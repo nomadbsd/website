@@ -1,0 +1,86 @@
+#!/usr/local/bin/perl
+#
+# vim: tabstop=4
+
+use strict;
+
+my %vars;
+my ($rootdir, $url);
+
+while ($ARGV[0] =~ m/^-/) {
+	if ($ARGV[0] eq "-r") {
+		shift;
+		@ARGV > 0 || die "Usage: $0 -r <rootdir>";
+		$rootdir = $ARGV[0];
+	}
+	shift;
+}
+$url = $ARGV[0];
+
+my (@content, @head, $date);
+
+$date = localtime();
+
+while (<STDIN>) {
+	if (/^TITLE=(.*)/) {
+		chomp($vars{title} = $1);
+	} elsif (/^ID=(.*)/) {
+		chomp($vars{id} = $1);
+	} elsif (/^BODY_ATTR=(.*)/) {
+		chomp($vars{body_attr} = $1);
+	} elsif (/^HEAD_START/) {
+		while (($_ = <STDIN>) && !/^HEAD_END/) {
+			push(@head, $_);
+		}
+	} elsif (/^CONTENT_START/) {
+		while (($_ = <STDIN>) && !/^CONTENT_END/) {
+			push(@content, $_);
+		}
+	}
+}
+
+open(FH, "template") || die "Couldn't open template file: $!";
+
+while (<FH>) {
+	next if (/^#/);
+
+	s/\@URL\@/$url/g;
+	s/\@ID\@/$vars{id}/g;
+	s/\@TITLE\@/$vars{title}/g;
+	s/\@ROOTDIR\@/$rootdir/g;
+	s/\@BODY_ATTR\@/$vars{body_attr}/g;
+	if (/\@HEAD\@/) {
+		foreach (@head) {
+			s/\@ROOTDIR\@/$rootdir/g;
+			s/\@TITLE\@/$vars{title}/g;
+			s/\@ID\@/$vars{id}/g;
+			print;
+		}
+	} elsif (/\@CONTENT\@/) {
+		foreach (@content) {
+			s/\@ROOTDIR\@/$rootdir/g;
+			s/\@TITLE\@/$vars{title}/g;
+			s/\@ID\@/$vars{id}/g;
+			s/\@DATE\@/$date/g;
+			for (my $x = $_; $x =~ /(^|\s)\#([a-z,A-Z,0-9,-,_]+)/; $_ = $x) {
+				# Replace hash tags with links to hash index
+				my $link =
+					qq(<a href="${rootdir}blog/hashindex.html#) . lc($2) .
+					qq(">#$2</a>);
+				$x =~ s/(^|\s)\#([a-z,A-Z,0-9,-,_]+)/$1$link/;
+				$_ = $x;
+			}
+			print;
+		}
+	} elsif (/\@FLATTR\@/) {
+		next unless ($vars{flattr} =~ m/[yY][eE][sS]/);
+		open(FLATTR, "flattr.hdr") || die "Couldn't open flattr.hdr: $!";
+		while (<FLATTR>) {
+			print;
+		}
+		close(FLATTR);
+	} else {
+		print;
+	}
+}
+

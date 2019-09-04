@@ -1,0 +1,34 @@
+get_rootdir() {
+	d=$1
+	while [ $d -gt 0 ]; do
+		echo -n "../"; d=$(expr $d - 1);
+	done
+}
+
+for i in `find . -name "*.in"`; do
+	i=$(echo $i | sed -E 's/^\.\/(.*)/\1/')
+	targets="$targets ${i%in}html"
+	sources="$sources $i"
+done
+
+echo "TARGETS = $targets"
+echo
+echo "all: \${TARGETS}"
+echo
+#printf "index.html: nomadbsd.html\n\tcp \$> \$@\n\n"
+for i in $(echo $sources); do
+	depth=$(echo "$i" | sed 's/[^\/]//g' | wc -c)
+	depth=$(expr $depth - 1)
+	rd=$(get_rootdir $depth)
+	echo ${i%in}html:$i
+	if [ ! -z "$rd" ]; then
+		printf "\tcat $> | ./build_page -r $rd ${i%in}html > \$@";
+	else
+		printf "\tcat $> | ./build_page ${i%in}html > \$@";
+	fi
+	echo
+	echo
+done
+echo "clean:"
+printf "\t-rm -f \${TARGETS}\n"
+ 

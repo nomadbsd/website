@@ -1,0 +1,338 @@
+TITLE=NomadBSD
+ID=handbook
+FLATTR=no
+<link rel="shortcut icon" href="/favicon.ico">
+CONTENT_START
+
+<h1>NomadBSD Handbooklet</h1>
+
+<h2>Content</h2>
+
+<ol>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#installation">Installation</a>
+<ol>
+<li><a href="#choosemedia">Choosing a USB flash drive</a></li>
+<li><a href="#download">Downloading an writing the image</a></li>
+</ol></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#keybindings">Key bindings</a></li>
+<li><a href="#autostart">Enable/Disable desktop components, and auto-start programs</a></li>
+<li><a href="#filesystems">Filesystem</a>
+<ol>
+<li><a href="#automount">Automount</a></li>
+<li><a href="#fssupport">Extending filesystem support</a>
+<ol>
+<li><a href="#exfat">exFat</a></li>
+<li><a href="#linuxfs">BTRFS, ReiserFS, XFS</a></li>
+</ol></li>
+</ol></li>
+<li><a href="#networking">Networking</a>
+<ol>
+<li><a href="#wifi">Wireless Networking</a></li>
+</ol></li>
+<li><a href="#advanced">Advanced Topics</a>
+<ol>
+<li><a href="#reset">Resetting NomandBSD</a>
+<ol>
+<li><a href="#reset_limits">Limitations</a></li>
+</ol></li>
+<li><a href="#disablegfxmenu">Disabling the graphics driver menu</a></li>
+<li><a href="#disableinitgfx">Disabling automatic graphics driver setup</a></li>
+<li><a href="#hddinstall">Installing NomadBSD on a hard disk</a></li>
+<li><a href="#vbox">Running NomadBSD in VirtualBox<sup>™</sup></a></li>
+</ol></li>
+<li><a href="#troubleshooting">Troubleshooting</a>
+<ol>
+<li><a href="#errata">Errata</a></li>
+<li><a href="#ts_graphics">Graphics</a>
+<ol>
+<li><a href="#ts_ati_amd">ATI/AMD</a></li>
+<li><a href="#ts_nvidia">NVIDIA</a></li>
+</ol></li>
+</ol></li>
+</ol>
+
+<p><a name="intro"></a></p>
+
+<h2>Intro</h2>
+
+<p>NomadBSD is a 64bit live system for USB flash drives, based on
+FreeBSD<sup>®</sup>. Together with automatic hardware detection and setup, it
+is configured to be used as a desktop system that works out of the box, but
+can also be used for data recovery, for educational purposes, or to test
+FreeBSD<sup>®</sup>'s hardware compatibility.</p>
+
+<p><a name="installation"></a></p>
+
+<h2>Installation</h2>
+
+<h3>Choosing a USB flash drive</h3>
+
+<p>NomadBSD performs well on USB 2.X flash drives, but writing many small files
+can be very slow. To improve performance, you should consider using a USB 3.X
+flash drive even on a USB 2.X port, as they tend to be faster. See
+<a href="https://www.anandtech.com/show/4523/usb-30-flash-drive-roundup/6">USB 3.0 Flash Drive Roundup</a></p>
+
+<h3>Downloading and writing the image</h3>
+
+<p>Instructions for writing the image to a flash drive from different operating
+systems can be found <a href="http://nomadbsd.org/download.html">here</a>.</p>
+
+<p><a name="overview"></a></p>
+
+<h2>Overview</h2>
+
+<p><img src="images/nomadbsd-overview.png" alt="" title="" /></p>
+
+<ol>
+<li><a href="http://freshports/x11-wm/openbox">Openbox</a> menu. You can reach it by
+pressing the Windows<sup>®</sup> key (or Super key)/⌘ key
+(Mac<sup>®</sup>), or by right-clicking on the background image
+(root window).</li>
+<li><a href="http://freshports.org/sysutils/dsbbatmon">DSBBatmon</a>. By hovering over
+the icon you can see the battery's current status and charge. Clicking
+on it brings up the configuration menu.</li>
+<li><a href="http://freshports.org/audio/dsbmixer">DSBMixer</a>. By hovering over the
+icon you can see the current volume of the master
+channel. Using the mouse wheel on it lets you change the
+master volume. Clicking on it brings up the main window of
+<a href="http://freshports.org/audio/dsbmixer">DSBMixer</a>.</li>
+<li><a href="http://freshports.org/sysutils/dsbmc">DSBMC</a>. Clicking on the icon brings
+up the main window in which you can see all the mountable storage devices
+attached to the system. Use the context menu of the device icons to select
+an action (un/mounting, opening, playing, ejecting) or double click to
+mount and open the device in your default file manager. You can use the
+preferences menu to change the file manager, autoplay setting, and
+multimedia programs.</li>
+<li>Date and time. Clicking in that area brings up a calendar.</li>
+</ol>
+
+<p><a name="keybindings"></a></p>
+
+<h2>Key bindings</h2>
+
+<p><code>&lt;Alt&gt;+&lt;F2&gt;</code></p>
+
+<ul>
+<li>Open DSBExec to execute a command.</li>
+</ul>
+
+<p><code>&lt;Ctrl&gt;+&lt;Space&gt;</code></p>
+
+<ul>
+<li>Open <a href="https://www.freshports.org/x11/dmenu/">dmenu-run</a> to execute a
+command.</li>
+</ul>
+
+<p><a name="autostart"></a></p>
+
+<h2>Enable/Disable desktop components, and auto-start programs</h2>
+
+<p>The program <a href="http://freshports.org/sysutils/dsbautostart">DSBAutostart</a>
+(<a href="#overview">Openbox menu</a> -> <em>Settings</em> -> <em>DSBAutostart</em>) allows you to control which
+programs are automatically executed when the graphical interface starts.
+Further, it allows you to enable/disable some components of the NomadBSD
+desktop. The changes take place after logging out and in again.</p>
+
+<p><img src="images/dsbautostart-screenshot.png" alt="" title="" /></p>
+
+<p><a name="filesystems"></a></p>
+
+<h2>Filesystems</h2>
+
+<p>NomadBSD comes with a bunch of pre-installed filesystems (CD9660, FAT, HFS+,
+NTFS, Ext2/3/4). You can mount storage devices via
+<a href="http://freshports.org/sysutils/dsbmc">DSBMC</a> (see <a href="#overview">Overview</a>),
+which is a graphical client for <a href="http://freshports.org/sysutils/dsbmd">DSBMD</a>.
+<a name="automount"></a></p>
+
+<h3>Automount</h3>
+
+<p>Execute the command <code>dsbmc-cli -a</code> to automount all currently connected
+storage devices, and to enable automounting on devices attached later to the
+system. To start this command automatically on session start, open
+<a href="#autostart">DSBAutostart</a>, and add a new entry for the above command.</p>
+
+<p><a name="fssupport"></a></p>
+
+<h3>Extending filesystem support</h3>
+
+<p>The following subsections describe how to extend the filesystems support.
+Rebooting the system, or restarting
+<a href="http://freshports.org/sysutils/dsbmd">DSBMD</a> is not necessary.</p>
+
+<p><a name="exfat"></a></p>
+
+<h4>ExFat</h4>
+
+<p>Unfortunately,
+<a href="https://freshports.org/sysutils/fusefs-exfat">sysutils/fusefs-exfat</a>
+requires a license from Microsoft<sup>®</sup>, and so it can't be
+pre-installed. You have to build it yourself by using the ports or the
+<a href="https://github.com/relan/exfat.git">Git repo</a>:</p>
+
+<pre><code># pkg install autoconf
+# pkg install automake
+# git clone https://github.com/relan/exfat.git
+# cd exfat
+# autoreconf --install
+# ./configure
+# make &amp;&amp; make install
+</code></pre>
+
+<p><a name="linuxfs"></a></p>
+
+<h4>BTRFS, ReiserFS, XFS</h4>
+
+<p>Install the package
+<a href="https://www.freshports.org/sysutils/fusefs-lkl">fusefs-lkl</a> for BTRFS,
+ReiserFS, and XFS support.</p>
+
+<pre><code># pkg install fusefs-lkl
+</code></pre>
+
+<p><a name="networking"></a></p>
+
+<h2>Networking</h2>
+
+<p><a name="wifi"></a></p>
+
+<h3>Wireless Networking</h3>
+
+<p>The program <a href="http://freshports.org/net-mgmt/wifimgr">wifimgr</a>
+(<a href="#overview">Openbox menu</a> -> <em>Network</em> -> <em>WiFi Networks Manager</em>) allows
+you to connect to a wireless network.</p>
+
+<p><a name="advanced"></a></p>
+
+<h2>Advanced Topics</h2>
+
+<p><a name="reset"></a></p>
+
+<h3>Resetting NomadBSD</h3>
+
+<p>If you are a tester, or your experiments with the systems left a total mess,
+you might want to reset NomadBSD.</p>
+
+<hr />
+
+<p><strong>Warning:</strong> The reset will delete <code>/home</code>, <code>/private</code>, <code>/etc</code>,
+<code>/var</code>, <code>/root</code>, and <code>/usr.local.etc</code>. Make a backup if there are any files
+you want to keep.</p>
+
+<hr />
+
+<p>You can reset NomadBSD as follows:</p>
+
+<ol>
+<li>Boot into single-user mode by (re)booting and choosing <code>2</code> in the boot
+menu.</li>
+<li>Execute <code>/usr/libexec/nomadbsd-reset</code></li>
+</ol>
+
+<p>After rebooting you'll be greeted by the setup again.</p>
+
+<p><a name="reset_limits"></a></p>
+
+<h4>Limitations</h4>
+
+<p>If you have modified or deleted system files from directory trees other than
+<code>/home</code>, <code>/private</code>, <code>/etc</code>, <code>/var</code>, <code>/root</code>, <code>/tmp</code>, and <code>/usr.local.etc</code>,
+you might not be able to cleanly reset NomadBSD.</p>
+
+<p><a name="disablegfxmenu"></a></p>
+
+<h3>Disabling the graphics driver menu</h3>
+
+<p>If you want to disable the graphics driver menu, add</p>
+
+<p><code>initgfx_menu="NO"</code> to <code>/etc/rc.conf</code>.</p>
+
+<p>By default, <code>initgfx</code> will try autodetection, but you can instead define a
+default driver to use by setting <code>initgfx_default</code> to <code>"scfb"</code> or <code>"vesa"</code> in
+<code>/etc/rc.conf</code>.</p>
+
+<p><a name="disableinitgfx"></a></p>
+
+<h3>Disabling automatic graphics driver setup</h3>
+
+<p>If you want to create your own graphics driver settings, you can disable
+<code>initgfx</code> by adding</p>
+
+<p><code>initgfx_enable="NO"</code> to <code>/etc/rc.conf</code>.</p>
+
+<p><a name="hddinstall"></a></p>
+
+<h3>Installing NomadBSD on a hard disk</h3>
+
+<p>Start <a href="#overview">Openbox menu</a> -> <em>System</em> -> <em>NomadBSD Installer</em> and
+follow the instructions.</p>
+
+<p><img src="images/installer-screenshot.png" alt="" title="" /></p>
+
+<p><a name="vbox"></a></p>
+
+<h3>Running NomadBSD in Virtualbox<sup>™</sup></h3>
+
+<ol>
+<li><a href="http://nomadbsd.org/download.html">Download and extract</a> an image you intend to run.</li>
+<li>NomadBSD will use the remaining space on a USB flash drive for its <code>/home</code>
+partitition, but since we intend to run it from an image file, we increase the
+(potential) size of the image as follows:
+<code>truncate -s +4G nomadbsd-x.y.z.img</code>. If you need more or less extra space, change the
+<code>-s</code> parameter accordingly.</li>
+<li>Create a vmdk file: <code>VBoxManage internalcommands createrawvmdk -filename ~/nomadbsd.vmdk -rawdisk nomadbsd-x.y.z.img</code></li>
+<li>Start VirtualBox<sup>™</sup>, and create a new virtual machine. Select
+<em>Use an existing virtual hard disk file</em> in the <em>Hard disk</em> settings, and
+choose <em>nomadbsd.vmdk</em> which we created in 3.
+<img src="images/create-vbox-machine.png" alt="" title="" /></li>
+</ol>
+
+<p><a name="troubleshooting"></a></p>
+
+<h2>Troubleshooting</h2>
+
+<p><a name="errata"></a></p>
+
+<h3>Errata</h3>
+
+<p>If you experience any problems, consult the
+<a href="http://nomadbsd.org/download/errata-1.2.txt">NomadBSD Errata</a> first.
+<a name="ts_graphics"></a></p>
+
+<h3>Graphics</h3>
+
+<p><a name="ts_ati_amd"></a></p>
+
+<h4>ATI/AMD</h4>
+
+<p>If you are booting a system with ATI/AMD graphics via UEFI, you might
+experience some problems. Due to
+<a href="https://wiki.freebsd.org/Graphics#AMD_Graphics">a conflict with the EFI framebuffer</a>,
+NomadBSD might crash or hang when the graphics driver gets loaded, or it just
+isn't able to start the X window system.</p>
+
+<p>Try the following workaround:</p>
+
+<ol>
+<li>(Re)boot and enter the boot submenu <code>Boot Options</code> (<code>6</code>).</li>
+<li>Change <code>Disable syscons</code> to <code>On</code> by pressing the key matching the item
+number.</li>
+<li>Go back to main menu, and press <code>&lt;Enter&gt;</code> to boot.</li>
+</ol>
+
+<hr />
+
+<p><strong>Note:</strong> You won't see any boot messages until the graphics driver gets loaded.</p>
+
+<hr />
+
+<p><a name="ts_nvidia"></a></p>
+
+<h4>NVIDIA</h4>
+
+<p>If you see an error message like <code>device_attach: nvidia0 attach returned 6</code>
+you could try to add <code>debug.acpi.disabled="sysres"</code> to <code>/boot/loader.conf</code>.</p>
+
+CONTENT_END

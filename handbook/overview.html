@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- 
+	vim: set tabstop=4:
+-->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../style.css" content="text/css" media="screen"/>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+	<title>NomadBSD</title>
+</head>
+<body id="handbook" >
+	<div id="header"></div>
+	<div id="navbar">
+		<ul>
+			<li id="navHome"><a href="../index.html">Home</a></li>
+		</ul>
+		<ul>
+			<li id="navHandbook"><a href="../docs/overview.html">Handbook</a></li>
+		</ul>
+		<ul>
+			<li id="navDownload"><a href="../download.html">Download</a></li>
+		</ul>
+		<ul>
+			<li id="navScreenshots"><a href="../screenshots.html">Screenshots</a></li>
+		</ul>
+<!--
+		<ul>
+			<li id="navFAQ"><a href="../faq.html">FAQ</a></li>
+		</ul>
+-->
+		<ul>
+			<li id="navContact"><a href="../contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<div id="container">
+
+<h2>NomadBSD Handbooklet</h2>
+<h3>Content</h3>
+<div id="toc">
+<ol style="margin-left:0;">
+	<li><a href="#intro">Intro</a></li>
+	<li><a href="#installation">Installation</a>
+	<ol>
+		<li><a href="#choosemedia">Choosing a USB flash drive</a></li>
+		<li><a href="#download">Downloading an writing the image</a></li>
+	</ol></li>
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#autostart">Enable/Disable desktop components, and
+	    Auto-start programs</a></li>
+	<li><a href="#filesystems">Filesystem</a>
+	<ol>
+		<li><a href="#automount">Automount</a></li>
+		<li><a href="#fssupport">Extending filesystem support</a>
+		<ol>
+			<li><a href="#exfat">exFat</a></li>
+			<li><a href="#linuxfs">BTRFS, ReiserFS, XFS</a></li>
+		</ol></li>
+	</ol></li>
+</ol>
+</div><br/>
+<a name="intro"></a>
+<h3>1. Intro</h3>
+NomadBSD is a 64bit live system for USB flash drives, based on
+FreeBSD<sup>®</sup>. Together with automatic hardware detection and setup, it
+is configured to be used as a desktop system that works out of the box, but can
+also be used for data recovery.
+<br/><br/>
+<a name="installation"></a>
+<h3>2. Installation</h3>
+<h4>2.1 Choosing a USB flash drive</h4>
+NomadBSD performs well on USB 2.0 flash drives, but writing many small files
+can be very slow. To improve performace, you should consider using a USB 3.0
+flash drive  even on a USB 2.0 port, as they tend to be faster. See <a href="https://www.anandtech.com/show/4523/usb-30-flash-drive-roundup/6">USB 3.0 Flash Drive Roundup</a> for some benchmarks.
+<br/><br/>
+<h4>2.2 Downloading and writing the image</h4>
+Instructions for writing the image to a flash drive from different operating
+systems can be found <a href="../download.html">here</a>.<br/><br/>
+<a name="overview"></a>
+<h3>3. Overview</h3>
+<img src="nomadbsd-overview.png"/>
+<ol>
+	<li>The main menu. You can reach the main menu by pressing the
+	Windows<sup>®</sup> key (or Super key)/Cmd key (Mac), or
+	by right-clicking on the background image (root window).
+	</li><br/>
+	<li>Logout button. Clicking on this icon brings up the logout menu which 	 lets you shutdown, reboot, etc. the system.
+	</li><br/>
+	<li><a href="http://freshports.org/audio/dsbmixer">DSBMixer</a>.
+	By hovering over the icon you can see the current volume of the master
+	channel. Using the mouse wheel on it lets you change the
+	master volume. Clicking on it brings up the main window of <a href="http://freshports.org/audio/dsbmixer">DSBMixer</a>.
+	</li><br/>
+	<li><a href="http://freshports.org/sysutils/dsbbatmon">DSBBatmon</a>. By hovering over the icon you can see the battery's
+	current status and charge. Clicking on it brings up the configuration
+	menu.
+	</li><br/>
+	<li><a href="http://freshports.org/sysutils/dsbmc">DSBMC</a>. Clicking on the icon brings up the main window in which you
+	can see all the mountable storage devices attached to the system. Use
+	the context menu of the device icons to select an action (un/mounting,
+	opening, playing, ejecting) or double click to mount and open the device
+	in a filemanager (<a href="https://www.freshports.org/x11-fm/thunar">Thunar</a>). You can use the preferences menu to change
+	the filemanager, autoplay setting, and multimedia programs.
+	</li><br/>
+	<li>Date and time. Clicking in that area brings up a calendar.
+	</li><br/>
+</ol>
+
+<a name="autostart"></a>
+<h3>4. Enable/Disable desktop components, and Auto-start programs</h3>
+The program DSBAutostart allows you to control which programs are automatically
+executed when the graphical interface starts. Further, it allows you to enable/disable some components of the NomadBSD desktop. The changes take place after
+logging out and in again.<br/><br/>
+<img src="dsbautostart-screenshot.png"/>
+<br/><br/>
+<a name="filesystems"></a>
+<h3>5. Filesystems</h3>
+<p>
+NomadBSD comes with a bunch of pre-installed filesystems (CD9660, FAT, HFS+,
+NTFS, Ext2/3/4). You can mount storage devices via DSBMC (see <a href="#overview">Overview</a>), which is a graphical client for DSBMD.
+<a name="automount"></a>
+<h4>5.1 Automount</h4>
+Execute the command <pre class="code">dsbmc-cli -a</pre> to automount all
+currently connected storage devices, and to enable automounting on devices
+attached later to the system. To start this command automatically on session
+start, open DSBAutostart, and add a new entry for the above command.
+<br/><br/>
+</p>
+
+<a name="fssupport"></a>
+<a name="exfat"></a>
+<h4>5.2 Extending filesystem support</h4>
+The following subsections describe how to extend the filesystems support.
+Rebooting the system, or restarting DSBMD is not necessary.
+<h4>5.2.1 ExFat</h4>
+Unfortunately,
+<a href="https://freshports.org/sysutils/fusefs-exfat">sysutils/fusefs-exfat</a> requires
+a license from Microsoft<sup>®</sup>, and so it can't be pre-installed. You have
+to build it yourself by using the ports or the <a href="https://github.com/relan/exfat.git">Git repo</a>:
+<pre class="code">
+# pkg install autoconf
+# pkg install automake
+# git clone https://github.com/relan/exfat.git
+# cd exfat
+# autoreconf --install
+# ./configure
+# make && make install
+</pre>
+<a name="linuxfs"></a>
+<h4>5.2.2 BTRFS, ReiserFS, XFS</h4>
+<p>
+Install the package <a href="https://www.freshports.org/sysutils/fusefs-lkl/">fusefs-lkl</a> for BTRFS, ReiserFS, and XFS support.
+</p>
+	</div>
+</body>
+</html>
+

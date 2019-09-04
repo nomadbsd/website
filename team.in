@@ -1,0 +1,12 @@
+TITLE=NomadBSD - Team
+ID=team
+CONTENT_START
+<p>
+<h3>The NomadBSD Team</h3>
+<ul>
+	<li>Lars Engels &lt;lme [at] nomadbsd [dot] org&gt;</li>
+	<li>Marcel Kaiser &lt;mk [at] nomadbsd [dot] org&gt;</li>
+	<li>Dmitry Salychev &lt;dsl [at] nomadbsd [dot] org&gt;</li>
+</ul>
+CONTENT_END
+</p>

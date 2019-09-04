@@ -1,0 +1,134 @@
+TITLE=NomadBSD - Download
+ID=download
+<link rel="shortcut icon" href="/favicon.ico">
+CONTENT_START
+<h3>Image format</h3>
+Since NomadBSD is designed to be a persistent system, we do not provide ISO
+files, as ISO-9660 is a read-only filesystem.
+<br/><br/>
+
+<h3>Writing the image to a USB memory stick</h3>
+The size of the uncompressed image is 3.4GiB, so the capacity of your flash
+drive should be 4GB at the minimum.
+<br/>
+<h4>FreeBSD</h4>
+<pre class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma
+# dd if=nomadbsd-x.y.z.img of=/dev/daX bs=1m
+</pre>
+or
+<pre class="code">
+# xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/daX bs=1m
+</pre>
+<br/>
+<h4>OpenBSD</h4>
+<pre class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma
+# dd if=nomadbsd-x.y.z.img of=/dev/rsdXc bs=1m
+</pre>
+or
+<pre class="code">
+# xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rsdXc bs=1m
+</pre>
+<br/>
+<h4>NetBSD</h4>
+<pre class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma
+# dd if=nomadbsd-x.y.z.img of=/dev/rsdXd bs=1m
+</pre>
+<pre class="code">
+or
+# xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rsdXd bs=1m
+</pre>
+<br/>
+<h4>DragonFly BSD</h4>
+<pre class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma
+# dd if=nomadbsd-x.y.z.img of=/dev/sdX bs=1m
+</pre>
+or
+<pre class="code">
+# xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/sdX bs=1m
+</pre>
+<br/>
+<h4>Mac OS X</h4>
+<pre class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma
+# dd if=nomadbsd-x.y.z.img of=/dev/rdiskX bs=1m
+</pre>
+or
+<pre class="code">
+# xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rdiskX bs=1m
+</pre>
+<br/>
+<h4>Linux</h4>
+<pre class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma
+# dd bs=1M if=nomadbsd-x.y.z.img of=/dev/sdX conv=fsync
+</pre>
+or
+<pre class="code">
+# xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/sdX bs=1M
+</pre>
+<br/>
+<b>Double check to make sure to replace <span class="mono">X</span> with the correct unit number!</b>
+<br/><br/>
+<h4>Windows</h4>
+You can uncompress the image using <a href="https://www.7-zip.org/">7-Zip</a>.
+To write the image to your USB stick, you can use <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a> or <a href="https://rufus.ie/">Rufus</a>.
+<br/>
+<br/>
+<h3>Download</h3>
+<table style="width:100%">
+	<tr>
+		<th>Version</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>1.2</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>1.2 (Mac image)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>1.2 (32-bit image)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>1.1</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>1.1 (Mac image)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>1.0.1</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.sha256">SHA256</a></td>
+	</tr>
+</table>
+
+CONTENT_END
+

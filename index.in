@@ -1,0 +1,387 @@
+TITLE=NomadBSD
+ID=home
+<link rel="shortcut icon" href="/favicon.ico">
+CONTENT_START
+<h2>About</h2>
+<p>
+NomadBSD is a persistent live system for USB flash drives, based on
+FreeBSD<sup>®</sup>. Together with automatic hardware detection and setup, it
+is configured to be used as a desktop system that works out of the box, but
+can also be used for data recovery, for educational purposes, or to test
+FreeBSD<sup>®</sup>'s hardware compatibility.
+</p>
+For a list of installed software packages see the
+<a href="download/nomadbsd-1.2.manifest">MANIFEST file</a>.
+</p>
+<h2>Requirements</h2>
+<p>
+The images for 64-bit and 32-bit computers, and the 64-bit Mac<sup>®</sup>
+images fit on a 4GB USB flash drive. A system with a 1.2GHz CPU and 1G of RAM
+should be able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
+</p>
+<h2>Current Version</h2>
+<p>
+	1.2
+</p>
+<h2>Errata</h2>
+<a href="download/errata-1.2.txt">NomadBSD 1.2 Errata</a>
+
+<h2>Development</h2>
+<p>
+You can check out the latest code and configuration files at
+<a href="https://github.com/nomadbsd/NomadBSD">GitHub</a>.
+<h3>Contributing to NomadBSD</h3>
+
+Would you like to translate program interfaces or documentation? Are you a
+designer or programmer? Check out the open
+<a href="https://github.com/nomadbsd/NomadBSD/issues">issues</a> on
+<a href="https://github.com/nomadbsd/NomadBSD">GitHub</a>.
+Do you have a cool idea for the project? Join the
+<a href="http://www.freelists.org/list/nomadbsddevs">NomadBSD developer
+mailing list</a> and let us know.
+</p>
+<h2>News <a href="http://nomadbsd.org/rss.xml">
+	<img src="feedicon.svg" width="36" height="14">
+	<!--(Mozilla Foundation) - feedicons.com, MPL 1.1, https://commons.wikimedia.org/w/index.php?curid=654420 -->
+</a></h2>
+<p class="news">
+<a name="1.2errata"></a>
+<h3>NomadBSD 1.2 Errata available</h3>
+<p class="date">2019-04-25</p>
+<p>
+The <a href="download/errata-1.2.txt">errata file</a> for NomadBSD 1.2 is
+now available.
+</p>
+<a name="rel1.2"></a>
+<h3>NomadBSD 1.2 released!</h3>
+<p class="date">2019-04-21</p>
+<p>
+<a href="screenshots/nomadbsd-1.2-ss1.png" target="_blank"><img src="screenshots/nomadbsd-1.2-ss1.png"/></a>
+We are pleased to announce the release of NomadBSD 1.2! We would like to
+thank all the testers who sent us feedback and bug reports.
+<h4>Changes</h4>
+<ul>
+	<li>The base system has been upgraded to FreeBSD 12.0-p3</li>
+	<li>TRIM has been enabled by default.</li>
+	<li>A <span class="mono">vt(4)</span> color theme has been added.</li>
+	<li>The <span class="mono">dialog(1)</span> based setup has been replaced
+	by a Qt GUI which supports dynamic translation. Currently available
+	translations are German and Russian.</li>
+	<li>In order to reduce the number of implicit package upgrades and
+	possible inconsistencies, the <span class="mono">pkg(8)</span> default
+	repository has been changed to "Quarterly".</li>
+	<li>A recent copy of the NomadBSD handbooklet has been added to nomad's
+	home dir.</li>
+	<li>A new option has been added to the boot menu which allows users to set
+	<span class="mono">hw.syscons.disable</span>.</li>
+	<li>The kernel tunable
+	<span class="mono">vfs.root_mount_always_wait=1</span> has been added to
+	/boot/loader.conf to prevent mountroot from mounting the root partition
+	before the device is available.</li>
+	<li>Dynamic creation of configuration files for Intel GPUs has been added.
+	For GPUs using the legacy i915kms driver, the UXA acceleration method is
+	used. For newer GPUs SNA is used which fixes performance problems (at
+	least on HD Graphics 5500 (Broadwell))</li>
+	<li>The backend for compton has been changed to xrender. This fixes input
+	delay problems with the NVIDIA driver. Further, it makes using compton
+	with VESA and SCFB possible.</li>
+	<li>x11/dmenu has been added which can be started by pressing Ctrl+Space.</li>
+	<li>A bug where the NVIDIA GLX libraries could not be found because of
+	path changes in the nvdia-driver-{304,340,390} packages has been fixed.</li>
+	<li>A bug where executing <span class="mono">pkg install</span>/
+	<span class="mono">delete</span> lead to overwriting the
+	library path to the NVIDIA libraries has been fixed.</li>
+	<li>A <span class="mono">dialog(1)</span> menu has been added to the
+	<span class="mono">initgfx</span> script which allows the
+	user to choose between auto detection and a non-accelerated graphics
+	driver.</li>
+	<li>The detection of network devices has been improved.</i>
+	<li>A script with a Qt5 frontend for installing NomadBSD on a hard
+	disk has been added.</li>
+	<li>Support for building 32bit images has been added.</li>
+	<li>The user interface has been slightly changed.</li>
+	<li>Support for the local keymap when entering the geli password has been added.</li>
+	<li>Support for resetting NomadBSD has been added. Users can execute
+		<pre class="code">/usr/libexec/nomad/nomad_setup reset</pre> in
+		single user mode to bring NomadBSD back to its initial state.
+	</li>
+	<li>Localized XDG standard dirs have been added.</li>
+	<li>The swap partition has been removed.</li>
+	<li>linux_base has been removed.</li>
+	<li>Several small improvements and bugfixes.</li>
+</ul>
+The image(s) and instructions can be found <a href="download.html">here</a>.
+</p>
+<a name="rel1.2-rc2"></a>
+<h3>NomadBSD 1.2-RC2 released!</h3>
+<p class="date">2019-02-18</p>
+<p>
+The second release candidate of NomadBSD 1.2 is now available! We would like to
+thank all the RC1 testers who sent us feedback and bug reports. If you notice
+any problems, please let us know.
+<h4>Changes since 1.2-RC1</h4>
+<ul>
+	<li>The base system has been upgraded to FreeBSD 12.0-p3</li>
+	<li>TRIM has been enabled by default.</li>
+	<li>A <span class="mono">vt(4)</span> color theme has been added.</li>
+	<li>The <span class="mono">dialog(1)</span> based setup has been replaced
+	by a Qt GUI which supports dynamic translation. Currently available
+	translations are German and	Russian.</li>
+	<li>In order to reduce the number of implicit package upgrades and
+	possible inconsistencies, the <span class="mono">pkg(8)</span> default
+	repository has been	changed to "Quarterly".</li>
+	<li>A recent copy of the NomadBSD handbooklet has been added to nomad's
+	home dir.</li>
+	<li>A new option has been added to the boot menu which allows users to set
+	<span class="mono">hw.syscons.disable</span>.</li>
+	<li>The kernel tunable
+	<span class="mono">vfs.root_mount_always_wait=1</span> has been added to
+	/boot/loader.conf to prevent mountroot from mounting the root partition
+	before the device is available.</li>
+	<li>Dynamic creation of configuration files for Intel GPUs has been added.
+	For GPUs using the legacy i915kms driver, the UXA acceleration method is
+	used. For newer GPUs SNA is used which fixes performance problems (at
+	least on HD Graphics 5500 (Broadwell))</li>
+	<li>The backend for compton has been changed to xrender. This fixes input
+	delay problems with the NVIDIA driver. Further, it makes using compton
+	with VESA and SCFB possible.</li>
+	<li>x11/dmenu has been added which can be started by pressing Ctrl+Space.</li>
+	<li>A bug where the NVIDIA GLX libraries could not be found because of
+	path changes in the nvdia-driver-{304,340,390} packages has been fixed.</li>
+	<li>A bug where executing <span class="mono">pkg install</span>/
+	<span class="mono">delete</span> lead to overwriting the
+	library path to the NVIDIA libraries has been fixed.</li>
+	<li>A <span class="mono">dialog(1)</span> menu has been added to the
+	<span class="mono">initgfx</span> script which allows the
+	user to choose between auto detection and a non-accelerated graphics
+	driver.</li>
+	<li>The driver database of sysutils/dsbdriverd has been extended to detect
+	more network devices:
+		<ul>
+			<li>
+				The device ID list for <span class="mono">run(4)</span>,
+				<span class="mono">iwm(4)</span> and firmware modules has
+				been extended.
+			</li>
+			<li>A record for <span class="mono">rtwn(4)</span> devices has
+			been added.</li>
+		</ul>
+	</li>
+	<li>A script for installing NomadBSD on a hard disk has been added.</li>
+	<li>Support for building 32bit images has been added.</li>
+</ul>
+The image(s) and instructions can be found <a href="download.html">here</a>.
+</p>
+<p class="news">
+<a name="rel1.2-rc1"></a>
+<h3>NomadBSD 1.2-RC1 released!</h3>
+<p class="date">2019-01-15</p>
+<p>
+<a href="screenshots/nomadbsd-1.2-RC1-ss1.png" target="_blank"><img src="screenshots/nomadbsd-1.2-RC1-ss1.png"/></a>
+The first release candidate of NomadBSD 1.2 is available! If you notice any
+problems, please let us know.
+<h4>Changes since 1.1</h4>
+<ul>
+	<li>The Base system has been upgraded to FreeBSD 12.0-RELEASE</li>
+	<li>The setup menu has been improved, and new configuration options for
+		choosing the standard web browser, e-mail client, filemanager,
+		and editors have been added.</li>
+	<li>The script for detecting and loading the Intel video driver has been
+		improved.</li>
+	<li>The user interface has been slightly changed.</li>
+	<li>Support for the local keymap when entering the geli password has been added.</li>
+	<li>Support for resetting NomadBSD has been added. Users can execute
+		<pre class="code">/usr/libexec/nomad/nomad_setup reset</pre> in
+		single user mode to bring NomadBSD back to its initial state.
+	</li>
+	<li>Localized XDG standard dirs have been added.</li>
+	<li>The swap partition has been removed.</li>
+	<li>linux_base has been removed.</li>
+	<li>Several small improvements and bugfixes.</li>
+	<li>New packages:
+		<ul>
+			<li>devel/geany</li>
+			<li>x11-wm/plank</li>
+			<li>x11-themes/lxappearance</li>
+		</ul>
+	</li>
+</ul>
+The image(s) and instructions can be found <a href="download.html">here</a>.
+</p>
+<p class="news">
+<a name="rel1.1"></a>
+<h3>NomadBSD 1.1 released!</h3>
+<p class="date">2018-07-07</p>
+<h4>Changes since 1.0.1</h4>
+<ul>
+	<li>Base system has been upgraded to FreeBSD 11.2-RELEASE</li>
+	<li>Basic support for MacBooks has been added</li>
+	<li>A script for loading the matching DRM driver from
+	graphics/drm-stable-kmod for Radeon GPUs has been added. Together with
+	x11-drivers/xf86-video-amdgpu more recent AMD Radeon chipsets should
+	now work out of the box.</li>
+	<li>For all Intel GPUs the new i915kms from graphics/drm-stable-kmod is
+	now used.</li>
+	<li>x11-drivers/xf86-video-scfb and x11-drivers/xf86-video-vesa have
+	been added as fallback drivers.</li>
+	<li>Autodetection of the VirtualBox pseudo GPU has been added.</li>
+	<li>Fallback configuration of SCFB</li>
+	<li>EFI booting has been fixed.</li>
+	<li>Support for modern Intel GPUs has been added.</li>
+	<li>Support for installing packages has been added.</li>
+	<li>Improved setup menu.</li>
+	<li>More software packages:
+		<ul>
+			<li>benchmarks/bonnie++</li>
+			<li>DSBDisplaySettings</li>
+			<li>DSBExec</li>
+			<li>DSBSu</li>
+			<li>mail/thunderbird</li>
+			<li>net/mosh</li>
+			<li>ports-mgmt/octopkg</li>
+			<li>print/qpdfview</li>
+			<li>security/nmap</li>
+			<li>sysutils/ddrescue</li>
+			<li>sysutils/fusefs-hfsfuse</li>
+			<li>sysutils/fusefs-sshfs</li>
+			<li>sysutils/sleuthkit</li>
+			<li>www/lynx</li>
+			<li>x11-wm/compton</li>
+			<li>x11/xev</li>
+			<li>x11/xterm</li>
+		</ul>
+	<li>Many improvements and bugfixes</li>
+</ul>
+The image(s) and instructions can be found <a href="download.html">here</a>.
+</p>
+<p class="news">
+<a name="rel1.1-rc2"></a>
+<h3>NomadBSD 1.1-RC2 released!</h3>
+<p class="date">2018-06-23</p>
+The second release candidate of NomadBSD-1.1 is available!
+<h4>Changes</h4>
+<ul>
+	<li>A script for loading the matching DRM driver from
+	graphics/drm-stable-kmod for Radeon GPUs has been added. Together with
+	x11-drivers/xf86-video-amdgpu more recent AMD Radeon chipsets should
+	now work out of the box.</li>
+	<li>For all Intel GPUs the new i915kms from graphics/drm-stable-kmod is
+	now used.</li>
+	<li>x11-drivers/xf86-video-scfb and x11-drivers/xf86-video-vesa have
+	been added as fallback drivers.</li>
+</ul>
+The image and instructions can be found <a href="download.html">here</a>.
+</p>
+<p class="news">
+<h3>Review of NomadBSD by barnabyh</h3>
+<p class="date">2018-06-19</p>
+<a href="https://www.blogger.com/profile/16140705405441470614">barnabyh</a> from <a href="https://all-things-linux.blogspot.com">all-things-linux.blogspot.com</a> wrote a <a href="https://all-things-linux.blogspot.com/2018/06/nomadic-working-with-nomadbsd-101-bsd.html">review of NomadBSD</a>. Thank you!
+</p>
+<p class="news">
+<a name="rel1.1-rc1"></a>
+<h3>NomadBSD 1.1-RC1 released!</h3>
+<p class="date">2018-06-16</p>
+<a href="screenshots/nomadbsd-1.1-ss1.png" target="_blank"><img src="screenshots/nomadbsd-1.1-ss1.png"/></a>
+The first – and hopefully final – release candidate of NomadBSD 1.1 is available!
+<h4>Changes</h4>
+<ul>
+	<li>The base system has been upgraded to FreeBSD 11.2-RC3</li>
+	<li>EFI booting has been fixed.</li>
+	<li>Support for modern Intel GPUs has been added.</li>
+	<li>Support for installing packages has been added.</li>
+	<li>Improved setup menu.</li>
+	<li>More software packages:
+		<ul>
+			<li>benchmarks/bonnie++</li>
+			<li>DSBDisplaySettings</li>
+			<li>DSBExec</li>
+			<li>DSBSu</li>
+			<li>mail/thunderbird</li>
+			<li>net/mosh</li>
+			<li>ports-mgmt/octopkg</li>
+			<li>print/qpdfview</li>
+			<li>security/nmap</li>
+			<li>sysutils/ddrescue</li>
+			<li>sysutils/fusefs-hfsfuse</li>
+			<li>sysutils/fusefs-sshfs</li>
+			<li>sysutils/sleuthkit</li>
+			<li>www/lynx</li>
+			<li>x11-wm/compton</li>
+			<li>x11/xev</li>
+			<li>x11/xterm</li>
+		</ul>
+	<li>Many improvements and bugfixes</li>
+</ul>
+The image and instructions can be found <a href="download.html">here</a>.
+</p>
+<p class="news">
+<h3>Review of NomadBSD 1.0.1</h3>
+<p class="date">2018-05-06</p>
+<a href=http://robonuggie.com/>RoboNuggie</a> made a review of NomadBSD 1.0.1. You can find the video
+<a href="https://www.youtube.com/watch?v=-Uoxkm1m7U4&t=18s">here</a>. Thank you!
+<a name="rel-1.0.1"></a>
+</p>
+<p class="news">
+<h3>NomadBSD 1.0.1 released</h3>
+<p class="date">2018-03-03</p>
+<h4>Changes</h4>
+<ul>
+	<li>Fix a problem with graphics driver detection.</li>
+	<li>Fix a boot problem on <i>Lenovo<sup>&reg;</sup> X220</i>.</li>
+	<li>Disable the terminal bell.</li>
+	<li>Add a rc script to automatically load the correct acpi module.</li>
+	<li>Close/lock root shells on ttyv{0,1,2}.</li>
+</ul>
+</p>
+<p class="news">
+<h3>NomadBSD on BSDNow</h3>
+<p class="date">2018-03-22</p>
+NomadBSD was mentioned in <a href="http://www.jupiterbroadcasting.com/123487/vlan-zezes-ki-in-hardware-bsd-now-238/">BSD Now 238</a>. Thank you, guys!
+</p>
+<p class="news">
+<a name="rel-1.0"></a>
+<h3>NomadBSD 1.0 released</h3>
+<p class="date">2018-02-28</p>
+<h4>Changes</h4>
+<ul>
+	<li>The setup process has been improved.</li>
+	<li>Support for optional geli encryption of the home partition has been added</li>
+	<li>Auto-detection of NVIDIA graphics cards and their corresponding driver has been added. (Thanks to holgerw and lme from BSDForen.de)</li>
+	<li>An rc script to start the GEOM disk scheduler on the root device has
+	been added.</li>
+	<li>More software has been added:</li>
+		<ul>
+			<li>accessibility/redshift (starts automatically)</li>
+			<li>audio/cantata</li>
+			<li>audio/musicpd</li>
+			<li>audio/ncmpc</li>
+			<li>ftp/filezilla</li>
+			<li>games/bsdtris</li>
+			<li>mail/neomutt</li>
+			<li>math/galculator</li>
+			<li>net-p2p/transmission-qt5</li>
+			<li>security/fpm2</li>
+			<li>sysutils/bsdstats</li>
+			<li>x11/metalock</li>
+			<li>x11/xbindkeys</li>
+		</ul>
+	<li>Several smaller improvements and bugfixes.</li>
+</ul>
+</p>
+<p class="news">
+<a name="rel-0.5.3"></a>
+<h3>NomadBSD 0.5.3 released</h3>
+<p class="date">2018-02-19</p>
+<h4>Changes</h4>
+<ul>
+	<li>The partition scheme has been changed from MBR to GPT+EFI.</li>
+	<li>The graphical boot loader by Oliver Fromme has been installed.</li>
+	<li>The filesystem settings have been changed for better performance.</li>
+	<li>Growing the filesystem to fill the flash drive can now automatically be done from the setup menu.</li>
+	<li>The boot time has been reduced.</li>
+	<li>A problem with the setup on systems where a NVIDIA graphics card is installed has been fixed.</li>
+	<li>The browser configurations have been changed/included to improve performance.</li>
+</ul>
+</p>
+CONTENT_END
+

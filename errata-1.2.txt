@@ -1,0 +1,29 @@
+NomadBSD 1.2 Errata
+
+Problem
+     Due to a rc dependency problem, the rc-script for configuring the network
+     devices runs after the device driver loading daemon. This prevents  auto-
+     configuration of some network devices.
+
+Solution
+     Download setup_netif [1], and copy it to /etc/rc.d:
+
+          # fetch https://raw.githubusercontent.com/nomadbsd/NomadBSD/master/config/etc/rc.d/setup_netifs
+          # cp setup_netifs /etc/rc.d
+
+     If you can't access the internet from NomadBSD:
+          Download  the  file and put it on a FAT, NTFS, or Ext2/3/4 formatted
+          USB thumb drive. Boot NomadBSD, mount the thumb drive, and copy  the
+          file to /etc/rc.d/
+
+          If you have a FreeBSD system with internet access, you can of course
+          copy the file directly to your NomadBSD USB flash drive:
+
+               # fetch https://raw.githubusercontent.com/nomadbsd/NomadBSD/master/config/etc/rc.d/setup_netifs
+               # mount /dev/gpt/nomadroot /mnt
+               # cp setup_netifs /mnt/etc/rc.d
+               # umount /mnt
+
+-----------
+  1 https://raw.githubusercontent.com/nomadbsd/NomadBSD/master/config/etc/rc.d/setup_netifs
+

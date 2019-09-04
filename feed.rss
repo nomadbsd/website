@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<rss version="2.0">
+	<channel>
+		<title>NomadBSD - FreeBSD based USB live system</title>
+		<link>http://nomadbsd.org/</link>
+		<description>NomadBSD news</description>
+		<item>
+			<title>NomadBSD-1.2 RC1 released</title>
+			<link>http://nomadbsd.org/index.html#rel1.2</link>
+			<guid>http://nomadbsd.org/index.html#rel1.2</guid>
+			<pubDate>Sun, 21 Apr 2019 21:30:00 UTC</pubDate>
+			<description>NomadBSD-1.2 is now available</description>
+		</item>
+		<item>
+			<title>NomadBSD-1.2 RC1 released</title>
+			<link>http://nomadbsd.org/index.html#rel1.2-rc1</link>
+			<guid>http://nomadbsd.org/index.html#rel1.2-rc1</guid>
+			<pubDate>Tu, 15 Jan 2019 21:42:00 UTC</pubDate>
+			<description>The first release candidate of NomadBSD-1.2 is available</description>
+		</item>
+		<item>
+			<title>NomadBSD-1.2 RC2 released</title>
+			<link>http://nomadbsd.org/index.html#rel1.2-rc2</link>
+			<guid>http://nomadbsd.org/index.html#rel1.2-rc2</guid>
+			<pubDate>Tu, 19 Feb 2019 22:26:23 UTC</pubDate>
+			<description>The second release candidate of NomadBSD-1.2 is available</description>
+		</item>
+	</channel>
+</rss>
