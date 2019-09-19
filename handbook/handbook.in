@@ -31,6 +31,7 @@ CONTENT_START
 <ol>
 <li><a href="#wifi">Wireless Networking</a></li>
 </ol></li>
+<li><a href="#multihead">Multihead setup</a></li>
 <li><a href="#advanced">Advanced Topics</a>
 <ol>
 <li><a href="#reset">Resetting NomandBSD</a>
@@ -72,7 +73,8 @@ FreeBSD<sup>®</sup>'s hardware compatibility.</p>
 <p>NomadBSD performs well on USB 2.X flash drives, but writing many small files
 can be very slow. To improve performance, you should consider using a USB 3.X
 flash drive even on a USB 2.X port, as they tend to be faster. See
-<a href="https://www.anandtech.com/show/4523/usb-30-flash-drive-roundup/6">USB 3.0 Flash Drive Roundup</a></p>
+<a href="https://www.anandtech.com/show/4523/usb-30-flash-drive-roundup/6">USB 3.0 Flash Drive Roundup</a>. Do not use cheap no-name thumb drives they sell at super markets
+and drug stores. These drives are very slow and unreliable.</p>
 
 <h3>Downloading and writing the image</h3>
 
@@ -204,6 +206,16 @@ ReiserFS, and XFS support.</p>
 (<a href="#overview">Openbox menu</a> -> <em>Network</em> -> <em>WiFi Networks Manager</em>) allows
 you to connect to a wireless network.</p>
 
+<p><a name="multihead"></a></p>
+
+<h2>Multihead setup</h2>
+
+<p>By default, NomadBSD enables all connected outputs (monitors). The tool
+<a href="http://freshports.org/x11/arandr">ArandR</a>
+(<a href="#overview">Openbox menu</a>-> <em>Settings</em> -> <em>ArandR</em>) allows you to configure
+the position, resolution, etc. of your monitors. Save your changes to
+<code>~/.screenlayout/default.sh</code> which is automatically executed on session start.</p>
+
 <p><a name="advanced"></a></p>
 
 <h2>Advanced Topics</h2>
@@ -282,11 +294,14 @@ partitition, but since we intend to run it from an image file, we increase the
 (potential) size of the image as follows:
 <code>truncate -s +4G nomadbsd-x.y.z.img</code>. If you need more or less extra space, change the
 <code>-s</code> parameter accordingly.</li>
-<li>Create a vmdk file: <code>VBoxManage internalcommands createrawvmdk -filename ~/nomadbsd.vmdk -rawdisk nomadbsd-x.y.z.img</code></li>
-<li>Start VirtualBox<sup>™</sup>, and create a new virtual machine. Select
+<li>Create a vmdk file: <code>VBoxManage internalcommands createrawvmdk -filename ~/nomadbsd.vmdk -rawdisk /full/path/to/nomadbsd-x.y.z.img</code></li>
+<li><p>Start VirtualBox<sup>™</sup>, and create a new virtual machine. Select
 <em>Use an existing virtual hard disk file</em> in the <em>Hard disk</em> settings, and
 choose <em>nomadbsd.vmdk</em> which we created in 3.
-<img src="images/create-vbox-machine.png" alt="" title="" /></li>
+<img src="images/create-vbox-machine.png" alt="" title="" /></p></li>
+<li><p>Go to <em>Settings</em> -> <em>Display</em> and set the video memory to 128MB or more.</p></li>
+<li>Go to <em>Settings</em> -> <em>System</em> -> <em>Processor</em> and set the number of
+processors to 2.</li>
 </ol>
 
 <p><a name="troubleshooting"></a></p>
