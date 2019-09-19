@@ -5,6 +5,13 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>The first rolling release of NomadBSD based on FreeBSD 13.0-CURRENT is available</title>
+			<link>http://nomadbsd.org/index.html#rr130c190919</link>
+			<guid>http://nomadbsd.org/index.html#rr130c190919</guid>
+			<pubDate>Thu, 19 Sep 2019 19:55:13 UTC</pubDate>
+			<description>NomadBSD 1.2 errata file available</description>
+		</item>
+		<item>
 			<title>NomadBSD 1.2 Errata available</title>
 			<link>http://nomadbsd.org/index.html#1.2errata</link>
 			<guid>http://nomadbsd.org/index.html#1.2errata</guid>

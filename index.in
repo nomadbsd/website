@@ -21,7 +21,8 @@ should be able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	1.2
+	1.2<br/>
+	rr130c190919
 </p>
 <h2>Errata</h2>
 <a href="download/errata-1.2.txt">NomadBSD 1.2 Errata</a>
@@ -45,6 +46,28 @@ mailing list</a> and let us know.
 	<!--(Mozilla Foundation) - feedicons.com, MPL 1.1, https://commons.wikimedia.org/w/index.php?curid=654420 -->
 </a></h2>
 <p class="news">
+<a name="rr130c190919"></a>
+<h3>The first rolling release of NomadBSD based on FreeBSD 13.0-CURRENT is
+now available!</h3>
+<p class="date">2019-09-19</p>
+<p>
+We are pleased to present the first rolling release (rr130c190919) of NomadBSD based on FreeBSD 13.0-CURRENT.
+<h4>Changes</h4>
+<ul>
+	<li>The rc-script for setting up the network interfaces has been fixed. Support for setting the country code for the wlan device has been added.</li>
+	<li>Support for ZFS has been added to the NomadBSD installer.</li>
+	<li>The GPT layout has been changed to MBR layout used by the FreeBSD memstick images. This prevents problems with Lenovo systems that refuse to boot from GPT if "lenovofix" is not set, and systems that hang on boot if "lenovofix" is set.</li>
+	<li>Support for multiple keyboard layouts has been added.</li>
+	<li>Auto-configuration for running in VirtualBox has been added.</li>
+	<li>The Xorg driver for newer Intel GPUs has been changed from "intel" to "modesetting".</li>
+	<li>A check for the default display has been added to the graphics configuration scripts. This fixes problems where users with Optimus have their NVIDIA card disabled, and use the integrated graphics chip instead.</li>
+	<li>The latest version of update_obmenu now supports auto-updating the Openbox menu. Manually updating the Openbox menu after packet (de)installation is therefore no longer needed.</li>
+	<li>Support for configuring a multihead system has been added.</li>
+	<li>Some templates for starting other DEs have been added to ~/.xinitrc.</li>
+	<li>The setup wizard and the installer have been improved.</li>
+</ul>
+The image(s) and instructions can be found <a href="download.html">here</a>.
+</p>
 <a name="1.2errata"></a>
 <h3>NomadBSD 1.2 Errata available</h3>
 <p class="date">2019-04-25</p>
