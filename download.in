@@ -95,6 +95,13 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
+		<td>rr130c190919 (Mac)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
 		<td>1.2</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
