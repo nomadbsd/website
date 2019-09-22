@@ -88,7 +88,7 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<th>Manifest</th>
 	</tr>
 	<tr>
-		<td>rr130c190919</td>
+		<td>rr130c190919 (amd64)</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.img.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.img.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.img.sha256">SHA256</a></td>
@@ -102,42 +102,49 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.2</td>
+		<td>rr130c190919 (i386)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>1.2 (amd64)</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.2 (Mac image)</td>
+		<td>1.2 (Mac)</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.2 (32-bit image)</td>
+		<td>1.2 (i386)</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.1</td>
+		<td>1.1 (amd64)</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.1 (Mac image)</td>
+		<td>1.1 (Mac)</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.0.1</td>
+		<td>1.0.1 (amd64)</td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.lzma">Download</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.sha256">SHA256</a></td>
