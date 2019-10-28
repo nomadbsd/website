@@ -7,23 +7,6 @@ CONTENT_START
 	the <a href="http://www.freelists.org/list/nomadbsddevs">NomadBSD
 	developer mailing list</a>
 	<br/><br/>
-	<!-- BEGIN FreeLists WEB FORM -->
-	<form action="https://www.freelists.org/cgi-bin/subscription.cgi" method="post" style="text-align: left;">
-		Enter your email address: <input type="text" name="email">
-		<input type=hidden name="list" value="nomadbsddevs">
-		<input type=hidden name="url_or_message" value="">
-		<select name="action">
-			<option value="subscribe">Subscribe</option>
-			<option value="unsubscribe">Unsubscribe</option>
-			<option value="set digest">Turn Digest mode on</option>
-			<option value="unset digest">Turn Digest mode off</option>
-			<option value="set vacation">Turn Vacation mode on</option>
-			<option value="unset vacation">Turn Vacation mode off</option>
-			<option value="help">Get Help</option>
-		</select>
-		<input type=submit value="Go!">
-	</form>
-	<!-- END FreeLists WEB FORM --> 
 	After subscribing, send your requests to nomadbsddevs [at] freelists [dot] org.
 </p>
 <p>
