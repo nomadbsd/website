@@ -33,7 +33,7 @@
 	border-radius: 6px;
 /*	padding-left: 83px; */
 /*	padding-right: 20px; */
-	padding-right: 13px; /*34px;*/
+	padding-right: 0px; /*13px;*/ /*34px;*/
 	margin-top: -8px;
 	margin-bottom: -8px;
 /*	width: 120px; */
@@ -273,17 +273,17 @@ pre.code {
 
 #contact #navContact a, #team #navTeam a, #home #navHome a,
 #screenshots #navScreenshots a, #download #navDownload a,
-#handbook #navHandbook a {
+#handbook #navHandbook a, #mirror #navMirror a {
 /*	background-color: #2464bc;*/
 	background-color: #384449;
 }
 
 li#navHome {
-	padding-left: 83px;
+	padding-left: 50px;
 }
 
-li#navContact {
-	padding-right: 0px;
+li#navMirror {
+	padding-right: 50px;
 }
 
 .news {

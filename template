@@ -35,6 +35,9 @@
 		<ul>
 			<li id="navContact"><a href="@ROOTDIR@contact.html">Contact</a></li>
 		</ul>
+		<ul>
+			<li id="navMirror"><a href="@ROOTDIR@mirror.html">Mirror</a></li>
+		</ul>
 	</div>
 	<div id="container">
 		@CONTENT@
