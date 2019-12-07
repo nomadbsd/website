@@ -88,25 +88,25 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<th>Manifest</th>
 	</tr>
 	<tr>
-		<td>1.3-RC1 (amd64)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.manifest">MANIFEST</a></td>
+		<td>1.3 (amd64)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.3-RC1 (Mac)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.mac.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.mac.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.manifest">MANIFEST</a></td>
+		<td>1.3 (Mac)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.mac.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.mac.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.mac.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.3-RC1 (i386)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.i386.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.i386.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3-RC1.i386.manifest">MANIFEST</a></td>
+		<td>1.3 (i386)</td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.img.lzma">Download</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.img.lzma.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.img.sha256">SHA256</a></td>
+		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
 		<td>rr130c190919 (amd64)</td>
@@ -149,26 +149,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
 		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>1.1 (amd64)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.efi.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>1.1 (Mac)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.mac.efi.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.1.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>1.0.1 (amd64)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.0.1.efi.sha256">SHA256</a></td>
 	</tr>
 </table>
 
