@@ -6,7 +6,7 @@ CONTENT_START
 
 <h3>What to mirror</h3>
 <p>
-<a href="https://nomadbsd.org/download">https://nomadbsd.org/download</a>
+rsync.nomadbsd.org::nomadbsd/
 </p>
 
 <h3>Expected mirror size</h3>
@@ -21,16 +21,9 @@ Once a day
 
 <h3>How to mirror</h3>
 <p>
-Via <a href="https://lftp.tech/">lftp</a>:
 <pre class="code">
-lftp -e 'mirror --delete https://nomadbsd.org/download /target/directory'
+rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/
 </pre>
-Or via <a href="https://www.gnu.org/software/wget/">wget</a>:
-<pre class="code">
-wget --no-host-directories --mirror --no-directories -P /target/directory https://nomadbsd.org/download
-</pre>
-</p>
-
 <h3>Announce a new mirror</h3>
 <p>
 If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [dot] org
