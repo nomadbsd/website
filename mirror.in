@@ -28,7 +28,7 @@ rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/
 <p>
 If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [dot] org
 </p>
-<h3>Available Mirror</h3>
+<h3>Available Mirrors</h3>
 
 <table style="width:100%">
 	<tr>
@@ -38,6 +38,10 @@ If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [
 	<tr>
 		<td>France</td>
 		<td><a href="https://download.nomadbsd.nosheep.fr">https://download.nomadbsd.nosheep.fr</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd">https://ftp.fau.de/nomadbsd</a></td>
 	</tr>
 </table>
 
