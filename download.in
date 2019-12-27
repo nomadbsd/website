@@ -79,78 +79,292 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 <br/>
 <br/>
 <h3>Download</h3>
+<a name="1.3amd64"></a>
+<h4>NomadBSD 1.3 (amd64)</h4>
 <table style="width:100%">
 	<tr>
-		<th>Version</th>
+		<th>Location</th>
 		<th>Image</th>
 		<th>Checksum (lzma)</th>
 		<th>Checksum (image)</th>
 		<th>Manifest</th>
 	</tr>
 	<tr>
-		<td>1.3 (amd64)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.3 (Mac)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.mac.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.mac.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>1.3 (i386)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.3.i386.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>rr130c190919 (amd64)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>rr130c190919 (Mac)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>rr130c190919 (i386)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>1.2 (amd64)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>1.2 (Mac)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.mac.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>1.2 (i386)</td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma">Download</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
-		<td><a href="http://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.manifest">MANIFEST</a></td>
 	</tr>
 </table>
-
+<a name="1.3i386"></a>
+<h4>NomadBSD 1.3 (i386)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.i386.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.i386.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.i386.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="1.3mac"></a>
+<h4>NomadBSD 1.3 (mac)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="rr2019999amd64"></a>
+<h4>NomadBSD rr2019999 (amd64)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr2019999.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-rr2019999.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="rr2019999i386"></a>
+<h4>NomadBSD rr2019999 (i386)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr2019999.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-rr2019999.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="rr2019999mac"></a>
+<h4>NomadBSD rr2019999 (mac)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr2019999.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-rr2019999.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-rr2019999.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-rr2019999.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="1.2amd64"></a>
+<h4>NomadBSD 1.2 (amd64)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="1.2i386"></a>
+<h4>NomadBSD 1.2 (i386)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="1.2mac"></a>
+<h4>NomadBSD 1.2 (mac)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
+	</tr>
+</table>
 CONTENT_END
-
