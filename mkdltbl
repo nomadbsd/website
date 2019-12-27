@@ -1,0 +1,64 @@
+#!/usr/bin/env perl
+#
+# Create a table of images, checksums, and manifest files from
+# the mirror list ("mirrors"), and the version list ("versions").
+#
+
+my $mainsite = "https://nomadbsd.org/download";
+
+open(my $fh, '<', 'mirrors')
+	or die("Couldn't open mirror list: $!");
+my @mirrors = <$fh>;
+close($fh);
+
+open($fh, '<', 'versions')
+	or die("Couldn't open version list: $!");
+
+foreach $image_version (<$fh>) {
+	chomp($image_version);
+	next if ($image_version =~ /^$/);
+	foreach my $arch (('amd64', 'i386', 'mac')) {
+		print(qq(<a name="${image_version}${arch}"></a>\n));
+		print(qq(<h4>NomadBSD $image_version ($arch)</h4>\n));
+		print(qq(<table style="width:100%">\n));
+		print(qq(\t<tr>\n));
+		print(qq(\t\t<th>Location</th>\n));
+		print(qq(\t\t<th>Image</th>\n));
+		print(qq(\t\t<th>Checksum (lzma)</th>\n));
+		print(qq(\t\t<th>Checksum (image)</th>\n));
+		print(qq(\t\t<th>Manifest</th>\n));
+		print(qq(\t</tr>\n));
+
+		foreach (@mirrors) {
+			chomp;
+			next if (/^#/);
+			next if (!/^([^\t]+)\t+([^\t]+)/);
+			$url	  = $2;
+			$location = $1;
+			my $image;
+
+			$image = "nomadbsd-$image_version";
+			$lzma_chksum  = "$mainsite/$image.img.lzma.sha256";
+			$image_chksum = "$mainsite/$image.img.sha256";
+			if ($arch eq 'i386' and $image_version * 10 >= 13) {
+				$manifest_url = "$url/nomadbsd-$image_version.i386.manifest";
+			} else {
+				$manifest_url = "$url/nomadbsd-$image_version.manifest";
+			}
+			if ($arch eq 'amd64') {
+				$image .= ".img.lzma";
+			} else {
+				$image .= ".$arch.img.lzma";
+			}
+			print(qq(\t<tr>\n));
+			print(qq(\t\t<td>$location</td>\n));
+			print(qq(\t\t<td><a href="$url/$image">Download</a></td>\n));
+			print(qq(\t\t<td><a href="$lzma_chksum">SHA256</a></td>\n));
+			print(qq(\t\t<td><a href="$image_chksum">SHA256</a></td>\n));
+			print(qq(\t\t<td><a href="$manifest_url">MANIFEST</a></td>\n));
+			print(qq(\t</tr>\n));
+		}
+		print(qq(</table>\n));
+	}
+}
+

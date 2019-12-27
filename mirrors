@@ -1,0 +1,9 @@
+#
+# List of mirrors, sorted alphabetically.
+# Format:
+# Location<one or more tabs>URL
+#
+Main site	https://nomadbsd.org/download
+France		https://download.nomadbsd.nosheep.fr
+Germany		https://ftp.fau.de/nomadbsd
+
