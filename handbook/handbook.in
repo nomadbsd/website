@@ -3,7 +3,6 @@ ID=handbook
 FLATTR=no
 <link rel="shortcut icon" href="/favicon.ico">
 CONTENT_START
-
 <h1>NomadBSD Handbooklet</h1>
 
 <h2>Content</h2>
@@ -13,11 +12,15 @@ CONTENT_START
 <li><a href="#installation">Installation</a>
 <ol>
 <li><a href="#choosemedia">Choosing a USB flash drive</a></li>
-<li><a href="#download">Downloading an writing the image</a></li>
+<li><a href="#download">Downloading and writing the image</a></li>
 </ol></li>
+<li><a href="#firstboot">The NomadBSD setup</a></li>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#keybindings">Key bindings</a></li>
 <li><a href="#autostart">Enable/Disable desktop components, and auto-start programs</a></li>
+<li><a href="#plank">Adding applications to the <em>plank</em> panel</a></li>
+<li><a href="#dmconfig">Display manager settings: Auto login, default user, and theme</a></li>
+<li><a href="#adduser">Adding a preconfigured user account</a></li>
 <li><a href="#filesystems">Filesystem</a>
 <ol>
 <li><a href="#automount">Automount</a></li>
@@ -31,10 +34,18 @@ CONTENT_START
 <ol>
 <li><a href="#wifi">Wireless Networking</a></li>
 </ol></li>
+<li><a href="#grafics">Graphics</a>
+<ol>
 <li><a href="#multihead">Multihead setup</a></li>
+<li><a href="#displaysettings">Changing display settings</a></li>
+</ol></li>
+<li><a href="#sound">Sound</a>
+<ol>
+<li><a href="#defaultaudio">Selecting the default audio device</a></li>
+</ol></li>
 <li><a href="#advanced">Advanced Topics</a>
 <ol>
-<li><a href="#reset">Resetting NomandBSD</a>
+<li><a href="#reset">Resetting NomadBSD</a>
 <ol>
 <li><a href="#reset_limits">Limitations</a></li>
 </ol></li>
@@ -42,6 +53,7 @@ CONTENT_START
 <li><a href="#disableinitgfx">Disabling automatic graphics driver setup</a></li>
 <li><a href="#hddinstall">Installing NomadBSD on a hard disk</a></li>
 <li><a href="#vbox">Running NomadBSD in VirtualBox<sup>™</sup></a></li>
+<li><a href="#linuxpkg">Installing Linux<sup>®</sup> packages</a></li>
 </ol></li>
 <li><a href="#troubleshooting">Troubleshooting</a>
 <ol>
@@ -50,6 +62,7 @@ CONTENT_START
 <ol>
 <li><a href="#ts_ati_amd">ATI/AMD</a></li>
 <li><a href="#ts_nvidia">NVIDIA</a></li>
+<li><a href="#efifb">Distorted/squished EFI framebuffer screen</a></li>
 </ol></li>
 </ol></li>
 </ol>
@@ -80,6 +93,16 @@ and drug stores. These drives are very slow and unreliable.</p>
 
 <p>Instructions for writing the image to a flash drive from different operating
 systems can be found <a href="http://nomadbsd.org/download.html">here</a>.</p>
+
+<p><a name="firstboot"></a></p>
+
+<h2>The NomadBSD setup</h2>
+
+<p>When you boot NomadBSD for the first time, it will run the setup wizard which
+allows you to set your locale, timezone, keyboard settings, password,
+encryption, and default applications. The setup creates a new partition for
+the <code>/home</code> directory which uses the remaining space on the storage device.
+Depending on the size, creating the file system can take several minutes.</p>
 
 <p><a name="overview"></a></p>
 
@@ -120,11 +143,23 @@ multimedia programs.</li>
 <li>Open DSBExec to execute a command.</li>
 </ul>
 
+<p><code>&lt;Ctrl&gt;+&lt;Alt&gt;+L</code></p>
+
+<ul>
+<li>Lock the screen.</li>
+</ul>
+
 <p><code>&lt;Ctrl&gt;+&lt;Space&gt;</code></p>
 
 <ul>
 <li>Open <a href="https://www.freshports.org/x11/dmenu/">dmenu-run</a> to execute a
 command.</li>
+</ul>
+
+<p><code>&lt;Print&gt;</code></p>
+
+<ul>
+<li>Open XFCE 4 screenshooter.</li>
 </ul>
 
 <p><a name="autostart"></a></p>
@@ -137,7 +172,38 @@ programs are automatically executed when the graphical interface starts.
 Further, it allows you to enable/disable some components of the NomadBSD
 desktop. The changes take place after logging out and in again.</p>
 
-<p><img src="images/dsbautostart-screenshot.png" alt="" title="" /></p>
+<p><img src="images/dsbautostart-screenshot.png" alt="" title="" />
+<a name="plank"></a></p>
+
+<h2>Adding applications to the <em>plank</em> panel</h2>
+
+<p>Open your prefered graphical file manager, and navigate to <code>/usr/local/share/applications</code>.
+You can also get there by clicking the shortcut <em>Applications</em> on the side pane.
+Use Drag&amp;Drop to add application icons to the <em>plank</em> panel.</p>
+
+<p><a name="dmconfig"></a></p>
+
+<h2>Display manager settings: Auto login, default user, and theme</h2>
+
+<p>The display manager, <a href="https://freshports.org/x11/slim">Slim</a>, used by NomadBSD
+is configured to automatically log in the default user <em>nomad</em>. The program
+<em>nomadbsd-dmconfig</em> (<a href="#overview">Openbox menu</a> -> <em>Settings</em> -> <em>Display manager settings</em>)
+allows you to change/disable the default user, and to enable/disable auto login.
+Futhermore, it lets you change the theme. If you want to add a new theme, copy
+the theme's directory to <em>/usr/local/share/slim/themes/</em>. To see a preview
+in <em>nomadbsd-dmconfig</em> copy a screenshot of the login screen to
+<em>/usr/local/share/slim/themes/your-theme-name/preview.png</em>.</p>
+
+<p><img src="images/nomadbsd-dmconfig-screenshot.png" alt="" title="" />
+<a name="adduser"></a></p>
+
+<h2>Adding a preconfigured user account</h2>
+
+<p>If you want to add a further preconfigured user account use
+<em>nomadbsd-adduser</em> (<a href="#overview">Openbox menu</a> -> <em>System</em> -> <em>Add user</em>).
+Since NomadBSD is configured to automatically log in the user <em>nomad</em> you
+need to change that behaviour in order to be able to log in as another
+user. See <a href="#dmconfig"><em>nomadbsd-dmconfig</em></a>.</p>
 
 <p><a name="filesystems"></a></p>
 
@@ -206,15 +272,42 @@ ReiserFS, and XFS support.</p>
 (<a href="#overview">Openbox menu</a> -> <em>Network</em> -> <em>WiFi Networks Manager</em>) allows
 you to connect to a wireless network.</p>
 
+<p><a name="graphics"></a></p>
+
+<h2>Graphics</h2>
+
 <p><a name="multihead"></a></p>
 
-<h2>Multihead setup</h2>
+<h3>Multihead setup</h3>
 
 <p>By default, NomadBSD enables all connected outputs (monitors). The tool
 <a href="http://freshports.org/x11/arandr">ArandR</a>
 (<a href="#overview">Openbox menu</a>-> <em>Settings</em> -> <em>ArandR</em>) allows you to configure
 the position, resolution, etc. of your monitors. Save your changes to
 <code>~/.screenlayout/default.sh</code> which is automatically executed on session start.</p>
+
+<p><a name="displaysettings"></a></p>
+
+<h3>Changing display settings</h3>
+
+<p>The program (<a href="#overview">Openbox menu</a>-> <em>Settings</em> -> <em>DSBDisplaySettings</em>)
+allows you to change the brightness, gamma, screen mode, display power management
+(DPMS) settings, etc.</p>
+
+<p><img src="images/dsbdisplaysettings-screenshot.png" alt="" title="" /></p>
+
+<p><a name="sound"></a></p>
+
+<h2>Sound</h2>
+
+<p><a name="defaultaudio"></a></p>
+
+<h3>Selecting the default audio device</h3>
+
+<p>Right-click on the speaker/volume indicator icon in the panel, and choose
+<em>Preferences</em> from the menu. In the preferences window go to the
+<em>Default device</em> tab, select the sound card/device, and click on <em>Ok</em>. 
+In order to take effect make sure to restart your audio application(s).</p>
 
 <p><a name="advanced"></a></p>
 
@@ -304,6 +397,20 @@ choose <em>nomadbsd.vmdk</em> which we created in 3.
 processors to 2.</li>
 </ol>
 
+<p><a href="linuxpkg"></a></p>
+
+<h2>Installing Linux<sup>®</sup> packages</h2>
+
+<p>Before you can install Linux<sup>®</sup> packages it is necessary to enable
+<a href="https://www.freebsd.org/doc/handbook/linuxemu-lbc-install.html">Linux<sup>®</sup> binary compatibility</a>.
+Let's say you want to install <a href="https://freshports.org/editors/linux-sublime">linux-sublime</a>
+you can proceed as follows:</p>
+
+<pre><code># kldload linux
+# sysrc linux_enable=YES
+# pkg install linux-sublime
+</code></pre>
+
 <p><a name="troubleshooting"></a></p>
 
 <h2>Troubleshooting</h2>
@@ -313,7 +420,7 @@ processors to 2.</li>
 <h3>Errata</h3>
 
 <p>If you experience any problems, consult the
-<a href="http://nomadbsd.org/download/errata-1.2.txt">NomadBSD Errata</a> first.
+<strike><a href="http://nomadbsd.org/download/errata-1.2.txt">NomadBSD Errata</a></strike> first.
 <a name="ts_graphics"></a></p>
 
 <h3>Graphics</h3>
@@ -350,4 +457,28 @@ number.</li>
 <p>If you see an error message like <code>device_attach: nvidia0 attach returned 6</code>
 you could try to add <code>debug.acpi.disabled="sysres"</code> to <code>/boot/loader.conf</code>.</p>
 
+<p><a name="efifb"></a></p>
+
+<h4>Distorted/squished EFI framebuffer screen</h4>
+
+<p>If you happend to see that the screen content seems to be <em>squished</em> into
+the upper 1/3 of your monitor you can try the following:</p>
+
+<ol>
+<li>Reboot, and then enter the loader prompt by pressing <code>3</code> at the boot menu.</li>
+<li>Type:
+<pre>
+set gop 0
+boot
+</pre></li>
+</ol>
+
+<p>If that didn't solve the problem, enter the loader prompt as described above,
+and type <code>list gop</code> to see a list of supported modes. According to the list
+try another mode number for the <code>set gop</code> command in 2.). If you found a mode
+that resolves the problem, you can save that setting by adding the line
+<code>exec="set gop X"</code> to <code>/boot/loader.conf</code>, where <code>X</code> is the mode number.</p>
+
+<p>Another way to solve this problem is to boot your system in legacy mode.
+Consult your EFI/BIOS manual.</p>
 CONTENT_END
