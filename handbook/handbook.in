@@ -177,7 +177,7 @@ desktop. The changes take place after logging out and in again.</p>
 
 <h2>Adding applications to the <em>plank</em> panel</h2>
 
-<p>Open your prefered graphical file manager, and navigate to <code>/usr/local/share/applications</code>.
+<p>Open your preferred graphical file manager, and navigate to <code>/usr/local/share/applications</code>.
 You can also get there by clicking the shortcut <em>Applications</em> on the side pane.
 Use Drag&amp;Drop to add application icons to the <em>plank</em> panel.</p>
 
@@ -189,7 +189,7 @@ Use Drag&amp;Drop to add application icons to the <em>plank</em> panel.</p>
 is configured to automatically log in the default user <em>nomad</em>. The program
 <em>nomadbsd-dmconfig</em> (<a href="#overview">Openbox menu</a> -> <em>Settings</em> -> <em>Display manager settings</em>)
 allows you to change/disable the default user, and to enable/disable auto login.
-Futhermore, it lets you change the theme. If you want to add a new theme, copy
+Furthermore, it lets you change the theme. If you want to add a new theme, copy
 the theme's directory to <em>/usr/local/share/slim/themes/</em>. To see a preview
 in <em>nomadbsd-dmconfig</em> copy a screenshot of the login screen to
 <em>/usr/local/share/slim/themes/your-theme-name/preview.png</em>.</p>
@@ -383,7 +383,7 @@ follow the instructions.</p>
 <ol>
 <li><a href="http://nomadbsd.org/download.html">Download and extract</a> an image you intend to run.</li>
 <li>NomadBSD will use the remaining space on a USB flash drive for its <code>/home</code>
-partitition, but since we intend to run it from an image file, we increase the
+partition, but since we intend to run it from an image file, we increase the
 (potential) size of the image as follows:
 <code>truncate -s +4G nomadbsd-x.y.z.img</code>. If you need more or less extra space, change the
 <code>-s</code> parameter accordingly.</li>
@@ -461,7 +461,7 @@ you could try to add <code>debug.acpi.disabled="sysres"</code> to <code>/boot/lo
 
 <h4>Distorted/squished EFI framebuffer screen</h4>
 
-<p>If you happend to see that the screen content seems to be <em>squished</em> into
+<p>If you happened to see that the screen content seems to be <em>squished</em> into
 the upper 1/3 of your monitor you can try the following:</p>
 
 <ol>
