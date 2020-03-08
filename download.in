@@ -8,8 +8,8 @@ files, as ISO-9660 is a read-only filesystem.
 <br/><br/>
 
 <h3>Writing the image to a USB memory stick</h3>
-The size of the uncompressed image is 3.4GiB (4.7GB Mac), so the capacity of your flash
-drive should be 4GB (5GB Mac) at the minimum.
+The size of the uncompressed image is 4.7GiB, so the capacity of your flash
+drive should be 5GB at the minimum.
 <br/>
 <h4>FreeBSD</h4>
 <pre class="code">
@@ -79,6 +79,123 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 <br/>
 <br/>
 <h3>Download</h3>
+<a name="1.3.1amd64"></a>
+<h4>NomadBSD 1.3.1 (amd64)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Canada</td>
+		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.sha256">SHA256</a></td>
+		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.1.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="1.3.1i386"></a>
+<h4>NomadBSD 1.3.1 (i386)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Canada</td>
+		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.sha256">SHA256</a></td>
+		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.i386.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.i386.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.1.i386.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.1.i386.manifest">MANIFEST</a></td>
+	</tr>
+</table>
+<a name="1.3.1mac"></a>
+<h4>NomadBSD 1.3.1 (mac)</h4>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Image</th>
+		<th>Checksum (lzma)</th>
+		<th>Checksum (image)</th>
+		<th>Manifest</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Canada</td>
+		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.sha256">SHA256</a></td>
+		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.sha256">SHA256</a></td>
+		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.1.mac.img.lzma">Download</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.lzma.sha256">SHA256</a></td>
+		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.sha256">SHA256</a></td>
+		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
+	</tr>
+</table>
 <a name="1.3amd64"></a>
 <h4>NomadBSD 1.3 (amd64)</h4>
 <table style="width:100%">
@@ -311,123 +428,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.lzma.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.sha256">SHA256</a></td>
 		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
-	</tr>
-</table>
-<a name="1.2amd64"></a>
-<h4>NomadBSD 1.2 (amd64)</h4>
-<table style="width:100%">
-	<tr>
-		<th>Location</th>
-		<th>Image</th>
-		<th>Checksum (lzma)</th>
-		<th>Checksum (image)</th>
-		<th>Manifest</th>
-	</tr>
-	<tr>
-		<td>Main site</td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.2.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>France</td>
-		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
-		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Germany</td>
-		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.img.sha256">SHA256</a></td>
-		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-</table>
-<a name="1.2i386"></a>
-<h4>NomadBSD 1.2 (i386)</h4>
-<table style="width:100%">
-	<tr>
-		<th>Location</th>
-		<th>Image</th>
-		<th>Checksum (lzma)</th>
-		<th>Checksum (image)</th>
-		<th>Manifest</th>
-	</tr>
-	<tr>
-		<td>Main site</td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.2.i386.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>France</td>
-		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.i386.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
-		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Germany</td>
-		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.i386.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.i386.img.sha256">SHA256</a></td>
-		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-</table>
-<a name="1.2mac"></a>
-<h4>NomadBSD 1.2 (mac)</h4>
-<table style="width:100%">
-	<tr>
-		<th>Location</th>
-		<th>Image</th>
-		<th>Checksum (lzma)</th>
-		<th>Checksum (image)</th>
-		<th>Manifest</th>
-	</tr>
-	<tr>
-		<td>Main site</td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.2.mac.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>France</td>
-		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.mac.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.sha256">SHA256</a></td>
-		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.2.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Germany</td>
-		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.mac.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.2.mac.img.sha256">SHA256</a></td>
-		<td><a href="https://ftp.fau.de/nomadbsd/nomadbsd-1.2.manifest">MANIFEST</a></td>
 	</tr>
 </table>
 CONTENT_END

@@ -11,20 +11,20 @@ can also be used for data recovery, for educational purposes, or to test
 FreeBSD<sup>®</sup>'s hardware compatibility.
 </p>
 For a list of installed software packages see the
-<a href="download/nomadbsd-1.3.manifest">MANIFEST file</a>.
+<a href="download/nomadbsd-1.3.1.manifest">MANIFEST file</a>.
 </p>
 <h2>Requirements</h2>
 <p>
-The images for 64-bit and 32-bit computers fit on a 4GB USB flash drive.
-The 64-bit Mac<sup>®</sup> image requires 5GB. A system with a 1.2GHz CPU and 1G of RAM
-should be able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
+The images for 64-bit and 32-bit computers fit on a >=5GB USB flash drive.
+A system with a 1.2GHz CPU and 1G of RAM should be able to run NomadBSD decently.
+Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	1.3<br/>
+	1.3.1<br/>
 </p>
 <h2>Errata</h2>
-<a href="download/errata-1.2.txt">NomadBSD 1.2 Errata</a>
+n/a
 
 <h2>Development</h2>
 <p>
@@ -45,6 +45,65 @@ mailing list</a> and let us know.
 	<!--(Mozilla Foundation) - feedicons.com, MPL 1.1, https://commons.wikimedia.org/w/index.php?curid=654420 -->
 </a></h2>
 <p class="news">
+<a name="1.3.1"></a>
+<h3>NomadBSD 1.3.1 is now available!</h3>
+<p class="date">2020-03-08</p>
+<p>
+We are pleased to present the release of NomadBSD 1.3.1.
+<h4>Changes since 1.3</h4>
+<ul>
+<li>
+	The base system has been upgraded to FreeBSD 12.1-p2
+</li>
+<li>
+	The automatic network interface setup has been improved. This includes
+	better hardware detection, and support for IPv6.
+</li>
+<li>
+	The NomadBSD image size has exceeded the 4GB mark. A flash drive >= 5GB
+	is now required.
+</li>
+<li>
+	Due to the bigger image size, mail/claws-mail could be replaced by
+	mail/thunderbird.
+</li>
+<li>
+	The NomadBSD setup now locks all kernel module packages to prevent users
+	from running into problems when upgrading their packages.
+</li>
+<li>
+	<i>nomadbsd-chusr</i>, which is a graphical tool for modifying user
+	accounts, has been added.
+</li>
+<li>
+	<i>nomadbsd-sysinfo</i>, which is a shell script to collect
+	information about the running system, has been added.
+</li>
+<li>
+	<i><a href="https://en.wikipedia.org/wiki/Zero-configuration_networking">Zeroconf</a></i>
+	via <i>avahi</i> and <i>mdns</i> has been added.
+</li>
+<li>
+	Czech translations have been added by Martin Orszulik.
+</li>
+<li>
+	French translations have been added by Grégory Reinbold.
+</li>
+<li>
+	Indonesian translations have been added by Andreas Bayu.
+</li>
+<li>
+	Key bindings for taking screenshots (<span class="mono">[Print]</span>),
+	and for locking the screen (<span class="mono">Ctrl + Alt + L</spa>)
+	have been added.
+</li>
+<li>
+	A theme for the lock screen has been added.
+</li>
+<li>
+	Several small tweaks and bug fixes have been added.
+</li>
+</ul>
 <a name="1.3"></a>
 <h3>NomadBSD 1.3 is now available!</h3>
 <p class="date">2019-12-07</p>

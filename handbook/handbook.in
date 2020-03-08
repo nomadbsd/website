@@ -3,6 +3,11 @@ ID=handbook
 FLATTR=no
 <link rel="shortcut icon" href="/favicon.ico">
 CONTENT_START
+<title>NomadBSD Handbooklet</title>
+</head>
+<html>
+<body>
+
 <h1>NomadBSD Handbooklet</h1>
 
 <h2>Content</h2>
@@ -167,7 +172,7 @@ command.</li>
 <h2>Enable/Disable desktop components, and auto-start programs</h2>
 
 <p>The program <a href="http://freshports.org/sysutils/dsbautostart">DSBAutostart</a>
-(<a href="#overview">Openbox menu</a> -> <em>Settings</em> -> <em>DSBAutostart</em>) allows you to control which
+(<a href="#overview">Openbox menu</a> -> <em>Settings</em> -> <em>Autostart Settings</em>) allows you to control which
 programs are automatically executed when the graphical interface starts.
 Further, it allows you to enable/disable some components of the NomadBSD
 desktop. The changes take place after logging out and in again.</p>
@@ -290,7 +295,7 @@ the position, resolution, etc. of your monitors. Save your changes to
 
 <h3>Changing display settings</h3>
 
-<p>The program (<a href="#overview">Openbox menu</a>-> <em>Settings</em> -> <em>DSBDisplaySettings</em>)
+<p>The program (<a href="#overview">Openbox menu</a>-> <em>Settings</em> -> <em>Display Settings</em>)
 allows you to change the brightness, gamma, screen mode, display power management
 (DPMS) settings, etc.</p>
 
