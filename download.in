@@ -97,13 +97,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
 		<td>France</td>
 		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.img.lzma">Download</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.img.lzma.sha256">SHA256</a></td>
@@ -134,13 +127,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.lzma.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.i386.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.i386.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.i386.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
 		<td>France</td>
@@ -175,13 +161,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.mac.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.1.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
 		<td>France</td>
 		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.1.mac.img.lzma">Download</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.1.mac.img.lzma.sha256">SHA256</a></td>
@@ -212,13 +191,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
 		<td>France</td>
@@ -253,13 +225,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.i386.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.i386.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.i386.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.i386.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
 		<td>France</td>
 		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-1.3.i386.img.lzma">Download</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.i386.img.lzma.sha256">SHA256</a></td>
@@ -290,13 +255,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.mac.img.lzma.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.mac.img.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.mac.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-1.3.mac.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-1.3.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
 		<td>France</td>
@@ -331,13 +289,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-rr130c190919.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
 		<td>France</td>
 		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr130c190919.img.lzma">Download</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.img.lzma.sha256">SHA256</a></td>
@@ -370,13 +321,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-rr130c190919.i386.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
 		<td>France</td>
 		<td><a href="https://download.nomadbsd.nosheep.fr/nomadbsd-rr130c190919.i386.img.lzma">Download</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.i386.img.lzma.sha256">SHA256</a></td>
@@ -407,13 +351,6 @@ To write the image to your USB stick, you can use <a href="https://sourceforge.n
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.lzma.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.sha256">SHA256</a></td>
 		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
-	</tr>
-	<tr>
-		<td>Canada</td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-rr130c190919.mac.img.lzma">Download</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.lzma.sha256">SHA256</a></td>
-		<td><a href="https://nomadbsd.org/download/nomadbsd-rr130c190919.mac.img.sha256">SHA256</a></td>
-		<td><a href="https://bsdadmin.com/nomadbsd/nomadbsd-rr130c190919.manifest">MANIFEST</a></td>
 	</tr>
 	<tr>
 		<td>France</td>
