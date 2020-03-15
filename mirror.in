@@ -43,8 +43,11 @@ If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [
 		<td>Germany</td>
 		<td><a href="https://ftp.fau.de/nomadbsd">https://ftp.fau.de/nomadbsd</a></td>
 	</tr>
+	<tr>
+		<td>Russia</td>
+		<td><a href="https://robby.pro/nomadbsd">https://robby.pro/nomadbsd</a></td>
+	</tr>
 </table>
-
 CONTENT_END
 </p>
 
