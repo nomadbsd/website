@@ -62,6 +62,10 @@ while (<FH>) {
 			s/\@TITLE\@/$vars{title}/g;
 			s/\@ID\@/$vars{id}/g;
 			s/\@DATE\@/$date/g;
+			if (/^\@DOWNLOAD_TABLE\@/) {
+				system("./mkdltbl");
+				next;
+			}
 			for (my $x = $_; $x =~ /(^|\s)\#([a-z,A-Z,0-9,-,_]+)/; $_ = $x) {
 				# Replace hash tags with links to hash index
 				my $link =
