@@ -6,9 +6,9 @@ CONTENT_START
 <b>Help fighting the Coronavirus with your computer!</b><br/><br/>
 By running <a href="https://foldingathome.org">Folding@Home</a> you can provide computing power that helps
 to find therapeutics for COVID-19 and other diseases. Please see <a href="https://foldingathome.org/2020/03/15/coronavirus-what-were-doing-and-how-you-can-help-in-simple-terms/">Coronavirus – What we’re doing and how you can help in simple terms</a> for more information. <a href="https://foldingathome.org/alternative-downloads/">The software is available for Linux, Mac, and Windows</a>. If you want
-to run <a href="https://foldingathome.org">Folding@Home</a> on FreeBSD, you can
-use <a href="https://github.com/mrclksr/fah-installer">this script</a> to install it.
-</p>
+to run <a href="https://foldingathome.org">Folding@Home</a> on FreeBSD, install
+the port <a href="https://www.freshports.org/biology/linux-foldingathome">
+biology/linux-foldingathome</a>.</p>
 
 <h2>About</h2>
 <p>
