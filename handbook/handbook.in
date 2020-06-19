@@ -1,13 +1,8 @@
-TITLE=NomadBSD
+TITLE=NomadBSD - Handbooklet
 ID=handbook
 FLATTR=no
 <link rel="shortcut icon" href="/favicon.ico">
 CONTENT_START
-<title>NomadBSD Handbooklet</title>
-</head>
-<html>
-<body>
-
 <h1>NomadBSD Handbooklet</h1>
 
 <h2>Content</h2>
@@ -21,7 +16,11 @@ CONTENT_START
 </ol></li>
 <li><a href="#firstboot">The NomadBSD setup</a></li>
 <li><a href="#overview">Overview</a></li>
-<li><a href="#keybindings">Key bindings</a></li>
+<li><a href="#keybindings">Key bindings</a>
+<ol>
+<li><a href="#globalkeybindings">Global keybindings</a></li>
+<li><a href="#terminalkeybindings">Terminal keybindings</a></li>
+</ol></li>
 <li><a href="#autostart">Enable/Disable desktop components, and auto-start programs</a></li>
 <li><a href="#plank">Adding applications to the <em>plank</em> panel</a></li>
 <li><a href="#dmconfig">Display manager settings: Auto login, default user, and theme</a></li>
@@ -39,7 +38,7 @@ CONTENT_START
 <ol>
 <li><a href="#wifi">Wireless Networking</a></li>
 </ol></li>
-<li><a href="#grafics">Graphics</a>
+<li><a href="#graphics">Graphics</a>
 <ol>
 <li><a href="#multihead">Multihead setup</a></li>
 <li><a href="#displaysettings">Changing display settings</a></li>
@@ -63,11 +62,16 @@ CONTENT_START
 <li><a href="#troubleshooting">Troubleshooting</a>
 <ol>
 <li><a href="#errata">Errata</a></li>
+<li><a href="#ts_boot">Boot process</a>
+<ol>
+<li><a href="#ts_mountroot">The boot process stops at the <em>mountroot</em> prompt</a></li>
+</ol></li>
 <li><a href="#ts_graphics">Graphics</a>
 <ol>
 <li><a href="#ts_ati_amd">ATI/AMD</a></li>
 <li><a href="#ts_nvidia">NVIDIA</a></li>
 <li><a href="#efifb">Distorted/squished EFI framebuffer screen</a></li>
+<li><a href="#hybridgfx">Hybrid Combination/Switchable Graphics</a></li>
 </ol></li>
 </ol></li>
 </ol>
@@ -86,6 +90,8 @@ FreeBSD<sup>®</sup>'s hardware compatibility.</p>
 
 <h2>Installation</h2>
 
+<p><a name="choosemedia"></a></p>
+
 <h3>Choosing a USB flash drive</h3>
 
 <p>NomadBSD performs well on USB 2.X flash drives, but writing many small files
@@ -93,6 +99,8 @@ can be very slow. To improve performance, you should consider using a USB 3.X
 flash drive even on a USB 2.X port, as they tend to be faster. See
 <a href="https://www.anandtech.com/show/4523/usb-30-flash-drive-roundup/6">USB 3.0 Flash Drive Roundup</a>. Do not use cheap no-name thumb drives they sell at super markets
 and drug stores. These drives are very slow and unreliable.</p>
+
+<p><a name="download"></a></p>
 
 <h3>Downloading and writing the image</h3>
 
@@ -142,6 +150,10 @@ multimedia programs.</li>
 
 <h2>Key bindings</h2>
 
+<p><a name="globalkeybindings"></a></p>
+
+<h3>Global keybindings</h3>
+
 <p><code>&lt;Alt&gt;+&lt;F2&gt;</code></p>
 
 <ul>
@@ -165,6 +177,22 @@ command.</li>
 
 <ul>
 <li>Open XFCE 4 screenshooter.</li>
+</ul>
+
+<p><a name="terminalkeybindings"></a></p>
+
+<h3>Terminal keybindings</h3>
+
+<p><code>&lt;Shift&gt;+&lt;Ctrl&gt;+C</code></p>
+
+<ul>
+<li>Copy selected text</li>
+</ul>
+
+<p><code>&lt;Shift&gt;+&lt;Ctrl&gt;+V</code></p>
+
+<ul>
+<li>Paste copied text</li>
 </ul>
 
 <p><a name="autostart"></a></p>
@@ -242,11 +270,21 @@ Rebooting the system, or restarting
 <p>Unfortunately,
 <a href="https://freshports.org/sysutils/fusefs-exfat">sysutils/fusefs-exfat</a>
 requires a license from Microsoft<sup>®</sup>, and so it can't be
-pre-installed. You have to build it yourself by using the ports or the
-<a href="https://github.com/relan/exfat.git">Git repo</a>:</p>
+pre-installed. You have to build it yourself by using the ports:</p>
 
-<pre><code># pkg install autoconf
-# pkg install automake
+<pre><code>    # pkg install autoconf automake
+# mkdir /home/ports
+# ln -s /home/ports /usr
+# svnlite co https://svn.freebsd.org/ports/head/Mk /usr/ports/Mk
+# svnlite co https://svn.freebsd.org/ports/head/Templates /usr/ports/Templates
+    # svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat
+    # cd /tmp/fusefs-exfat
+    # make DISTDIR=/tmp install
+</code></pre>
+
+<p>or the <a href="https://github.com/relan/exfat.git">Git repo</a>:</p>
+
+<pre><code># pkg install autoconf automake
 # git clone https://github.com/relan/exfat.git
 # cd exfat
 # autoreconf --install
@@ -379,6 +417,13 @@ default driver to use by setting <code>initgfx_default</code> to <code>"scfb"</c
 <p>Start <a href="#overview">Openbox menu</a> -> <em>System</em> -> <em>NomadBSD Installer</em> and
 follow the instructions.</p>
 
+<hr />
+
+<p><strong>Note:</strong> The NomadBSD installer will use the entire disk. Installing to a
+single partition is currently not possible.</p>
+
+<hr />
+
 <p><img src="images/installer-screenshot.png" alt="" title="" /></p>
 
 <p><a name="vbox"></a></p>
@@ -402,7 +447,7 @@ choose <em>nomadbsd.vmdk</em> which we created in 3.
 processors to 2.</li>
 </ol>
 
-<p><a href="linuxpkg"></a></p>
+<p><a name="linuxpkg"></a></p>
 
 <h2>Installing Linux<sup>®</sup> packages</h2>
 
@@ -425,7 +470,17 @@ you can proceed as follows:</p>
 <h3>Errata</h3>
 
 <p>If you experience any problems, consult the
-<strike><a href="http://nomadbsd.org/download/errata-1.2.txt">NomadBSD Errata</a></strike> first.
+<strike><a href="http://nomadbsd.org/download/errata-1.2.txt">NomadBSD Errata</a></strike> first.</p>
+
+<p><a name="ts_boot"></a></p>
+
+<h3>Boot problems</h3>
+
+<p><a name="ts_mountroot"></a></p>
+
+<h4>The boot process stops at the <em>mountroot</em> prompt</h4>
+
+<p>If you are using a USB 3.X port, try to use a USB 2.X port instead.
 <a name="ts_graphics"></a></p>
 
 <h3>Graphics</h3>
@@ -486,4 +541,11 @@ that resolves the problem, you can save that setting by adding the line
 
 <p>Another way to solve this problem is to boot your system in legacy mode.
 Consult your EFI/BIOS manual.</p>
+
+<p><a name="hybridgfx"></a></p>
+
+<h4>Hybrid Combination/Switchable Graphics</h4>
+
+<p>NomadBSD doesn't support switchable graphics like <em>Optimus</em> yet. If the
+Xorg server fails to start, disable one of the GPUs in your system's BIOS/UEFI.</p>
 CONTENT_END
