@@ -121,6 +121,7 @@ img {
 #container ul {
 	list-style-position: inside;
 	list-style: square;
+	padding-bottom: 12px;
 }
 
 td.mlink {
