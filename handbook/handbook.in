@@ -54,7 +54,7 @@ CONTENT_START
 <li><a href="#reset_limits">Limitations</a></li>
 </ol></li>
 <li><a href="#disablegfxmenu">Disabling the graphics driver menu</a></li>
-<li><a href="#disableinitgfx">Disabling automatic graphics driver setup</a></li>
+<li><a href="#disableinitgfx">Disabling the automatic graphics driver setup</a></li>
 <li><a href="#hddinstall">Installing NomadBSD on a hard disk</a></li>
 <li><a href="#vbox">Running NomadBSD in VirtualBox<sup>™</sup></a></li>
 <li><a href="#linuxpkg">Installing Linux<sup>®</sup> packages</a></li>
@@ -272,14 +272,14 @@ Rebooting the system, or restarting
 requires a license from Microsoft<sup>®</sup>, and so it can't be
 pre-installed. You have to build it yourself by using the ports:</p>
 
-<pre><code>    # pkg install autoconf automake
+<pre><code># pkg install autoconf automake
 # mkdir /home/ports
 # ln -s /home/ports /usr
 # svnlite co https://svn.freebsd.org/ports/head/Mk /usr/ports/Mk
 # svnlite co https://svn.freebsd.org/ports/head/Templates /usr/ports/Templates
-    # svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat
-    # cd /tmp/fusefs-exfat
-    # make DISTDIR=/tmp install
+# svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat
+# cd /tmp/fusefs-exfat
+# make DISTDIR=/tmp install
 </code></pre>
 
 <p>or the <a href="https://github.com/relan/exfat.git">Git repo</a>:</p>
@@ -403,7 +403,7 @@ default driver to use by setting <code>initgfx_default</code> to <code>"scfb"</c
 
 <p><a name="disableinitgfx"></a></p>
 
-<h3>Disabling automatic graphics driver setup</h3>
+<h3>Disabling the automatic graphics driver setup</h3>
 
 <p>If you want to create your own graphics driver settings, you can disable
 <code>initgfx</code> by adding</p>
