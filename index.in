@@ -19,7 +19,7 @@ can also be used for data recovery, for educational purposes, or to test
 FreeBSD<sup>®</sup>'s hardware compatibility.
 </p>
 For a list of installed software packages see the
-<a href="download/nomadbsd-1.3.1.manifest">MANIFEST file</a>.
+<a href="download/nomadbsd-1.3.2.manifest">MANIFEST file</a>.
 </p>
 <h2>Requirements</h2>
 <p>
@@ -29,7 +29,7 @@ Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	1.3.1<br/>
+	1.3.2<br/>
 </p>
 <h2>Errata</h2>
 n/a
@@ -53,6 +53,82 @@ mailing list</a> and let us know.
 	<!--(Mozilla Foundation) - feedicons.com, MPL 1.1, https://commons.wikimedia.org/w/index.php?curid=654420 -->
 </a></h2>
 <p class="news">
+<a name="1.3.2"></a>
+<h3><a href="#1.3.2">NomadBSD 1.3.2 is now available!</a></h3>
+<p class="date">2020-07-06</p>
+<p>
+We are pleased to present the release of NomadBSD 1.3.2.
+<h4>Changes since 1.3.1</h4>
+<ul>
+<li>
+	The base system has been upgraded to FreeBSD 12.1-p6.
+</li>
+<li>
+	<a href="https://www.freshports.org/sysutils/rtsx-kmod">rtsx-kmod</a>,
+	which is a driver for Realtek card readers,
+	has been added.
+</li>
+<li>
+	The ZFS layout used for installing NomadBSD on a harddisk has been
+	changed to allow beactl to back up the boot environment. Thanks to
+	@maurizio-emmex.
+</li>
+<li>
+	<i>load_iichid</i> has been added. It is a rc-script, which offers the
+	user, via a <i>dialog</i>(1) menu, to load the experimental iichid
+	driver from
+	<a href="https://www.freshports.org/sysutils/iichid">sysutils/iichid</a>
+	if it finds a I2C HID.
+</li>
+<li>
+	<a href="https://www.freshports.org/graphics/intel-backlight">graphics/intel-backlight</a> has been added.
+</li>
+<li>
+	A curses menu has been added, which allows user to acknowledge licenses
+	of certain wireless drivers in order to use them.
+</li>
+<li>
+	A unionfs_maxfiles <span class="code">rc.conf</span> variable has been
+	added. It controls how many files can be opened on the unionfs.
+</li>
+<li>
+	<a href="https://www.freshports.org/graphics/mirage">graphics/mirage</a> has been replaced by <a href="https://www.freshports.org/graphics/viewnior">graphics/viewnior</a>.
+</li>
+<li>
+	A patch from 12-STABLE has been added to the <i>acpi_video</i> module,
+	which sends <i>devd</i> events whenever the brightness was changed.
+</li>
+<li>
+	<i>brightness_listener</i> has been added. It is a tool that listens in
+	the background on devd events for keypresses of screen brightness
+	buttons and shows the current brightness level using <i>dunst</i>(1).
+</li>
+<li>
+	<i>volumecontrol</i> has been added. It is a wrapper around
+	<i>/usr/sbin/mixer</i> to increase, decrease and toggle mute the
+	soundcard and display the current value with <i>dunst</i>(1).
+</li>
+<li>
+	Spanish translations have been added to <i>nomadbsd-adduser</i>.
+	Thanks to Hugo Salgado.
+</li>
+<li>
+	A bug which makes the brigtness keys of the ThinkPad T450 fail has been
+	fixed.
+</li>
+<li>
+	The bwn(4) module was build with <span class="code">BWN_GPL_PHY</span>
+	enabled to build it with N-PHY support, which is needed for BCM43224 and
+	BCM43225 devices.
+</li>
+<li>
+	<a href="https://www.freshports.org/x11-drivers/xf86-input-keyboard">x11-drivers/xf86-input-keyboard</a> and
+	<a href="https://www.freshports.org/x11-drivers/xf86-input-mouse">x11-drivers/xf86-input-mouse</a>
+	have been replaced by
+	<a href="https://www.freshports.org/x11-drivers/xf86-input-libinput">x11-drivers/xf86-input-libinput</a>.
+</li>
+</ul>
+
 <a name="forumcreated"></a>
 <h3><a href="#forumcreated">NomadBSD Forum created</a></h3>
 <p class="date">2020-03-19</p>

@@ -5,6 +5,13 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>NomadBSD 1.3.2 released</title>
+			<link>http://nomadbsd.org/index.html#1.3.2</link>
+			<guid>http://nomadbsd.org/index.html#1.3.2</guid>
+			<pubDate>Mon, 6 Jul 2020 18:20:00 UTC</pubDate>
+			<description>The release of NomadBSD 1.3.2 is now available</description>
+		</item>
+		<item>
 			<title>NomadBSD Forum created</title>
 			<link>http://nomadbsd.org/index.html#forumcreated</link>
 			<guid>http://nomadbsd.org/index.html#forumcreated</guid>
