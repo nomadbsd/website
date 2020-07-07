@@ -6,6 +6,13 @@ use strict;
 
 my %vars;
 my ($rootdir, $url);
+my $freshports_url = "https://freshports.org";
+
+sub mklink {
+	my ($site, $document) = @_;
+	my $url = "$site/$document";
+	return "<a href=\"$url\">$document</a>";
+}
 
 while ($ARGV[0] =~ m/^-/) {
 	if ($ARGV[0] eq "-r") {
@@ -66,6 +73,13 @@ while (<FH>) {
 				system("./mkdltbl");
 				next;
 			}
+			if (/^\@MIRROR_TABLE\@/) {
+				system("./mkmirrortbl");
+				next;
+			}
+			# Replace @PORT@(category/portname) with a link to freshports.org
+			s/\@PORT\@\(([^\)]+)\)/mklink($freshports_url, $1)/eg;
+
 			for (my $x = $_; $x =~ /(^|\s)\#([a-z,A-Z,0-9,-,_]+)/; $_ = $x) {
 				# Replace hash tags with links to hash index
 				my $link =
