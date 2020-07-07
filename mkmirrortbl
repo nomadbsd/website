@@ -1,0 +1,30 @@
+#!/usr/bin/env perl
+#
+# Create a table of mirros
+#
+
+open(my $fh, '<', 'mirrors')
+	or die("Couldn't open mirror list: $!");
+my @mirrors = <$fh>;
+close($fh);
+
+print(qq(<table style="width:100%">\n));
+print(qq(\t<tr>\n));
+print(qq(\t\t<th>Location</th>\n));
+print(qq(\t\t<th>Mirror</th>\n));
+print(qq(\t</tr>\n));
+
+foreach (@mirrors) {
+	chomp;
+	next if (/^#/);
+	next if (!/^([^\t]+)\t+([^\t]+)/);
+	$url	  = $2;
+	$location = $1;
+	print(qq(\t<tr>\n));
+	print(qq(\t\t<td>$location</td>\n));
+	print(qq(\t\t<td><a href="$url">$url</a></td>\n));
+	print(qq(\t</tr>\n));
+}
+
+print(qq(</table>\n));
+
