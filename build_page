@@ -80,6 +80,8 @@ while (<FH>) {
 			# Replace @PORT@(category/portname) with a link to freshports.org
 			s/\@PORT\@\(([^\)]+)\)/mklink($freshports_url, $1)/eg;
 
+			# Replace @CODE@(string) with <span class="code">string</span>
+			s/\@CODE\@\(([^\)]+)\)/<span class="code">$1<\/span>/g;
 			for (my $x = $_; $x =~ /(^|\s)\#([a-z,A-Z,0-9,-,_]+)/; $_ = $x) {
 				# Replace hash tags with links to hash index
 				my $link =
