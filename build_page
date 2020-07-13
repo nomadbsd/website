@@ -84,14 +84,6 @@ while (<FH>) {
 			# Replace @CODE@(string) with <span class="code">string</span>
 			s/\@CODE\@\(([^\)]+)\)/<span class="code">$1<\/span>/g;
 
-			for (my $x = $_; $x =~ /(^|\s)\#([a-z,A-Z,0-9,-,_]+)/; $_ = $x) {
-				# Replace hash tags with links to hash index
-				my $link =
-					qq(<a href="${rootdir}blog/hashindex.html#) . lc($2) .
-					qq(">#$2</a>);
-				$x =~ s/(^|\s)\#([a-z,A-Z,0-9,-,_]+)/$1$link/;
-				$_ = $x;
-			}
 			if (/^\s*LIST_START/) {
 				$in_list++;
 				$_ = "<ul>";
