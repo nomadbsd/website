@@ -111,13 +111,6 @@ while (<FH>) {
 			}
 			print;
 		}
-	} elsif (/\@FLATTR\@/) {
-		next unless ($vars{flattr} =~ m/[yY][eE][sS]/);
-		open(FLATTR, "flattr.hdr") || die "Couldn't open flattr.hdr: $!";
-		while (<FLATTR>) {
-			print;
-		}
-		close(FLATTR);
 	} else {
 		print;
 	}
