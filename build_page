@@ -25,6 +25,7 @@ while ($ARGV[0] =~ m/^-/) {
 $url = $ARGV[0];
 
 my (@content, @head, $date);
+my ($in_list, $in_list_item);
 
 $date = localtime();
 
@@ -82,6 +83,7 @@ while (<FH>) {
 
 			# Replace @CODE@(string) with <span class="code">string</span>
 			s/\@CODE\@\(([^\)]+)\)/<span class="code">$1<\/span>/g;
+
 			for (my $x = $_; $x =~ /(^|\s)\#([a-z,A-Z,0-9,-,_]+)/; $_ = $x) {
 				# Replace hash tags with links to hash index
 				my $link =
@@ -89,6 +91,23 @@ while (<FH>) {
 					qq(">#$2</a>);
 				$x =~ s/(^|\s)\#([a-z,A-Z,0-9,-,_]+)/$1$link/;
 				$_ = $x;
+			}
+			if (/^\s*LIST_START/) {
+				$in_list++;
+				$_ = "<ul>";
+			} elsif (/^\s*LIST_END/) {
+				$in_list--;
+				$_ = "</ul>" . "\n";
+			} elsif ($in_list) {
+				if (/^\s*\*\s(.*)$/) {
+					$in_list_item++;
+					$_ = "<li>" . $1 . "\n";
+				} elsif (/^$/) {
+					if ($in_list_item) {
+						$in_list_item--;
+						$_ = "</li>" . "\n";
+					}
+				}
 			}
 			print;
 		}
