@@ -5,17 +5,24 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>NomadBSD Forum is back</title>
+			<link>https://nomadbsd.org/index.html#1602864508</link>
+			<guid>https://nomadbsd.org/index.html#1602864508</guid>
+			<pubDate>Fri, 16 Oct 2020 16:13:24 UTC</pubDate>
+			<description>The NomadBSD is back. Thank you for your patience.</description>
+		</item>
+		<item>
 			<title>>NomadBSD Forum down for maintenance</title>
 			<link>http://nomadbsd.org/index.html#forum_down</link>
 			<guid>http://nomadbsd.org/index.html#forum_down</guid>
-			<pubDate>Fr, 16 Oct 2020 10:50:00 UTC</pubDate>
+			<pubDate>Fri, 16 Oct 2020 10:50:00 UTC</pubDate>
 			<description>The NomadBSD is currently down for maintenance.</description>
 		</item>
 		<item>
 			<title>NomadBSD 1.3.2 Errata available</title>
 			<link>http://nomadbsd.org/index.html#1.3.2-Errata</link>
 			<guid>http://nomadbsd.org/index.html#1.3.2-Errata</guid>
-			<pubDate>Fr, 16 Oct 2020 10:50:00 UTC</pubDate>
+			<pubDate>Fri, 16 Oct 2020 10:50:00 UTC</pubDate>
 			<description>https://nomadbsd.org/errata-1.3.2.html</description>
 		</item>
 		<item>
