@@ -1,3 +1,5 @@
+#!/bin/sh
+
 get_rootdir() {
 	d=$1
 	while [ $d -gt 0 ]; do
@@ -15,16 +17,15 @@ echo "TARGETS = $targets"
 echo
 echo "all: \${TARGETS}"
 echo
-#printf "index.html: nomadbsd.html\n\tcp \$> \$@\n\n"
 for i in $(echo $sources); do
 	depth=$(echo "$i" | sed 's/[^\/]//g' | wc -c)
 	depth=$(expr $depth - 1)
 	rd=$(get_rootdir $depth)
 	echo ${i%in}html:$i
 	if [ ! -z "$rd" ]; then
-		printf "\tcat $> | ./build_page -r $rd ${i%in}html > \$@";
+		printf "\t./build_page -r $rd ${i%in}html < $i > \$@";
 	else
-		printf "\tcat $> | ./build_page ${i%in}html > \$@";
+		printf "\t./build_page ${i%in}html < $i > \$@";
 	fi
 	echo
 	echo
