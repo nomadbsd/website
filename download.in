@@ -14,7 +14,7 @@ drive should be 5GB at the minimum.
 <h4>FreeBSD</h4>
 <pre class="code">
 # lzma -d nomadbsd-x.y.z.img.lzma
-# dd if=nomadbsd-x.y.z.img of=/dev/daX bs=1m
+# dd if=nomadbsd-x.y.z.img of=/dev/daX bs=1m conv=sync
 </pre>
 or
 <pre class="code">
