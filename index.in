@@ -29,7 +29,7 @@ Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	1.3.2<br/>
+	1.4<br/>
 </p>
 <h2>Errata</h2>
 n/a
@@ -52,7 +52,90 @@ mailing list</a> and let us know.
 	<img src="feedicon.svg" width="36" height="14">
 	<!--(Mozilla Foundation) - feedicons.com, MPL 1.1, https://commons.wikimedia.org/w/index.php?curid=654420 -->
 </a></h2>
+
 <p class="news">
+<a name="1.4"></a>
+<h3><a href="#1.4">NomadBSD 1.4 is now available!</a></h3>
+<p class="date">2021-03-03</p>
+<p>We are pleased to present the release of NomadBSD 1.4.</p>
+<p><strong>Changes since 1.3.2</strong></p>
+<ul>
+<li>The base system has been upgraded to FreeBSD 12.2-p4.</li>
+<li>The installer has been improved.</li>
+<ul>
+	<li> Problems with booting the installed system via UEFI has been fixed.</li>
+	<li> The suitable graphics card driver will now be installed and setup,
+	instead of using the auto-detection on the installed system.</li>
+</ul>
+<li>Automatic graphics driver detection has been improved</li>
+<ul>
+	<li> The menu has been removed.</li>
+	<li> If no better graphics driver could be found, VESA or SCFB is used.</li>
+	<li> Autodetection will now run only if the system configuration
+	changed	since the last successful detection.</li>
+	<li> Autodetection can be disabled via the boot menu in case there
+	is a problem.</li>
+</ul>
+<li>Touchpad support has been improved</li>
+<ul>
+	<li> If Xorg reports a problem with the touchpad,
+	<code>kern.evdev.rcpt_mask</code> is automatically adjusted to use
+	sysmouse.</li>
+	<li> The tool DSBXinput has been added which allows for easy
+	configuration of touchpads and mice.</li>
+</ul>
+<li>An rc-script for saving an restoring the display brightness has been added.</li>
+<li>A GUI for easy installation of the Linux Chrome, Brave and Vivaldi browser has been
+added. They allow to use streaming services like <em>Netflix</em>, <em>Prime Video</em>,
+or <em>Spotify</em>.</li>
+<li>Support for selecting other window managers or desktop environments by pressing
+<code>&lt;F1&gt;</code> in the graphical login manager (<a href="https://www.freshports.org/x11/slim">SLiM</a>)
+has been added.</li>
+<li><a href="https://www.freshports.org/net-mgmt/wifimgr">wifimgr</a> has been replaced by
+<a href="https://www.freshports.org/net-mgmt/networkmgr">NetworkMgr</a>.</li>
+<li>The subsystem for auto-starting applications used by NomadBSD does now conform to the
+<a href="https://specifications.freedesktop.org/autostart-spec/0.5/ar01s02.html">XDG autostart specs</a></li>
+<li>The partition which uses the remaining space is now mounted under <code>/data</code>.</li>
+<li><code>/compat</code>, <code>/var/tmp</code>, <code>/var/db</code>, and <code>/usr/ports</code> are now nullfs mount points for their
+counterparts under <code>/data</code>, so that users don't have to create symlinks for those directories
+anymore.</li>
+<li>Bad news for i386 users: Since <a href="https://www.freshports.org/graphics/drm-legacy-kmod">drm-legacy-kmod</a> is now obsolete, there is
+no i386 support for accelerated graphics for Intel and ATI/AMD cards aymore.</li>
+</ul>
+<a name="1.4-RC1"></a>
+<h3><a href="#1.4-RC1">The first release candidate of NomadBSD 1.4 is now available!</a></h3>
+<p class="date">2021-01-26</p>
+<p>
+We are pleased to present the first release candidate of NomadBSD 1.4.</p>
+<p><strong>Changes since 1.3.2</strong></p>
+<ul>
+<li>The base system has been upgraded to FreeBSD 12.2-p2.</li>
+<li>The installer has been improved.
+<ul>
+<li>Problems with booting the installed system via UEFI has been fixed.</li>
+<li>The suitable graphics card driver will now be installed and setup, instead of using the auto-detection on the installed system.</li>
+</ul></li>
+<li>Automatic graphics driver detection has been improved
+<ul>
+<li>The menu has been removed.</li>
+<li>If no better graphics driver could be found, VESA or SCFB is used.</li>
+<li>Autodetection will now run only if the system configuration changed since the last successful detection.</li>
+</ul></li>
+<li>Touchpad support has been improved
+<ul>
+<li>If Xorg reports a problem with the touchpad, <code>kern.evdev.rcpt_mask</code> is automatically adjusted to use sysmouse.</li>
+<li>The tool DSBXinput has been added which allows for easy configuration of touchpads and mice.</li>
+</ul></li>
+<li>An rc-script for saving an restoring the display brightness has been added.</li>
+<li>A GUI for easy installation of the Linux Chrome and Brave browser has been added. Both browsers allow to use streaming services like <em>Netflix</em>, <em>Prime Video</em>, or <em>Spotify</em>.</li>
+<li>Support for selecting other window managers or desktop environments by pressing <code>&lt;F1&gt;</code> in the graphical login manager (<a href="https://www.freshports.org/x11/slim">SLiM</a>) has been added.</li>
+<li><a href="https://www.freshports.org/net-mgmt/wifimgr">wifimgr</a> has been replaced by <a href="https://www.freshports.org/net-mgmt/networkmgr">NetworkMgr</a>.</li>
+<li>The subsystem for auto-starting applications used by NomadBSD does now conform to the <a href="https://specifications.freedesktop.org/autostart-spec/0.5/ar01s02.html">XDG autostart specs</a></li>
+<li>The partition which uses the remaining space is now mounted under <code>/data</code>.</li>
+<li><code>/compat</code>, <code>/var/tmp</code>, <code>/var/db/freebsd-update</code>, <code>/var/db/portsnap</code>, and <code>/usr/ports</code> are now nullfs mount points for their counterparts under <code>/data</code>, so that users don’t have to create symlinks for those directories anymore.</li>
+<li>Bad news for i386 users: Since <a href="https://www.freshports.org/graphics/drm-legacy-kmod">drm-legacy-kmod</a> is now obsolete, there is no i386 support for accelerated graphics for Intel and ATI/AMD cards anymore.</li>
+</ul>
+</p>
 <a name="1602864508"></a>
 <h3><a href="#1602864508">NomadBSD Forum is back</a></h3>
 <p class="date">2020-10-16</p>

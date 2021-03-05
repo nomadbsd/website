@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# Create a table of mirros
+# Create a table of mirrors
 #
 
 open(my $fh, '<', 'mirrors')
