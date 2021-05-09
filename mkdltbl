@@ -43,7 +43,9 @@ foreach $image_version (<$fh>) {
 			} else {
 				$manifest_url = "$url/nomadbsd-$image_version.manifest";
 			}
-			if ($arch eq 'amd64') {
+			$base_version = $image_version;
+			$base_version =~ s/([0-9]+).*/\1/;
+			if ($arch eq 'amd64' and $base_version < 130) {
 				$lzma_chksum  = "$mainsite/$image.img.lzma.sha256";
 				$image_chksum = "$mainsite/$image.img.sha256";
 				$image .= ".img.lzma";
