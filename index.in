@@ -29,7 +29,7 @@ Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	1.4<br/>
+	130R-20210508<br/>
 </p>
 <h2>Errata</h2>
 n/a
@@ -54,6 +54,26 @@ mailing list</a> and let us know.
 </a></h2>
 
 <p class="news">
+<a name="130R-20210508"></a>
+<h3><a href="#130R-20210508">NomadBSD 130R-20210508 is now available!</a></h3>
+<p class="date">2021-05-11</p>
+<p>We are pleased to present the release of NomadBSD 130R-20210508.</p>
+<p><strong>Changes since 1.4</strong></p>
+<ul>
+<li>
+We've decided to change the versioning scheme to the following form:
+FFfX-YYYYMMDD, where <em>FF</em> is the major two-digit FreeBSD version,
+<em>f</em> is the minor version, and <em>X</em> stands for ALPHA (A),
+BETA (B), RC, or RELEASE (R). Followed by the a date. The new scheme
+allows us to provide images with different version of FreeBSD.
+</li>
+<li>The base system has been upgraded to FreeBSD 13.0-RELEASE.</li>
+<li>The partition alignment has been changed to 1M to improve the write
+speed on flash drives.</li>
+<li>A bug where GLX is disabled has been fixed.</li>
+<li>Drivers for VMware have been added.</li>
+</ul>
+
 <a name="1.4"></a>
 <h3><a href="#1.4">NomadBSD 1.4 is now available!</a></h3>
 <p class="date">2021-03-03</p>
