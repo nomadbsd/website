@@ -49,7 +49,7 @@ foreach $image_version (<$fh>) {
 				$lzma_chksum  = "$mainsite/$image.img.lzma.sha256";
 				$image_chksum = "$mainsite/$image.img.sha256";
 				$image .= ".img.lzma";
-		} else {
+			} else {
 				$lzma_chksum  = "$mainsite/$image.$arch.img.lzma.sha256";
 				$image_chksum = "$mainsite/$image.$arch.img.sha256";
 				$image .= ".$arch.img.lzma";
