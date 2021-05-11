@@ -64,7 +64,7 @@ mailing list</a> and let us know.
 We've decided to change the versioning scheme to the following form:
 FFfX-YYYYMMDD, where <em>FF</em> is the major two-digit FreeBSD version,
 <em>f</em> is the minor version, and <em>X</em> stands for ALPHA (A),
-BETA (B), RC, or RELEASE (R). Followed by the a date. The new scheme
+BETA (B), RC, or RELEASE (R). Followed by a date. The new scheme
 allows us to provide images with different version of FreeBSD.
 </li>
 <li>The base system has been upgraded to FreeBSD 13.0-RELEASE.</li>
