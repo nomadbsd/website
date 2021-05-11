@@ -5,6 +5,27 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>NomadBSD 130R-20210508 released</title>
+			<link>http://nomadbsd.org/index.html#130R-20210508</link>
+			<guid>http://nomadbsd.org/index.html#130R-20210508</guid>
+			<pubDate>Tue, 11 May 2021 17:30:00 UTC</pubDate>
+			<description>The release of NomadBSD 130R-20210508 is now available</description>
+		</item>
+		<item>
+			<title>NomadBSD 1.4 released</title>
+			<link>http://nomadbsd.org/index.html#1.4</link>
+			<guid>http://nomadbsd.org/index.html#1.4</guid>
+			<pubDate>Wed, 03 Mar 2021 16:00:00 UTC</pubDate>
+			<description>The release of NomadBSD 1.4 is now available</description>
+		</item>
+		<item>
+			<title>NomadBSD 1.4 RC1 released</title>
+			<link>http://nomadbsd.org/index.html#1.4-RC1</link>
+			<guid>http://nomadbsd.org/index.html#1.4-RC1</guid>
+			<pubDate>Tue, 26 Jan 2021 17:04:00 UTC</pubDate>
+			<description>The first release candidate of NomadBSD 1.4 is now available</description>
+		</item>
+		<item>
 			<title>NomadBSD Forum is back</title>
 			<link>https://nomadbsd.org/index.html#1602864508</link>
 			<guid>https://nomadbsd.org/index.html#1602864508</guid>
@@ -12,7 +33,7 @@
 			<description>The NomadBSD is back. Thank you for your patience.</description>
 		</item>
 		<item>
-			<title>>NomadBSD Forum down for maintenance</title>
+			<title>NomadBSD Forum down for maintenance</title>
 			<link>http://nomadbsd.org/index.html#forum_down</link>
 			<guid>http://nomadbsd.org/index.html#forum_down</guid>
 			<pubDate>Fri, 16 Oct 2020 10:50:00 UTC</pubDate>
