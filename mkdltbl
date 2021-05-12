@@ -38,13 +38,17 @@ foreach $image_version (<$fh>) {
 			my $image;
 
 			$image = "nomadbsd-$image_version";
-			if ($arch eq 'i386' and $image_version * 10 >= 13) {
-				$manifest_url = "$url/nomadbsd-$image_version.i386.manifest";
-			} else {
-				$manifest_url = "$url/nomadbsd-$image_version.manifest";
-			}
 			$base_version = $image_version;
 			$base_version =~ s/([0-9]+).*/\1/;
+			if ($base_version < 130) {
+				if ($arch eq 'i386' and $image_version * 10 >= 13) {
+					$manifest_url = "$url/nomadbsd-$image_version.i386.manifest";
+				} else {
+					$manifest_url = "$url/nomadbsd-$image_version.manifest";
+				}
+			} else {
+				$manifest_url = "$url/nomadbsd-$image_version.$arch.manifest";
+			}
 			if ($arch eq 'amd64' and $base_version < 130) {
 				$lzma_chksum  = "$mainsite/$image.img.lzma.sha256";
 				$image_chksum = "$mainsite/$image.img.sha256";
