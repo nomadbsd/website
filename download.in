@@ -7,6 +7,12 @@ Since NomadBSD is designed to be a persistent system, we do not provide ISO
 files, as ISO-9660 is a read-only filesystem.
 <br/><br/>
 
+<h3>Architecture</h3>
+<ul>
+	<li>For AMD and Intel 64-bit systems, use the amd64 image.</li>
+	<li>For AMD and Intel 32-bit systems, use the i386 image.</li>
+</ul>
+
 <h3>Writing the image to a USB memory stick</h3>
 The size of the uncompressed image is 4.7GiB, so the capacity of your flash
 drive should be 5GB at the minimum.

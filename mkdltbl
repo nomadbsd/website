@@ -19,7 +19,14 @@ foreach $image_version (<$fh>) {
 	next if ($image_version =~ /^$/);
 	foreach my $arch (('amd64', 'i386', 'mac')) {
 		print(qq(<a name="${image_version}${arch}"></a>\n));
-		print(qq(<h4>NomadBSD $image_version ($arch)</h4>\n));
+		if ($arch eq 'amd64') {
+			$arch_str = '64-bit/x86-64/amd64';
+		} elsif ($arch eq 'i386') {
+			$arch_str = '32-bit/IA-32/i386';
+		} else {
+			$arch_str = 'Mac x86-64';
+		}
+		print(qq(<h4>NomadBSD $image_version ($arch_str)</h4>\n));
 		print(qq(<table style="width:100%">\n));
 		print(qq(\t<tr>\n));
 		print(qq(\t\t<th>Location</th>\n));
