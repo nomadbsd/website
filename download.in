@@ -81,10 +81,9 @@ or
 <br/><br/>
 <h4>Windows</h4>
 You can uncompress the image using <a href="https://www.7-zip.org/">7-Zip</a>.
-To write the image to your USB stick, you can use <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a> or <a href="https://rufus.ie/">Rufus</a>.
+To write the image to your USB stick, you can use <a href="https://www.balena.io/etcher/">balenaEtcher</a>, <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>, or <a href="https://rufus.ie/">Rufus</a>.
 <br/>
 <br/>
 <h3>Download</h3>
-
 @DOWNLOAD_TABLE@
 CONTENT_END
