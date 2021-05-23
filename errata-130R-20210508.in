@@ -1,0 +1,36 @@
+TITLE=NomadBSD 130R-20210508 Errata
+ID=Errata
+CONTENT_START
+<p>
+<h2>NomadBSD 130R-20210508 Errata</h2>
+
+<h3>HDD/SSD installed NomadBSD doesn't start the GUI on systems which require
+nvidia-driver &gt; 390</h3>
+<p>
+<h4>Description</h4>
+Due to the version upgrade from 440 to 460 of @PORT@(x11/nvidia-driver),
+the NomadBSD installer fails to install nvidia-driver-440.
+<h4>Solution</h4>
+Install @PORT@(x11/nvidia-driver) and make the modules load via
+<span class="mono">/etc/rc.conf</span>:
+<pre class="code">
+# pkg install x11/nvidia-driver
+# sysrc kld_list+=" /boot/modules/nvidia-modeset.ko /boot/modules/nvidia.ko"
+# sysrc initgfx_enable=NO
+</pre>
+If the file <span class="mono">
+/usr/local/etc/X11/xorg.conf.d/00-video-initgfx.conf</span> does not
+exist, or doesn't contain the line <span class="mono">Driver "nvidia"</span>,
+create the file with the following content:
+<pre class="code">
+Section "Device"
+    Identifier    "NVIDIA CARD"
+    VendorName    "NVIDIA Corporation"
+    Driver        "nvidia"
+EndSection
+</pre>
+
+After a reboot the GUI should start.
+</p>
+CONTENT_END
+
