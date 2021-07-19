@@ -4,6 +4,37 @@ CONTENT_START
 <p>
 <h2>NomadBSD 130R-20210508 Errata</h2>
 
+<h3>Package upgrade breaks autostart of applications</h3>
+<p>
+<h4>Description</h4>
+DSBAutostart creates desktop files for autostarting programs. The desktop
+files are read and executed by a script which is part of Openbox. This script
+uses the Python module @PORT@(devel/py-xdg). Due to the Python upgrade the
+package name changed from py37-xdg to py38-xdg.
+
+<h4>Solution</h4>
+Install py38-xdg:
+
+<pre class="code">
+# pkg install py38-xdg
+</pre>
+</p>
+
+<h3>Python upgrade breaks dsbxinput and nomadbsd-chusr</h3>
+<p>
+<h4>Description</h4>
+Due to the upgrade of Python, the Qt5 python module packages changed from
+py37-qt5-* to py38-qt5-*. This breaks dsbxinput and nomadbsd-chusr.
+
+<h4>Solution</h4>
+Change the shebang of dsbxinput and nomadbsd-chusr:
+
+<pre class="code">
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/dsbxinput
+# sed -i '' 's/python3.7/python3.8/' /usr/bin/nomadbsd-chusr
+</pre>
+</p>
+
 <h3>HDD/SSD installed NomadBSD doesn't start the GUI on systems which require
 nvidia-driver &gt; 390</h3>
 <p>
