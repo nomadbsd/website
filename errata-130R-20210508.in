@@ -24,7 +24,8 @@ Install py38-xdg:
 <p>
 <h4>Description</h4>
 Due to the upgrade of Python, the Qt5 python module packages changed from
-py37-qt5-* to py38-qt5-*. This breaks dsbxinput, nomadbsd-chusr, and lbi-gui.
+py37-qt5-* to py38-qt5-*. This breaks dsbxinput, nomadbsd-chusr, lbi-gui,
+and ipfwGUI.
 
 <h4>Solution</h4>
 Change the shebang of dsbxinput and nomadbsd-chusr:
@@ -33,6 +34,7 @@ Change the shebang of dsbxinput and nomadbsd-chusr:
 # sed -i '' 's/python3.7/python3.8/' /usr/local/bin/dsbxinput
 # sed -i '' 's/python3.7/python3.8/' /usr/local/bin/lbi-gui
 # sed -i '' 's/python3.7/python3.8/' /usr/bin/nomadbsd-chusr
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/ipfwGUI
 </pre>
 </p>
 
