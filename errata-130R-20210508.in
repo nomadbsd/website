@@ -4,6 +4,19 @@ CONTENT_START
 <p>
 <h2>NomadBSD 130R-20210508 Errata</h2>
 
+<h3>pkg upgrade: e2fsprogs-nobootfsck-1.46.4_1 conflicts with e2fsprogs-1.46.2</h3>
+<p>
+<h4>Description</h4>
+The package @PORT@(sysutils/e2fsprogs) now has the nobootfsck FLAVOR enabled (e2fsprogs-nobootfsck). This results in a conflict when trying to upgrade the locked @PORT@(sysutils/e2fsprogs) package.
+
+<h4>Solution</h4>
+Unlock the package, and continue with the upgrade.
+<pre class="code">
+# pkg unlock -y e2fsprogs
+# pkg upgrade
+</pre>
+</p>
+
 <h3>Package upgrade breaks autostart of applications</h3>
 <p>
 <h4>Description</h4>
