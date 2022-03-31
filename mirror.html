@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- 
+	vim: set tabstop=4:
+-->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<link rel="stylesheet" href="style.css" content="text/css" media="screen"/>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+	<title>How to mirror</title>
+	<link rel="alternate" type="application/rss+xml" title="NomadBSD news" href="http://nomadbsd.org/rss.xml"/>
+</head>
+<body id="mirror" >
+	<div id="header"></div>
+	<div id="navbar">
+		<ul>
+			<li id="navHome"><a href="index.html">Home</a></li>
+		</ul>
+		<ul>
+			<li id="navHandbook"><a href="handbook/handbook.html">Handbook</a></li>
+		</ul>
+		<ul>
+			<li id="navDownload"><a href="download.html">Download</a></li>
+		</ul>
+		<ul>
+			<li id="navScreenshots"><a href="screenshots.html">Screenshots</a></li>
+		</ul>
+		<ul>
+			<li id="navTeam"><a href="team.html">Team</a></li>
+		</ul>
+		<ul>
+			<li id="navContact"><a href="contact.html">Contact</a></li>
+		</ul>
+		<ul>
+			<li id="navMirror"><a href="mirror.html">Mirror</a></li>
+		</ul>
+	</div>
+	<div id="container">
+<p>
+<h2>How to mirror NomadBSD</h2>
+
+<h3>What to mirror</h3>
+<p>
+rsync.nomadbsd.org::nomadbsd/
+</p>
+
+<h3>Expected mirror size</h3>
+<p>
+The mirror won't require more than 50GB.
+</p>
+
+<h3>Mirror update frequency</h3>
+<p>
+Once a day
+</p>
+
+<h3>How to mirror</h3>
+<p>
+<pre class="code">
+rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/
+</pre>
+<h3>Announce a new mirror</h3>
+<p>
+If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [dot] org
+</p>
+<h3>Available Mirrors</h3>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Mirror</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a href="https://nomadbsd.org/download">https://nomadbsd.org/download</a></td>
+	</tr>
+	<tr>
+		<td>Brazil</td>
+		<td><a href="http://mirror.facom.ufms.br/nomadbsd">http://mirror.facom.ufms.br/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>Canada</td>
+		<td><a href="https://bsdadmin.com/nomadbsd">https://bsdadmin.com/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>England (London)</td>
+		<td><a href="http://lon.mirror.splise.net/nomadbsd">http://lon.mirror.splise.net/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://download.nomadbsd.nosheep.fr">https://download.nomadbsd.nosheep.fr</a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a href="https://elgrande74.net/nomadbsd">https://elgrande74.net/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a href="https://ftp.fau.de/nomadbsd">https://ftp.fau.de/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>Netherlands</td>
+		<td><a href="https://nomadbsd.emaus.it">https://nomadbsd.emaus.it</a></td>
+	</tr>
+	<tr>
+		<td>Singapore (SG)</td>
+		<td><a href="http://sin.mirror.splise.net/nomadbsd">http://sin.mirror.splise.net/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>Sweden</td>
+		<td><a href="https://ftpmirror2.infania.net/nomadbsd">https://ftpmirror2.infania.net/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>USA (Kentucky)</td>
+		<td><a href="https://mirror2.sandyriver.net/pub/nomadbsd">https://mirror2.sandyriver.net/pub/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>USA (New York)</td>
+		<td><a href="http://nyc.mirror.splise.net/nomadbsd">http://nyc.mirror.splise.net/nomadbsd</a></td>
+	</tr>
+	<tr>
+		<td>USA (San Francisco) </td>
+		<td><a href="http://sfo.mirror.splise.net/nomadbsd">http://sfo.mirror.splise.net/nomadbsd</a></td>
+	</tr>
+</table>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- 
+	vim: set tabstop=4:
+-->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<link rel="stylesheet" href="style.css" content="text/css" media="screen"/>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+	<title>NomadBSD 130R-20210508 Errata</title>
+	<link rel="alternate" type="application/rss+xml" title="NomadBSD news" href="http://nomadbsd.org/rss.xml"/>
+</head>
+<body id="Errata" >
+	<div id="header"></div>
+	<div id="navbar">
+		<ul>
+			<li id="navHome"><a href="index.html">Home</a></li>
+		</ul>
+		<ul>
+			<li id="navHandbook"><a href="handbook/handbook.html">Handbook</a></li>
+		</ul>
+		<ul>
+			<li id="navDownload"><a href="download.html">Download</a></li>
+		</ul>
+		<ul>
+			<li id="navScreenshots"><a href="screenshots.html">Screenshots</a></li>
+		</ul>
+		<ul>
+			<li id="navTeam"><a href="team.html">Team</a></li>
+		</ul>
+		<ul>
+			<li id="navContact"><a href="contact.html">Contact</a></li>
+		</ul>
+		<ul>
+			<li id="navMirror"><a href="mirror.html">Mirror</a></li>
+		</ul>
+	</div>
+	<div id="container">
+<p>
+<h2>NomadBSD 130R-20210508 Errata</h2>
+
+<h3>pkg upgrade: e2fsprogs-nobootfsck-1.46.4_1 conflicts with e2fsprogs-1.46.2</h3>
+<p>
+<h4>Description</h4>
+The package <a href="https://freshports.org/sysutils/e2fsprogs">sysutils/e2fsprogs</a> now has the nobootfsck FLAVOR enabled (e2fsprogs-nobootfsck). This results in a conflict when trying to upgrade the locked <a href="https://freshports.org/sysutils/e2fsprogs">sysutils/e2fsprogs</a> package.
+
+<h4>Solution</h4>
+Unlock the package, and continue with the upgrade.
+<pre class="code">
+# pkg unlock -y e2fsprogs
+# pkg upgrade
+</pre>
+</p>
+
+<h3>Package upgrade breaks autostart of applications</h3>
+<p>
+<h4>Description</h4>
+DSBAutostart creates desktop files for autostarting programs. The desktop
+files are read and executed by a script which is part of Openbox. This script
+uses the Python module <a href="https://freshports.org/devel/py-xdg">devel/py-xdg</a>. Due to the Python upgrade the
+package name changed from py37-xdg to py38-xdg.
+
+<h4>Solution</h4>
+Install py38-xdg:
+
+<pre class="code">
+# pkg install py38-xdg
+</pre>
+</p>
+
+<h3>Python upgrade breaks dsbxinput, nomadbsd-chusr, and lbi-gui</h3>
+<p>
+<h4>Description</h4>
+Due to the upgrade of Python, the Qt5 python module packages changed from
+py37-qt5-* to py38-qt5-*. This breaks dsbxinput, nomadbsd-chusr, lbi-gui,
+and ipfwGUI.
+
+<h4>Solution</h4>
+Change the shebang of dsbxinput and nomadbsd-chusr:
+
+<pre class="code">
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/dsbxinput
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/lbi-gui
+# sed -i '' 's/python3.7/python3.8/' /usr/bin/nomadbsd-chusr
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/ipfwGUI
+</pre>
+</p>
+
+<h3>HDD/SSD installed NomadBSD doesn't start the GUI on systems which require
+nvidia-driver &gt; 390</h3>
+<p>
+<h4>Description</h4>
+Due to the version upgrade from 440 to 460 of <a href="https://freshports.org/x11/nvidia-driver">x11/nvidia-driver</a>,
+the NomadBSD installer fails to install nvidia-driver-440.
+<h4>Solution</h4>
+Install <a href="https://freshports.org/x11/nvidia-driver">x11/nvidia-driver</a> and make the modules load via
+<span class="mono">/etc/rc.conf</span>:
+<pre class="code">
+# pkg install x11/nvidia-driver
+# sysrc kld_list+=" /boot/modules/nvidia-modeset.ko /boot/modules/nvidia.ko"
+# sysrc initgfx_enable=NO
+</pre>
+If the file <span class="mono">
+/usr/local/etc/X11/xorg.conf.d/00-video-initgfx.conf</span> does not
+exist, or doesn't contain the line <span class="mono">Driver "nvidia"</span>,
+create the file with the following content:
+<pre class="code">
+Section "Device"
+    Identifier    "NVIDIA CARD"
+    VendorName    "NVIDIA Corporation"
+    Driver        "nvidia"
+EndSection
+</pre>
+
+After a reboot the GUI should start.
+</p>
+	</div>
+</body>
+</html>
+
