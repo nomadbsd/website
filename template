@@ -1,18 +1,13 @@
 #
 #
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- 
-	vim: set tabstop=4:
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<link rel="stylesheet" href="@ROOTDIR@style.css" content="text/css" media="screen"/>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css"/>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
-	@HEAD@
 	<title>@TITLE@</title>
 	<link rel="alternate" type="application/rss+xml" title="NomadBSD news" href="http://nomadbsd.org/rss.xml"/>
 </head>
@@ -21,23 +16,11 @@
 	<div id="navbar">
 		<ul>
 			<li id="navHome"><a href="@ROOTDIR@index.html">Home</a></li>
-		</ul>
-		<ul>
-			<li id="navHandbook"><a href="@ROOTDIR@handbook/handbook.html">Handbook</a></li>
-		</ul>
-		<ul>
+			<li id="navHandbook"><a href="@ROOTDIR@handbook.html">Handbook</a></li>
 			<li id="navDownload"><a href="@ROOTDIR@download.html">Download</a></li>
-		</ul>
-		<ul>
 			<li id="navScreenshots"><a href="@ROOTDIR@screenshots.html">Screenshots</a></li>
-		</ul>
-		<ul>
 			<li id="navTeam"><a href="@ROOTDIR@team.html">Team</a></li>
-		</ul>
-		<ul>
 			<li id="navContact"><a href="@ROOTDIR@contact.html">Contact</a></li>
-		</ul>
-		<ul>
 			<li id="navMirror"><a href="@ROOTDIR@mirror.html">Mirror</a></li>
 		</ul>
 	</div>
@@ -46,4 +29,3 @@
 	</div>
 </body>
 </html>
-
