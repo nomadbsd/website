@@ -143,7 +143,7 @@ Depending on the size, creating the file system can take several minutes.</p>
 
 <h2>Overview</h2>
 
-<p><img src="handbook/images/nomadbsd-overview.png" alt="" /></p>
+<p><img src="images/nomadbsd-overview.png" alt="" /></p>
 
 <ol>
 <li><a href="https://freshports/x11-wm/openbox">Openbox</a> menu. You can reach it by
@@ -287,7 +287,7 @@ programs are automatically executed when the graphical interface starts.
 Further, it allows you to enable/disable some components of the NomadBSD
 desktop. The changes take place after logging out and in again.</p>
 
-<p><img src="handbook/images/dsbautostart-screenshot.png" alt="" />
+<p><img src="images/dsbautostart-screenshot.png" alt="" />
 <a name="plank"></a></p>
 
 <h2>Adding applications to the <em>plank</em> panel</h2>
@@ -309,7 +309,7 @@ the theme's directory to <em>/usr/local/share/slim/themes/</em>. To see a previe
 in <em>nomadbsd-dmconfig</em> copy a screenshot of the login screen to
 <em>/usr/local/share/slim/themes/your-theme-name/preview.png</em>.</p>
 
-<p><img src="handbook/images/nomadbsd-dmconfig-screenshot.png" alt="" />
+<p><img src="images/nomadbsd-dmconfig-screenshot.png" alt="" />
 <a name="adduser"></a></p>
 
 <h2>Adding a preconfigured user account</h2>
@@ -438,7 +438,7 @@ the position, resolution, etc. of your monitors. Save your changes to
 allows you to change the brightness, gamma, screen mode, display power management
 (DPMS) settings, etc.</p>
 
-<p><img src="handbook/images/dsbdisplaysettings-screenshot.png" alt="" /></p>
+<p><img src="images/dsbdisplaysettings-screenshot.png" alt="" /></p>
 
 <p><a name="sound"></a></p>
 
@@ -521,7 +521,7 @@ single partition is currently not possible.</p>
 
 <hr />
 
-<p><img src="handbook/handbook/images/installer-screenshot.png" alt="" /></p>
+<p><img src="images/installer-screenshot.png" alt="" /></p>
 
 <p><a name="vbox"></a></p>
 

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="@ROOTDIR@style.css"/>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
 	<title>@TITLE@</title>
 	<link rel="alternate" type="application/rss+xml" title="NomadBSD news" href="http://nomadbsd.org/rss.xml"/>
@@ -16,7 +16,7 @@
 	<div id="navbar">
 		<ul>
 			<li id="navHome"><a href="@ROOTDIR@index.html">Home</a></li>
-			<li id="navHandbook"><a href="@ROOTDIR@handbook.html">Handbook</a></li>
+			<li id="navHandbook"><a href="@ROOTDIR@handbook/handbook.html">Handbook</a></li>
 			<li id="navDownload"><a href="@ROOTDIR@download.html">Download</a></li>
 			<li id="navScreenshots"><a href="@ROOTDIR@screenshots.html">Screenshots</a></li>
 			<li id="navTeam"><a href="@ROOTDIR@team.html">Team</a></li>
