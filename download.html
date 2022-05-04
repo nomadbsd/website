@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css"/>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/png"/>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<title>NomadBSD - Download</title>
 	<link rel="alternate" type="application/rss+xml" title="NomadBSD news" href="http://nomadbsd.org/rss.xml"/>
 </head>
 <body id="download" >
-	<div id="header"><div id="nomad-text-logo-div"><h1 id="header-nomad-text">nomad</h1><h1 id="header-bsd-text">BSD</h1></div><img width="160" src="NomadBSD_LogoWhite.svg"></div>
+	<div id="header"><div id="nomad-text-logo-div"><h1 id="header-nomad-text">nomad</h1><h1 id="header-bsd-text">BSD</h1></div><img width="160" src="NomadBSD_LogoWhite.svg" alt="NomadBSD Logo"></div>
 	<nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,7 +23,7 @@
         </ul>
     </nav>
 	<main>
-<h3>Image format</h3>
+<h3>Image format</h3> <br>
 Since NomadBSD is designed to be a persistent system, we do not provide ISO
 files, as ISO-9660 is a read-only filesystem.
 <br/><br/>
@@ -34,10 +34,8 @@ files, as ISO-9660 is a read-only filesystem.
 	<li>For AMD and Intel 32-bit systems, use the i386 image.</li>
 </ul>
 
-<h3>Writing the image to a USB memory stick</h3>
-The size of the uncompressed image is 4.7GiB, so the capacity of your flash
-drive should be 5GB at the minimum.
-<br/>
+<h3>Writing the image to a USB memory stick</h3> <br>
+<p>The size of the uncompressed image is 4.7GiB, so the capacity of your flashdrive should be 5GB at the minimum.</p>
 <h4>FreeBSD</h4>
 <pre class="code">
 # lzma -d nomadbsd-x.y.z.img.lzma
