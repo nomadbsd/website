@@ -176,6 +176,34 @@ nav ul li a:hover {
 	color: rgb(190, 109, 53);
 }
 
+#home nav ul li #homehref {
+	border-bottom: 5px solid rgb(190, 109, 53);
+}
+
+#handbook nav ul li #handbookhref {
+	border-bottom: 5px solid rgb(190, 109, 53);
+}
+
+#download nav ul li #downloadhref {
+	border-bottom: 5px solid rgb(190, 109, 53);
+}
+
+#screenshots nav ul li #screenshotshref {
+	border-bottom: 5px solid rgb(190, 109, 53);
+}
+
+#team nav ul li #teamhref {
+	border-bottom: 5px solid rgb(190, 109, 53);
+}
+
+#contact nav ul li #contacthref {
+	border-bottom: 5px solid rgb(190, 109, 53);
+}
+
+#mirror nav ul li #mirrorhref {
+	border-bottom: 5px solid rgb(190, 109, 53);
+}
+
 main {
 	padding: 20px;
 	background-color: white;
