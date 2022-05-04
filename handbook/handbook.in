@@ -159,67 +159,102 @@ icon shows the menu from which you can connect to wireless networks.</li>
 
 <h3 id="globalkeybindings">Global keybindings</h3>
 
-<div class="table-div">
-	<div>
-		<h4>Keys</h4>
-		<p>Alt+F2</p>
-		<p>Ctrl+Alt+L</p>
-		<p>Ctrl+Space</p>
-		<p>Print</p>
-	</div>
-
-	<div>
-		<h4>Function</h4>
-		<p>Open DSBExec to execute a command.</p>
-		<p>Lock the screen.</p>
-		<p>Open <a href="https://www.freshports.org/x11/dmenu" target="_blank">dmenu-run</a> to execute a command.</p>
-		<p>Open XFCE 4 screenshooter.</p>
-	</div>
-</div>
+<table style="width:100%; table-layout:fixed">
+	<tr>
+		<th>Keys</th>
+		<th>Function</th>
+	</tr>
+	<tr>
+		<td>Alt+F2</td>
+		<td>Open DSBExec to execute a command.</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Alt+L</td>
+		<td>Lock the screen.</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Space</td>
+		<td>Open <a href="https://www.freshports.org/x11/dmenu">dmenu-run</a>
+		to execute a command.</td>
+	</tr>
+	<tr>
+		<td>Print</td>
+		<td>Open XFCE 4 screenshooter.</td>
+	</tr>
+</table>
 
 <h3 id="terminalkeybindings">Terminal keybindings</h3>
 
-<div class="table-div">
-	<div>
-		<h4>Keys</h4>
-		<p>Ctrl++</p>
-		<p>Ctrl--</p>
-		<p>Shift+Ctrl+C</p>
-		<p>Shift+Ctrl+V</p>
-		<p>Ctrl+Shift+T</p>
-		<p>Ctrl+Shift+W</p>
-		<p>Alt+Left cursor</p>
-		<p>Alt+Right cursor</p>
-		<p>Alt+[1-9]</p>
-		<p>Ctrl+Shift+S</p>
-		<p>Ctrl+Shift+Left mouse button</p>
-		<p>F11</p>
-		<p>Shift+PageUp</p>
-		<p>Shift+PageDown</p>
-		<p>Ctrl+Shift+Up</p>
-		<p>Ctrl+Shift+Down</p>
-	</div>
-
-	<div>
-		<h4>Function</h4>
-		<p>Increase font size</p>
-		<p>Decrease font size</p>
-		<p>Copy selected text</p>
-		<p>Paste copied text</p>
-		<p>Open a new tab</p>
-		<p>Close current tab</p>
-		<p>Previous tab</p>
-		<p>Next tab</p>
-		<p>Switch to tab N (1-9)</p>
-		<p>Toggle scrollbar</p>
-		<p>Open link</p>
-		<p>Fullscreen</p>
-		<p>Scroll up one page</p>
-		<p>Scroll down on page</p>
-		<p>Scroll up one line</p>
-		<p>Scroll down one line</p>
-	</div>
-</div>
+<table style="width:100%; table-layout:fixed">
+	<tr>
+		<th>Keys</th>
+		<th>Function</th>
+	</tr>
+	<tr>
+		<td>Ctrl++</td>
+		<td>Increase font size</td>
+	</tr>
+	<tr>
+		<td>Ctrl+-</td>
+		<td>Decrease font size</td>
+	</tr>
+	<tr>
+		<td>Shift+Ctrl+C</td>
+		<td>Copy selected text</td>
+	</tr>
+	<tr>
+		<td>Shift+Ctrl+V</td>
+		<td>Paste copied text</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Shift+T</td>
+		<td>Open a new tab</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Shift+W</td>
+		<td>Close current tab</td>
+	</tr>
+	<tr>
+		<td>Alt+Left cursor</td>
+		<td>Previous tab</td>
+	</tr>
+	<tr>
+		<td>Alt+Right cursor</td>
+		<td>Next tab</td>
+	</tr>
+	<tr>
+		<td>Alt+[1-9]</td>
+		<td>Switch to tab N (1-9)</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Shift+S</td>
+		<td>Toggle scrollbar</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Shift+Left mouse button</td>
+		<td>Open link</td>
+	</tr>
+	<tr>
+		<td>F11</td>
+		<td>Fullscreen</td>
+	</tr>
+	<tr>
+		<td>Shift+PageUp</td>
+		<td>Scroll up one page</td>
+	</tr>
+	<tr>
+		<td>Shift+PageDown</td>
+		<td>Scroll down on page</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Shift+Up</td>
+		<td>Scroll up one line</td>
+	</tr>
+	<tr>
+		<td>Ctrl+Shift+Down</td>
+		<td>Scroll down one line</td>
+	</tr>
+</table>
 
 <h2 id="autostart">Enable/Disable desktop components, and auto-start programs</h2>
 

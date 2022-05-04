@@ -190,6 +190,15 @@ main {
 	width: 520px;
 }
 
+table {
+	margin-bottom: 14px;
+}
+
+table th {
+	text-align: left;
+	color: rgb(190, 109, 53);
+}
+
 footer {
 	padding: 20px;
 	background-color: white;
