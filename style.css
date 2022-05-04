@@ -237,9 +237,22 @@ table th {
 
 hr {
 	margin-bottom: 14px;
+	color: rgb(219, 219, 219)
 }
 
 footer {
 	padding: 20px;
 	background-color: white;
+	border-top: 2px solid rgb(219, 219, 219);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer h1 {
+	margin-bottom: 0 !important;
+}
+
+footer h2 {
+	margin-bottom: 0 !important;
 }
