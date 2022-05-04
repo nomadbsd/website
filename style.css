@@ -228,10 +228,14 @@ table th {
 }
 
 .code {
-	padding: 14px;
+	padding: 4px 10px;
 	background-color: rgb(244, 244, 244);
 	border: 1px solid rgb(219, 219, 219);
 	border-radius: 14px;
+	margin-bottom: 14px;
+}
+
+hr {
 	margin-bottom: 14px;
 }
 
