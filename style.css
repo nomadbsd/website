@@ -227,6 +227,14 @@ table th {
 	color: rgb(190, 109, 53);
 }
 
+.code {
+	padding: 14px;
+	background-color: rgb(234, 234, 234);
+	border: 1px solid rgb(199, 199, 199);
+	border-radius: 14px;
+	margin-bottom: 14px;
+}
+
 footer {
 	padding: 20px;
 	background-color: white;
