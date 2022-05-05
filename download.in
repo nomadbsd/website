@@ -1,8 +1,8 @@
 TITLE=NomadBSD - Download
 ID=download
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 CONTENT_START
-<h3>Image format</h3>
+<h3>Image format</h3> <br>
 Since NomadBSD is designed to be a persistent system, we do not provide ISO
 files, as ISO-9660 is a read-only filesystem.
 <br/><br/>
@@ -13,16 +13,14 @@ files, as ISO-9660 is a read-only filesystem.
 	<li>For AMD and Intel 32-bit systems, use the i386 image.</li>
 </ul>
 
-<h3>Writing the image to a USB memory stick</h3>
-The size of the uncompressed image is 4.7GiB, so the capacity of your flash
-drive should be 5GB at the minimum.
-<br/>
+<h3>Writing the image to a USB memory stick</h3> <br>
+<p>The size of the uncompressed image is 4.7GiB, so the capacity of your flashdrive should be 5GB at the minimum.</p>
 <h4>FreeBSD</h4>
 <pre class="code">
 # lzma -d nomadbsd-x.y.z.img.lzma
 # dd if=nomadbsd-x.y.z.img of=/dev/daX bs=1m conv=sync
 </pre>
-or
+<p>or</p>
 <pre class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/daX bs=1m
 </pre>
@@ -32,7 +30,7 @@ or
 # lzma -d nomadbsd-x.y.z.img.lzma
 # dd if=nomadbsd-x.y.z.img of=/dev/rsdXc bs=1m
 </pre>
-or
+<p>or</p>
 <pre class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rsdXc bs=1m
 </pre>
@@ -42,8 +40,8 @@ or
 # lzma -d nomadbsd-x.y.z.img.lzma
 # dd if=nomadbsd-x.y.z.img of=/dev/rsdXd bs=1m
 </pre>
+<p>or</p>
 <pre class="code">
-or
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rsdXd bs=1m
 </pre>
 <br/>
@@ -52,7 +50,7 @@ or
 # lzma -d nomadbsd-x.y.z.img.lzma
 # dd if=nomadbsd-x.y.z.img of=/dev/sdX bs=1m
 </pre>
-or
+<p>or</p>
 <pre class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/sdX bs=1m
 </pre>
@@ -62,7 +60,7 @@ or
 # lzma -d nomadbsd-x.y.z.img.lzma
 # dd if=nomadbsd-x.y.z.img of=/dev/rdiskX bs=1m
 </pre>
-or
+<p>or</p>
 <pre class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rdiskX bs=1m
 </pre>
@@ -72,7 +70,7 @@ or
 # lzma -d nomadbsd-x.y.z.img.lzma
 # dd bs=1M if=nomadbsd-x.y.z.img of=/dev/sdX conv=fsync
 </pre>
-or
+<p>or</p>
 <pre class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/sdX bs=1M
 </pre>

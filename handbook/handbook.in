@@ -7,10 +7,7 @@ CONTENT_START
 
 <h2>PDF Format</h2>
 
-<ol>
-<li><a href="NomadBSD_Handbook.pdf" target="_blank">Handbook PDF</a></li>
-</ol>
-<br>
+<p><a href="NomadBSD_Handbook.pdf" target="_blank">Handbook PDF</a></p>
 
 <h2>Content</h2>
 
@@ -98,9 +95,7 @@ CONTENT_START
 </ol></li>
 </ol>
 
-<p><a name="intro"></a></p>
-
-<h2>Intro</h2>
+<h2 id="intro">Intro</h2>
 
 <p>NomadBSD is a 64bit live system for USB flash drives, based on
 FreeBSD<sup>®</sup>. Together with automatic hardware detection and setup, it
@@ -108,13 +103,9 @@ is configured to be used as a desktop system that works out of the box, but
 can also be used for data recovery, for educational purposes, or to test
 FreeBSD<sup>®</sup>'s hardware compatibility.</p>
 
-<p><a name="installation"></a></p>
+<h2 id="installation">Installation</h2> <br>
 
-<h2>Installation</h2>
-
-<p><a name="choosemedia"></a></p>
-
-<h3>Choosing a USB flash drive</h3>
+<h3 id="choosemedia">Choosing a USB flash drive</h3>
 
 <p>NomadBSD performs well on USB 2.X flash drives, but writing many small files
 can be very slow. To improve performance, you should consider using a USB 3.X
@@ -122,16 +113,12 @@ flash drive even on a USB 2.X port, as they tend to be faster. See
 <a href="https://www.anandtech.com/show/4523/usb-30-flash-drive-roundup/6">USB 3.0 Flash Drive Roundup</a>. Do not use cheap no-name thumb drives they sell at super markets
 and drug stores. These drives are very slow and unreliable.</p>
 
-<p><a name="download"></a></p>
-
-<h3>Downloading and writing the image</h3>
+<h3 id="download">Downloading and writing the image</h3>
 
 <p>Instructions for writing the image to a flash drive from different operating
 systems can be found <a href="http://nomadbsd.org/download.html">here</a>.</p>
 
-<p><a name="firstboot"></a></p>
-
-<h2>The NomadBSD setup</h2>
+<h2 id="firstboot">The NomadBSD setup</h2>
 
 <p>When you boot NomadBSD for the first time, it will run the setup wizard which
 allows you to set your locale, timezone, keyboard settings, password,
@@ -139,11 +126,9 @@ encryption, and default applications. The setup creates a new partition for
 the <code>/data</code> directory which uses the remaining space on the storage device.
 Depending on the size, creating the file system can take several minutes.</p>
 
-<p><a name="overview"></a></p>
+<h2 id="overview"">Overview</h2>
 
-<h2>Overview</h2>
-
-<p><img src="images/nomadbsd-overview.png" alt="" /></p>
+<p><img width="1040" src="images/nomadbsd-overview.png" alt="" /></p>
 
 <ol>
 <li><a href="https://freshports/x11-wm/openbox">Openbox</a> menu. You can reach it by
@@ -170,13 +155,9 @@ icon shows the menu from which you can connect to wireless networks.</li>
 <li>Date and time. Clicking in that area brings up a calendar.</li>
 </ol>
 
-<p><a name="keybindings"></a></p>
+<h2 id="keybindings">Key bindings</h2> <br>
 
-<h2>Key bindings</h2>
-
-<p><a name="globalkeybindings"></a></p>
-
-<h3>Global keybindings</h3>
+<h3 id="globalkeybindings">Global keybindings</h3>
 
 <table style="width:100%; table-layout:fixed">
 	<tr>
@@ -202,9 +183,7 @@ icon shows the menu from which you can connect to wireless networks.</li>
 	</tr>
 </table>
 
-<p><a name="terminalkeybindings"></a></p>
-
-<h3>Terminal keybindings</h3>
+<h3 id="terminalkeybindings">Terminal keybindings</h3>
 
 <table style="width:100%; table-layout:fixed">
 	<tr>
@@ -277,9 +256,7 @@ icon shows the menu from which you can connect to wireless networks.</li>
 	</tr>
 </table>
 
-<p><a name="autostart"></a></p>
-
-<h2>Enable/Disable desktop components, and auto-start programs</h2>
+<h2 id="autostart">Enable/Disable desktop components, and auto-start programs</h2>
 
 <p>The program <a href="http://freshports.org/sysutils/dsbautostart">DSBAutostart</a>
 (<a href="#overview">Openbox menu</a> → <em>Settings</em> → <em>Autostart Settings</em>) allows you to control which
@@ -288,17 +265,14 @@ Further, it allows you to enable/disable some components of the NomadBSD
 desktop. The changes take place after logging out and in again.</p>
 
 <p><img src="images/dsbautostart-screenshot.png" alt="" />
-<a name="plank"></a></p>
 
-<h2>Adding applications to the <em>plank</em> panel</h2>
+<h2 id="plank">Adding applications to the <em>plank</em> panel</h2>
 
 <p>Open your preferred graphical file manager, and navigate to <code>/usr/local/share/applications</code>.
 You can also get there by clicking the shortcut <em>Applications</em> on the side pane.
 Use Drag&amp;Drop to add application icons to the <em>plank</em> panel.</p>
 
-<p><a name="dmconfig"></a></p>
-
-<h2>Display manager settings: Auto login, default user, and theme</h2>
+<h2 id="dmconfig">Display manager settings: Auto login, default user, and theme</h2>
 
 <p>The display manager, <a href="https://freshports.org/x11/slim">SLiM</a>, used by NomadBSD
 is configured to automatically log in the default user <em>nomad</em>. The program
@@ -310,9 +284,8 @@ in <em>nomadbsd-dmconfig</em> copy a screenshot of the login screen to
 <em>/usr/local/share/slim/themes/your-theme-name/preview.png</em>.</p>
 
 <p><img src="images/nomadbsd-dmconfig-screenshot.png" alt="" />
-<a name="adduser"></a></p>
 
-<h2>Adding a preconfigured user account</h2>
+<h2 id="adduser">Adding a preconfigured user account</h2>
 
 <p>If you want to add a further preconfigured user account use
 <em>nomadbsd-adduser</em> (<a href="#overview">Openbox menu</a> → <em>System</em> → <em>Add user</em>).
@@ -320,17 +293,15 @@ Since NomadBSD is configured to automatically log in the user <em>nomad</em> you
 need to change that behaviour in order to be able to log in as another
 user. See <a href="#dmconfig"><em>nomadbsd-dmconfig</em></a>.</p>
 
-<p><a name="filesystems"></a></p>
 
-<h2>Filesystems</h2>
+<h2 id="filesystems">Filesystems</h2>
 
 <p>NomadBSD comes with a bunch of pre-installed filesystems (CD9660, FAT, HFS+,
 NTFS, Ext2/3/4). You can mount storage devices via
 <a href="http://freshports.org/sysutils/dsbmc">DSBMC</a> (see <a href="#overview">Overview</a>),
 which is a graphical client for <a href="http://freshports.org/sysutils/dsbmd">DSBMD</a>.
-<a name="automount"></a></p>
 
-<h3>Automount</h3>
+<h3 id="automount">Automount</h3>
 
 <p>You can enable automount in <a href="http://freshports.org/sysutils/dsbmc">DSBMC</a> under
 <em>File</em> → <em>Preferences</em> → <em>Automatically mount devices</em></p>
@@ -341,88 +312,70 @@ storage devices, and to enable automounting on devices attached later to the
 system. To start this command automatically on session start, open
 <a href="#autostart">DSBAutostart</a>, and add a new entry for the above command.</p>
 
-<p><a name="fssupport"></a></p>
-
-<h3>Extending filesystem support</h3>
+<h3 id="fssupport">Extending filesystem support</h3>
 
 <p>The following subsections describe how to extend the filesystems support.
 Rebooting the system, or restarting
 <a href="http://freshports.org/sysutils/dsbmd">DSBMD</a> is not necessary.</p>
 
-<p><a name="exfat"></a></p>
-
-<h4>ExFat</h4>
+<h4 id="exfat">ExFat</h4>
 
 <p>Unfortunately,
 <a href="https://freshports.org/sysutils/fusefs-exfat">sysutils/fusefs-exfat</a>
 requires a license from Microsoft<sup>®</sup>, and so it can't be
 pre-installed. You have to build it yourself by using the ports:</p>
 
-<pre><code># pkg install autoconf automake
+<pre class="code">
+# pkg install autoconf automake
 # svnlite co https://svn.freebsd.org/ports/head/Mk /usr/ports/Mk
 # svnlite co https://svn.freebsd.org/ports/head/Templates /usr/ports/Templates
 # svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat
 # cd /tmp/fusefs-exfat
 # make DISTDIR=/tmp install
-</code></pre>
+</pre>
 
 <p>or the <a href="https://github.com/relan/exfat.git">Git repo</a>:</p>
 
-<pre><code># pkg install autoconf automake
+<pre class="code"># pkg install autoconf automake
 # git clone https://github.com/relan/exfat.git
 # cd exfat
 # autoreconf --install
 # ./configure
 # make &amp;&amp; make install
-</code></pre>
+</pre>
 
-<p><a name="linuxfs"></a></p>
-
-<h4>BTRFS and XFS</h4>
+<h4 id="linuxfs">BTRFS and XFS</h4>
 
 <p>Install the package
 <a href="https://www.freshports.org/sysutils/fusefs-lkl">fusefs-lkl</a> for BTRFS
 and XFS support.</p>
 
-<pre><code># pkg install fusefs-lkl
-</code></pre>
+<pre class="code"># pkg install fusefs-lkl</pre>
 
-<p><a name="networking"></a></p>
+<h2 id="networking">Networking</h2> <br>
 
-<h2>Networking</h2>
-
-<p><a name="wifi"></a></p>
-
-<h3>Wireless Networking</h3>
+<h3 id="wifi">Wireless Networking</h3>
 
 <p>The program <a href="http://freshports.org/net-mgmt/networkmgr">networkmgr</a>, which
 runs in the tray, allows you to connect to wireless networks.</p>
 
-<p><a name="instpkg"></a></p>
-
-<h2>Installing software packages</h2>
+<h2 id="instpkg">Installing software packages</h2>
 
 <p>You can install and upgrade software packages with
 <a href="https://www.freshports.org/ports-mgmt/octopkg">OctoPkg</a>
 (<a href="#overview">Openbox menu</a> → <em>System</em> → <em>OctoPkg</em>) which is a graphical
 front-end to FreeBSD's <a href="https://www.freebsd.org/doc/handbook/pkgng-intro.html">pkg</a>.</p>
 
-<p><a name="linuxbrowser"></a></p>
-
-<h2>Installing Linux<sup>®</sup> browsers for watching <em>Netflix</em>, <em>Prime Video</em>, etc.</h2>
+<h2 id="linuxbrowser">Installing Linux<sup>®</sup> browsers for watching <em>Netflix</em>, <em>Prime Video</em>, etc.</h2>
 
 <p>The program <em>lbi-gui</em> (<a href="#overview">Openbox menu</a> → <em>Network</em> → <em>Linux Browser Installer GUI</em>)
 allows you to install <a href="https://en.wikipedia.org/wiki/Widevine"><em>Widevine</em></a> capable Linux versions of the
 <a href="https://www.chromium.org/Home">Chromium</a> and <a href="https://brave.com/">Brave</a>
 browser.</p>
 
-<p><a name="graphics"></a></p>
+<h2 id="graphics">Graphics</h2> <br>
 
-<h2>Graphics</h2>
-
-<p><a name="multihead"></a></p>
-
-<h3>Multihead setup</h3>
+<h3 id="multihead">Multihead setup</h3>
 
 <p>By default, NomadBSD enables all connected outputs (monitors). The tool
 <a href="http://freshports.org/x11/arandr">ArandR</a>
@@ -430,9 +383,7 @@ browser.</p>
 the position, resolution, etc. of your monitors. Save your changes to
 <code>~/.screenlayout/default.sh</code> which is automatically executed on session start.</p>
 
-<p><a name="displaysettings"></a></p>
-
-<h3>Changing display settings</h3>
+<h3 id="displaysettings">Changing display settings</h3>
 
 <p>The program (<a href="#overview">Openbox menu</a>→ <em>Settings</em> → <em>Display Settings</em>)
 allows you to change the brightness, gamma, screen mode, display power management
@@ -440,34 +391,24 @@ allows you to change the brightness, gamma, screen mode, display power managemen
 
 <p><img src="images/dsbdisplaysettings-screenshot.png" alt="" /></p>
 
-<p><a name="sound"></a></p>
+<h2 id="sound">Sound</h2> <br>
 
-<h2>Sound</h2>
-
-<p><a name="defaultaudio"></a></p>
-
-<h3>Selecting the default audio device</h3>
+<h3 id="defaultaudio">Selecting the default audio device</h3>
 
 <p>Right-click on the speaker/volume indicator icon in the panel, and choose
 <em>Preferences</em> from the menu. In the preferences window go to the
 <em>Default device</em> tab, select the sound card/device, and click on <em>Ok</em>.
 In order to take effect make sure to restart your audio application(s).</p>
 
-<p><a name="altwm"></a></p>
-
-<h2>Using an alternative window manager</h2>
+<h2 id="altwm">Using an alternative window manager</h2>
 
 <p>You can install different window managers and desktop environments on
 NomadBSD. Select the one you want to start by pressing <code>&lt;F1&gt;</code> in the
 graphical login manager (<a href="https://freshports.org/x11/slim">SLiM</a>).</p>
 
-<p><a name="advanced"></a></p>
+<h2 id="advanced">Advanced Topics</h2> <br>
 
-<h2>Advanced Topics</h2>
-
-<p><a name="reset"></a></p>
-
-<h3>Resetting NomadBSD</h3>
+<h3 id="reset">Resetting NomadBSD</h3>
 
 <p>If you are a tester, or your experiments with the systems left a total mess,
 you might want to reset NomadBSD.</p>
@@ -490,57 +431,48 @@ menu.</li>
 
 <p>After rebooting you'll be greeted by the setup again.</p>
 
-<p><a name="reset_limits"></a></p>
-
-<h4>Limitations</h4>
+<h4 id="reset_limits">Limitations</h4>
 
 <p>If you have modified or deleted system files from directory trees other than
 <code>/home</code>, <code>/private</code>, <code>/etc</code>, <code>/var</code>, <code>/root</code>, <code>/tmp</code>, and <code>/usr.local.etc</code>,
 you might not be able to cleanly reset NomadBSD.</p>
 
-<p><a name="disableinitgfx"></a></p>
-
-<h3>Disabling the automatic graphics driver setup</h3>
+<h3 id="disableinitgfx">Disabling the automatic graphics driver setup</h3>
 
 <p>If you want to create your own graphics driver settings, you can disable
 <code>initgfx</code> by adding</p>
 
 <p><code>initgfx_enable=&quot;NO&quot;</code> to <code>/etc/rc.conf</code>.</p>
 
-<p><a name="hddinstall"></a></p>
-
-<h3>Installing NomadBSD on a hard disk</h3>
+<h3 id="hddinstall">Installing NomadBSD on a hard disk</h3>
 
 <p>Start <a href="#overview">Openbox menu</a> → <em>System</em> → <em>NomadBSD Installer</em> and
 follow the instructions.</p>
 
-<hr />
+<hr/>
 
 <p><strong>Note:</strong> The NomadBSD installer will use the entire disk. Installing to a
 single partition is currently not possible.</p>
 
-<hr />
+<hr/>
 
 <p><img src="images/installer-screenshot.png" alt="" /></p>
 
-<p><a name="vbox"></a></p>
-
-<h3>Running NomadBSD in Virtualbox<sup>™</sup></h3>
+<h3 id="vbox">Running NomadBSD in Virtualbox<sup>™</sup></h3>
 
 <ol>
 <li><p><a href="http://nomadbsd.org/download.html">Download and extract</a> an image you intend to run.</p></li>
 <li><p>Create a virtual harddisk (VDI) from the image:</p>
 
-<pre><code>VBoxManage convertfromraw nomadbsd-x.y.z.img \
+<pre class="code">VBoxManage convertfromraw nomadbsd-x.y.z.img \
 	nomadbsd-x.y.z.vdi --format VDI
-</code></pre></li>
+</pre></li>
 <li><p>Change the size of the virtual harddisk, so that you have enough space to
 store files, and install packages. NomadBSD's base system requires approx. 4 GB,
 so resizing the VDI to 8 GB (8000 MB), which is the minimum recommended size,
 will give you about 4 GB for your files.</p>
 
-<pre><code>VBoxManage modifyhd nomadbsd-x.y.z.vdi --resize 8000
-</code></pre>
+<pre class="code">VBoxManage modifyhd nomadbsd-x.y.z.vdi --resize 8000</pre>
 
 <hr />
 
@@ -557,55 +489,40 @@ choose <em>nomadbsd-x.y.z.vdi</em> which we created in 2.
 processors to 2.</p></li>
 </ol>
 
-<p><a name="linuxpkg"></a></p>
-
-<h2>Installing Linux<sup>®</sup> packages</h2>
+<h2 id="linuxpkg">Installing Linux<sup>®</sup> packages</h2>
 
 <p>Before you can install Linux<sup>®</sup> packages it is necessary to enable
 <a href="https://www.freebsd.org/doc/handbook/linuxemu-lbc-install.html">Linux<sup>®</sup> binary compatibility</a>.
 Let's say you want to install <a href="https://freshports.org/editors/linux-sublime">linux-sublime</a>
 you can proceed as follows:</p>
 
-<pre><code># sysrc linux_enable=YES
+<pre class="code"># sysrc linux_enable=YES
 # service abi start
 # pkg install linux-sublime
-</code></pre>
+</pre>
 
-<p><a name="troubleshooting"></a></p>
+<h2 id="troubleshooting">Troubleshooting</h2> <br>
 
-<h2>Troubleshooting</h2>
-
-<p><a name="errata"></a></p>
-
-<h3>Errata</h3>
+<h3 id="errata">Errata</h3>
 
 <p>If you experience any problems, consult the
 <a href="http://nomadbsd.org/errata-130R-20210508.html">NomadBSD Errata</a> first.</p>
 
-<p><a name="ts_boot"></a></p>
+<h3 id="ts_boot">Boot problems</h3>
 
-<h3>Boot problems</h3>
-
-<p><a name="ts_mountroot"></a></p>
-
-<h4>The boot process stops at the <em>mountroot</em> prompt</h4>
+<h4 id="ts_mountroot">The boot process stops at the <em>mountroot</em> prompt</h4>
 
 <p>If you are using a USB 3.X port, try to use a USB 2.X port instead.
-<a name="ts_graphics"></a></p>
 
-<h3>Graphics</h3>
+<h3 id="ts_graphics">Graphics</h3>
 
-<p><a name="ts_gfxdetect_crash"></a></p>
-
-<h4>Automatic graphics card detection crashes the system</h4>
+<h4 id="ts_gfxdetect_crash">Automatic graphics card detection crashes the system</h4>
 
 <p>If the graphics driver detection crashes the system, you can use a
 non-accelerated fallback driver (VESA or SCFB) by disabling the automatic
 detection in the boot menu. Press <code>g</code> or <code>7</code> to toggle it.</p>
 
-<p><a name="ts_ati_amd"></a></p>
-
-<h4>ATI/AMD</h4>
+<h4 id="ts_ati_amd">ATI/AMD</h4>
 
 <p>If you are booting a system with ATI/AMD graphics via UEFI, you might
 experience some problems. Due to
@@ -628,28 +545,21 @@ number.</li>
 
 <hr />
 
-<p><a name="ts_nvidia"></a></p>
-
-<h4>NVIDIA</h4>
+<h4 id="ts_nvidia">NVIDIA</h4>
 
 <p>If you see an error message like <code>device_attach: nvidia0 attach returned 6</code>
 you could try to add <code>debug.acpi.disabled=&quot;sysres&quot;</code> to <code>/boot/loader.conf</code>.</p>
 
-<p><a name="efifb"></a></p>
-
-<h4>Distorted/squished EFI framebuffer screen</h4>
+<h4 id="efifb">Distorted/squished EFI framebuffer screen</h4>
 
 <p>If you happened to see that the screen content seems to be <em>squished</em> into
 the upper 1/3 of your monitor you can try the following:</p>
 
-<ol>
-<li>Reboot, and then enter the loader prompt by pressing <code>3</code> at the boot menu.</li>
-<li>Type:
-<pre>
+<p>Reboot, and then enter the loader prompt by pressing <code>3</code> at the boot menu. Then type:</p>
+<pre class="code">
 gop set 0
 boot
-</pre></li>
-</ol>
+</pre>
 
 <p>If that didn't solve the problem, enter the loader prompt as described above,
 and type <code>list gop</code> to see a list of supported modes. According to the list
@@ -660,9 +570,7 @@ that resolves the problem, you can save that setting by adding the line
 <p>Another way to solve this problem is to boot your system in legacy mode.
 Consult your EFI/BIOS manual.</p>
 
-<p><a name="hybridgfx"></a></p>
-
-<h4>Hybrid Combination/Switchable Graphics</h4>
+<h4 id="hybridgfx">Hybrid Combination/Switchable Graphics</h4>
 
 <p>NomadBSD doesn't support switchable graphics like <em>Optimus</em> yet. If the
 Xorg server fails to start, disable one of the GPUs in your system's BIOS/UEFI.</p>

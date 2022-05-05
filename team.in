@@ -2,7 +2,7 @@ TITLE=NomadBSD - Team
 ID=team
 CONTENT_START
 <p>
-<h3>The NomadBSD Team</h3>
+<h3 class="header-text">The NomadBSD Team</h3>
 <ul>
 	<li>Lars Engels &lt;lme [at] nomadbsd [dot] org&gt;</li>
 	<li>Marcel Kaiser &lt;mk [at] nomadbsd [dot] org&gt;</li>

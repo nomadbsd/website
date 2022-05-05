@@ -2,7 +2,7 @@ TITLE=How to mirror
 ID=mirror
 CONTENT_START
 <p>
-<h2>How to mirror NomadBSD</h2>
+<h2>How to mirror NomadBSD</h2><br>
 
 <h3>What to mirror</h3>
 <p>
@@ -20,14 +20,9 @@ Once a day
 </p>
 
 <h3>How to mirror</h3>
-<p>
-<pre class="code">
-rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/
-</pre>
+<pre class="code">rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/</pre>
 <h3>Announce a new mirror</h3>
-<p>
-If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [dot] org
-</p>
+<p>If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [dot] org</p>
 <h3>Available Mirrors</h3>
 @MIRROR_TABLE@
 CONTENT_END
