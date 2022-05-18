@@ -128,7 +128,7 @@ Depending on the size, creating the file system can take several minutes.</p>
 
 <h2 id="overview"">Overview</h2>
 
-<p><img width="1040" src="images/nomadbsd-overview.png" alt="" /></p>
+<p><img width="100%" src="images/nomadbsd-overview.png" alt="" /></p>
 
 <ol>
 <li><a href="https://freshports/x11-wm/openbox">Openbox</a> menu. You can reach it by
@@ -264,7 +264,7 @@ programs are automatically executed when the graphical interface starts.
 Further, it allows you to enable/disable some components of the NomadBSD
 desktop. The changes take place after logging out and in again.</p>
 
-<p><img src="images/dsbautostart-screenshot.png" alt="" />
+<p><img width="100%" src="images/dsbautostart-screenshot.png" alt="" />
 
 <h2 id="plank">Adding applications to the <em>plank</em> panel</h2>
 
@@ -283,7 +283,7 @@ the theme's directory to <em>/usr/local/share/slim/themes/</em>. To see a previe
 in <em>nomadbsd-dmconfig</em> copy a screenshot of the login screen to
 <em>/usr/local/share/slim/themes/your-theme-name/preview.png</em>.</p>
 
-<p><img src="images/nomadbsd-dmconfig-screenshot.png" alt="" />
+<p><img width="100%" src="images/nomadbsd-dmconfig-screenshot.png" alt="" />
 
 <h2 id="adduser">Adding a preconfigured user account</h2>
 
@@ -325,24 +325,25 @@ Rebooting the system, or restarting
 requires a license from Microsoft<sup>®</sup>, and so it can't be
 pre-installed. You have to build it yourself by using the ports:</p>
 
-<pre class="code">
-# pkg install autoconf automake
-# svnlite co https://svn.freebsd.org/ports/head/Mk /usr/ports/Mk
-# svnlite co https://svn.freebsd.org/ports/head/Templates /usr/ports/Templates
-# svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat
-# cd /tmp/fusefs-exfat
-# make DISTDIR=/tmp install
-</pre>
+<p class="code">
+# pkg install autoconf automake <br>
+# svnlite co https://svn.freebsd.org/ports/head/Mk /usr/ports/Mk <br>
+# svnlite co https://svn.freebsd.org/ports/head/Templates /usr/ports/Templates <br> 
+# svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat <br>
+# cd /tmp/fusefs-exfat <br>
+# make DISTDIR=/tmp install <br>
+</p>
 
 <p>or the <a href="https://github.com/relan/exfat.git">Git repo</a>:</p>
 
-<pre class="code"># pkg install autoconf automake
-# git clone https://github.com/relan/exfat.git
-# cd exfat
-# autoreconf --install
-# ./configure
-# make &amp;&amp; make install
-</pre>
+<p class="code">
+# pkg install autoconf automake <br>
+# git clone https://github.com/relan/exfat.git <br>
+# cd exfat <br>
+# autoreconf --install <br>
+# ./configure <br>
+# make &amp;&amp; make install <br>
+</p> 
 
 <h4 id="linuxfs">BTRFS and XFS</h4>
 
@@ -350,7 +351,7 @@ pre-installed. You have to build it yourself by using the ports:</p>
 <a href="https://www.freshports.org/sysutils/fusefs-lkl">fusefs-lkl</a> for BTRFS
 and XFS support.</p>
 
-<pre class="code"># pkg install fusefs-lkl</pre>
+<p class="code"># pkg install fusefs-lkl</p> <br>
 
 <h2 id="networking">Networking</h2> <br>
 
@@ -389,7 +390,7 @@ the position, resolution, etc. of your monitors. Save your changes to
 allows you to change the brightness, gamma, screen mode, display power management
 (DPMS) settings, etc.</p>
 
-<p><img src="images/dsbdisplaysettings-screenshot.png" alt="" /></p>
+<p><img width="100%" src="images/dsbdisplaysettings-screenshot.png" alt="" /></p>
 
 <h2 id="sound">Sound</h2> <br>
 
@@ -456,7 +457,7 @@ single partition is currently not possible.</p>
 
 <hr/>
 
-<p><img src="images/installer-screenshot.png" alt="" /></p>
+<p><img width="100%" src="images/installer-screenshot.png" alt="" /></p>
 
 <h3 id="vbox">Running NomadBSD in Virtualbox<sup>™</sup></h3>
 
@@ -464,15 +465,15 @@ single partition is currently not possible.</p>
 <li><p><a href="http://nomadbsd.org/download.html">Download and extract</a> an image you intend to run.</p></li>
 <li><p>Create a virtual harddisk (VDI) from the image:</p>
 
-<pre class="code">VBoxManage convertfromraw nomadbsd-x.y.z.img \
+<p class="code">VBoxManage convertfromraw nomadbsd-x.y.z.img \ <br>
 	nomadbsd-x.y.z.vdi --format VDI
-</pre></li>
+</p></li>
 <li><p>Change the size of the virtual harddisk, so that you have enough space to
 store files, and install packages. NomadBSD's base system requires approx. 4 GB,
 so resizing the VDI to 8 GB (8000 MB), which is the minimum recommended size,
 will give you about 4 GB for your files.</p>
 
-<pre class="code">VBoxManage modifyhd nomadbsd-x.y.z.vdi --resize 8000</pre>
+<p class="code">VBoxManage modifyhd nomadbsd-x.y.z.vdi --resize 8000</p>
 
 <hr />
 
@@ -483,7 +484,7 @@ setup will not have any effect on NomadBSD's filesystem capacity.</p>
 <li><p>Start VirtualBox<sup>™</sup>, and create a new virtual machine. Select
 <em>Use an existing virtual hard disk file</em> in the <em>Hard disk</em> settings, and
 choose <em>nomadbsd-x.y.z.vdi</em> which we created in 2.
-<img src="images/create-vbox-machine.png" alt="" /></p></li>
+<img width="100%" src="images/create-vbox-machine.png" alt="" /></p></li>
 <li><p>Go to <em>Settings</em> → <em>Display</em> and set the video memory to 128MB or more.</p></li>
 <li><p>Go to <em>Settings</em> → <em>System</em> → <em>Processor</em> and set the number of
 processors to 2.</p></li>
@@ -496,10 +497,11 @@ processors to 2.</p></li>
 Let's say you want to install <a href="https://freshports.org/editors/linux-sublime">linux-sublime</a>
 you can proceed as follows:</p>
 
-<pre class="code"># sysrc linux_enable=YES
-# service abi start
-# pkg install linux-sublime
-</pre>
+<p class="code">
+# sysrc linux_enable=YES <br>
+# service abi start <br>
+# pkg install linux-sublime <br>
+</p> <br>
 
 <h2 id="troubleshooting">Troubleshooting</h2> <br>
 
