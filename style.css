@@ -233,6 +233,7 @@ table th {
 	border: 1px solid rgb(219, 219, 219);
 	border-radius: 14px;
 	margin-bottom: 14px;
+	display: inline-block;
 }
 
 hr {
