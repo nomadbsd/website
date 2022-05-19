@@ -22,7 +22,7 @@ foreach (@mirrors) {
 	$location = $1;
 	print(qq(\t<tr>\n));
 	print(qq(\t\t<td>$location</td>\n));
-	print(qq(\t\t<td><a href="$url"><img style="margin-left: 12px" width="34" title="$url" src="goicon.svg"></a></td>\n));
+	print(qq(\t\t<td><a class="mirror-link-hyperlink" href="$url"><img style="margin-left: 12px" width="34" title="$url" src="goicon.svg"></a></td>\n));
 	print(qq(\t</tr>\n));
 }
 

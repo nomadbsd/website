@@ -19,8 +19,8 @@ The mirror won't require more than 50GB.
 Once a day
 </p>
 
-<h3>How to mirror</h3>
-<p class="code">rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/</p>
+<h3>How to mirror</h3> <br>
+<p class="code">rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/</p> <br>
 <h3>Announce a new mirror</h3>
 <p>If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [dot] org</p>
 <h3>Available Mirrors</h3>

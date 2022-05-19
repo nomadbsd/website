@@ -236,9 +236,23 @@ table th {
 	display: inline-block;
 }
 
+.mirror-link-hyperlink img {
+	transition: all ease 0.25s;
+}
+
+.mirror-link-hyperlink img:hover {
+	transition: all ease 0.25s;
+	box-shadow: rgba(190, 109, 53, 0.4) -5px 5px, rgba(190, 109, 53, 0.2) -10px 10px, rgba(190, 109, 53, 0.2) -15px 15px, rgba(190, 109, 53, 0.1) -20px 20px, rgba(190, 109, 53, 0.05) -25px 25px;
+	-moz-box-shadow: rgba(190, 109, 53, 0.4) -5px 5px, rgba(190, 109, 53, 0.2) -10px 10px, rgba(190, 109, 53, 0.2) -15px 15px, rgba(190, 109, 53, 0.1) -20px 20px, rgba(190, 109, 53, 0.05) -25px 25px;
+	-webkit-box-shadow: rgba(190, 109, 53, 0.4) -5px 5px, rgba(190, 109, 53, 0.2) -10px 10px, rgba(190, 109, 53, 0.2) -15px 15px, rgba(190, 109, 53, 0.1) -20px 20px, rgba(190, 109, 53, 0.05) -25px 25px;
+	border-radius: 999px;
+	padding: 1px;
+	transform: scale(1.04);
+}
+
 hr {
 	margin-bottom: 14px;
-	color: rgb(219, 219, 219)
+	color: rgb(219, 219, 219);
 }
 
 footer {
