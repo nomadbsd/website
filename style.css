@@ -164,14 +164,14 @@ nav ul li {
 	margin-bottom: 0 !important;
 }
 
-nav ul li a {
+nav ul .nav-item-desktop a {
 	color: rgb(190, 109, 53);
 	text-decoration: none;
 	font-weight: 700;
 	padding: 6px 0px;
 }
 
-nav ul li a:hover {
+nav ul .nav-item-desktop a:hover {
 	border-bottom: 5px solid rgb(190, 109, 53);
 	color: rgb(190, 109, 53);
 }
@@ -236,6 +236,13 @@ table th {
 	display: inline-block;
 }
 
+.nav-item-mobile {
+	display: none;
+	cursor: pointer;
+	color: rgb(190, 109, 53);
+	font-weight: 700;
+}
+
 .mirror-link-hyperlink img {
 	transition: all ease 0.25s;
 }
@@ -270,4 +277,29 @@ footer h1 {
 
 footer img {
 	margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 750px) {
+	nav ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav-item-mobile {
+		padding: 0px !important;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 20px;
+	}
+
+	.nav-item-mobile a {
+		height: 20px;
+	}
+
+	.nav-item-desktop {
+		display: none;
+	}
 }
