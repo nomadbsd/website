@@ -309,6 +309,10 @@ footer img {
 	cursor: pointer;
 }
 
+.modal-background-div .modal-content-div .close-modal-span img {
+	margin: 0 !important;
+}
+
 .modal-background-div .modal-content-div ul {
 	margin: 0 !important;
 }
