@@ -1,6 +1,9 @@
 // Modal Open Button
 const navbarMenu = document.querySelector("#mobiledash");
 
+// Modal Close Button
+const closeModalButton = document.querySelector(".close-modal-span");
+
 // Modal Background
 const modalBackground = document.querySelector(".modal-background-div");
 
@@ -19,4 +22,14 @@ navbarMenu.addEventListener("click", function() {
     nav.style.filter = "blur(2px)";
     main.style.filter = "blur(2px)";
     footer.style.filter = "blur(2px)";
+});
+
+closeModalButton.addEventListener("click", function() {
+    modalBackground.style.visibility = "hidden";
+    modalBackground.style.opacity = "0";
+
+    header.style.filter = "blur(0px)";
+    nav.style.filter = "blur(0px)";
+    main.style.filter = "blur(0px)";
+    footer.style.filter = "blur(0px)";
 });
