@@ -12,8 +12,23 @@
 	<link rel="alternate" type="application/rss+xml" title="NomadBSD news" href="http://nomadbsd.org/rss.xml"/>
 </head>
 <body id="@ID@" @BODY_ATTR@>
+		<div class="modal-background-div">
+            <div class="modal-content-div">
+                <span class="close-modal-span"><img width="26" src="@ROOTDIR@exitmodelicon.svg" alt="Exit"></span>
+                <ul>
+                	<li><a href="@ROOTDIR@index.html">Home</a></li>
+                    <li><a href="@ROOTDIR@handbook/handbook.html">Handbook</a></li>
+                    <li><a href="@ROOTDIR@download.html">Download</a></li>
+                    <li><a href="@ROOTDIR@screenshots.html">Screenshots</a></li>
+                    <li><a href="@ROOTDIR@team.html">Team</a></li>
+			     	<li><a href="@ROOTDIR@contact.html">Contact</a></li>
+		            <li><a href="@ROOTDIR@mirror.html">Mirror</a></li>
+                </ul>
+            </div>
+        </div>
 	<div id="header"><div id="nomad-text-logo-div"><h1 id="header-nomad-text">nomad</h1><h1 id="header-bsd-text">BSD</h1></div><img width="160" src="@ROOTDIR@NomadBSD_LogoWhite.svg" alt="NomadBSD Logo"></div>
-	<nav>
+
+		<nav id="nav">
         <ul>
 			<li class="nav-item-mobile"><a id="mobilehomehref" href="@ROOTDIR@index.html"><img width="20" src="homenavbaricon.svg" alt="Home"></a></li>
 			<li class="nav-item-mobile"><a id="mobiledash"><img width="20" src="dashesnavbaricon.svg" alt="Menu"></a></li>
@@ -26,12 +41,13 @@
             <li class="nav-item-desktop"><a id="mirrorhref" href="@ROOTDIR@mirror.html">Mirror</a></li>
         </ul>
     </nav>
-	<main>
+	<main id="main">
 		@CONTENT@
 	</main>
-	<footer>
+	<footer id="footer">
 		<h1>NOMADBSD</h1>
 		<img width="120" src="NomadBSD_BrownLogo.svg" alt="NomadBSD Logo">
 	</footer>
+	<script src="@ROOTDIR@modal.js"></script>
 </body>
 </html>

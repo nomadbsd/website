@@ -279,6 +279,55 @@ footer img {
 	margin-bottom: 0 !important;
 }
 
+.modal-background-div {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	box-shadow: inset 0px 0px 40px 1px rgb(190, 109, 53);
+	position: fixed;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s;
+}
+
+.modal-background-div .modal-content-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.modal-background-div .modal-content-div .close-modal-span {
+	position: fixed;
+	top: 2%;
+	right: 2.5%;
+	cursor: pointer;
+}
+
+.modal-background-div .modal-content-div ul li {
+	list-style-type: none;
+	margin: 40px;
+}
+
+.modal-background-div .modal-content-div ul li a {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: rgb(190, 109, 53);
+	font-weight: bold;
+	padding: 10px 20px;
+	transition: all ease 0.25s;
+}
+
+.modal-background-div .modal-content-div ul li a:hover {
+	text-shadow: 0px 0px 10px rgb(190, 109, 53);
+	transition: all ease 0.25s;
+}
+
 @media screen and (max-width: 750px) {
 	nav ul {
 		display: flex;
@@ -301,5 +350,19 @@ footer img {
 
 	.nav-item-desktop {
 		display: none;
+	}
+}
+
+@media screen and (max-height: 470px) {
+	.modal-background-div .modal-content-div ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.modal-background-div .modal-content-div ul li {
+		margin: 20px !important;
 	}
 }
