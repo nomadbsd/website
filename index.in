@@ -564,7 +564,7 @@ thank all the testers who sent us feedback and bug reports.
 	<li>The user interface has been slightly changed.</li>
 	<li>Support for the local keymap when entering the geli password has been added.</li>
 	<li>Support for resetting NomadBSD has been added. Users can execute
-		<pre class="code">/usr/libexec/nomad/nomad_setup reset</pre> in
+		<p class="code">/usr/libexec/nomad/nomad_setup reset</p> in
 		single user mode to bring NomadBSD back to its initial state.
 	</li>
 	<li>Localized XDG standard dirs have been added.</li>
@@ -653,7 +653,7 @@ problems, please let us know.
 	<li>The user interface has been slightly changed.</li>
 	<li>Support for the local keymap when entering the geli password has been added.</li>
 	<li>Support for resetting NomadBSD has been added. Users can execute
-		<pre class="code">/usr/libexec/nomad/nomad_setup reset</pre> in
+		<p class="code">/usr/libexec/nomad/nomad_setup reset</p> in
 		single user mode to bring NomadBSD back to its initial state.
 	</li>
 	<li>Localized XDG standard dirs have been added.</li>

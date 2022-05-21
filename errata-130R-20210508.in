@@ -7,75 +7,84 @@ CONTENT_START
 <h3>pkg upgrade: e2fsprogs-nobootfsck-1.46.4_1 conflicts with e2fsprogs-1.46.2</h3>
 <p>
 <h4>Description</h4>
-The package @PORT@(sysutils/e2fsprogs) now has the nobootfsck FLAVOR enabled (e2fsprogs-nobootfsck). This results in a conflict when trying to upgrade the locked @PORT@(sysutils/e2fsprogs) package.
+<p>The package @PORT@(sysutils/e2fsprogs) now has the nobootfsck FLAVOR enabled (e2fsprogs-nobootfsck). This results in a conflict when trying to upgrade the locked @PORT@(sysutils/e2fsprogs) package.</p>
 
 <h4>Solution</h4>
-Unlock the package, and continue with the upgrade.
-<pre class="code">
-# pkg unlock -y e2fsprogs
-# pkg upgrade
-</pre>
+<p>Unlock the package, and continue with the upgrade.</p>
+<p class="code">
+# pkg unlock -y e2fsprogs <br>
+# pkg upgrade <br>
+</p>
 </p>
 
 <h3>Package upgrade breaks autostart of applications</h3>
 <p>
 <h4>Description</h4>
+<p>
 DSBAutostart creates desktop files for autostarting programs. The desktop
 files are read and executed by a script which is part of Openbox. This script
 uses the Python module @PORT@(devel/py-xdg). Due to the Python upgrade the
-package name changed from py37-xdg to py38-xdg.
+package name changed from py37-xdg to py38-xdg.</p>
 
 <h4>Solution</h4>
+<p>
 Install py38-xdg:
-
-<pre class="code">
+</p>
+<p class="code">
 # pkg install py38-xdg
-</pre>
+</p>
 </p>
 
 <h3>Python upgrade breaks dsbxinput, nomadbsd-chusr, and lbi-gui</h3>
 <p>
 <h4>Description</h4>
+<p>
 Due to the upgrade of Python, the Qt5 python module packages changed from
 py37-qt5-* to py38-qt5-*. This breaks dsbxinput, nomadbsd-chusr, lbi-gui,
 and ipfwGUI.
-
+</p>
 <h4>Solution</h4>
+<p>
 Change the shebang of dsbxinput and nomadbsd-chusr:
-
-<pre class="code">
-# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/dsbxinput
-# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/lbi-gui
-# sed -i '' 's/python3.7/python3.8/' /usr/bin/nomadbsd-chusr
-# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/ipfwGUI
-</pre>
+</p>
+<p class="code">
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/dsbxinput <br>
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/lbi-gui <br>
+# sed -i '' 's/python3.7/python3.8/' /usr/bin/nomadbsd-chusr <br>
+# sed -i '' 's/python3.7/python3.8/' /usr/local/bin/ipfwGUI <br>
+</p>
 </p>
 
 <h3>HDD/SSD installed NomadBSD doesn't start the GUI on systems which require
 nvidia-driver &gt; 390</h3>
 <p>
 <h4>Description</h4>
+<p>
 Due to the version upgrade from 440 to 460 of @PORT@(x11/nvidia-driver),
 the NomadBSD installer fails to install nvidia-driver-440.
+</p>
 <h4>Solution</h4>
+<p>
 Install @PORT@(x11/nvidia-driver) and make the modules load via
 <span class="mono">/etc/rc.conf</span>:
-<pre class="code">
-# pkg install x11/nvidia-driver
-# sysrc kld_list+=" /boot/modules/nvidia-modeset.ko /boot/modules/nvidia.ko"
-# sysrc initgfx_enable=NO
-</pre>
-If the file <span class="mono">
+</p>
+<p class="code">
+# pkg install x11/nvidia-driver <br> 
+# sysrc kld_list+=" /boot/modules/nvidia-modeset.ko /boot/modules/nvidia.ko" <br>
+# sysrc initgfx_enable=NO <br>
+</p> <br>
+<p>If the file <span class="mono"> 
 /usr/local/etc/X11/xorg.conf.d/00-video-initgfx.conf</span> does not
 exist, or doesn't contain the line <span class="mono">Driver "nvidia"</span>,
 create the file with the following content:
-<pre class="code">
-Section "Device"
-    Identifier    "NVIDIA CARD"
-    VendorName    "NVIDIA Corporation"
-    Driver        "nvidia"
-EndSection
-</pre>
+</p>
+<p class="code">
+Section "Device" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Identifier    "NVIDIA CARD" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;VendorName    "NVIDIA Corporation" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Driver        "nvidia" <br>
+EndSection <br>
+</p> <br>
 
 After a reboot the GUI should start.
 </p>

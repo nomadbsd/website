@@ -31,8 +31,8 @@ foreach $image_version (<$fh>) {
 		print(qq(\t<tr>\n));
 		print(qq(\t\t<th>Location</th>\n));
 		print(qq(\t\t<th>Image</th>\n));
-		print(qq(\t\t<th>Checksum (lzma)</th>\n));
-		print(qq(\t\t<th>Checksum (image)</th>\n));
+		print(qq(\t\t<th title="Checksum (lzma)">Ch.</th>\n));
+		print(qq(\t\t<th title="Checksum (image)">Ch.</th>\n));
 		print(qq(\t\t<th>Manifest</th>\n));
 		print(qq(\t</tr>\n));
 
@@ -67,7 +67,7 @@ foreach $image_version (<$fh>) {
 			}
 			print(qq(\t<tr>\n));
 			print(qq(\t\t<td>$location</td>\n));
-			print(qq(\t\t<td><a href="$url/$image">Download</a></td>\n));
+			print(qq(\t\t<td><a href="$url/$image"><img title="$url/$image" style="margin-left: 13px; margin-right: auto" width="25" src="downloadicon.svg"></a></td>\n));
 			print(qq(\t\t<td><a href="$lzma_chksum">SHA256</a></td>\n));
 			print(qq(\t\t<td><a href="$image_chksum">SHA256</a></td>\n));
 			print(qq(\t\t<td><a href="$manifest_url">MANIFEST</a></td>\n));

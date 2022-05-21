@@ -48,13 +48,13 @@ h4 {
 }
 
 ul {
-	margin-left: 40px;
+	margin-left: 30px;
 	max-width: 900px;
 	margin-bottom: 14px;
 }
 
 ol {
-	margin-left: 40px;
+	margin-left: 30px;
 	max-width: 900px;
 	margin-bottom: 14px;
 }
@@ -164,14 +164,14 @@ nav ul li {
 	margin-bottom: 0 !important;
 }
 
-nav ul li a {
+nav ul .nav-item-desktop a {
 	color: rgb(190, 109, 53);
 	text-decoration: none;
 	font-weight: 700;
 	padding: 6px 0px;
 }
 
-nav ul li a:hover {
+nav ul .nav-item-desktop a:hover {
 	border-bottom: 5px solid rgb(190, 109, 53);
 	color: rgb(190, 109, 53);
 }
@@ -233,11 +233,33 @@ table th {
 	border: 1px solid rgb(219, 219, 219);
 	border-radius: 14px;
 	margin-bottom: 14px;
+	display: inline-block;
+}
+
+.nav-item-mobile {
+	display: none;
+	cursor: pointer;
+	color: rgb(190, 109, 53);
+	font-weight: 700;
+}
+
+.mirror-link-hyperlink img {
+	transition: all ease 0.25s;
+}
+
+.mirror-link-hyperlink img:hover {
+	transition: all ease 0.25s;
+	box-shadow: rgba(190, 109, 53, 0.4) -5px 5px, rgba(190, 109, 53, 0.2) -10px 10px, rgba(190, 109, 53, 0.2) -15px 15px, rgba(190, 109, 53, 0.1) -20px 20px, rgba(190, 109, 53, 0.05) -25px 25px;
+	-moz-box-shadow: rgba(190, 109, 53, 0.4) -5px 5px, rgba(190, 109, 53, 0.2) -10px 10px, rgba(190, 109, 53, 0.2) -15px 15px, rgba(190, 109, 53, 0.1) -20px 20px, rgba(190, 109, 53, 0.05) -25px 25px;
+	-webkit-box-shadow: rgba(190, 109, 53, 0.4) -5px 5px, rgba(190, 109, 53, 0.2) -10px 10px, rgba(190, 109, 53, 0.2) -15px 15px, rgba(190, 109, 53, 0.1) -20px 20px, rgba(190, 109, 53, 0.05) -25px 25px;
+	border-radius: 999px;
+	padding: 1px;
+	transform: scale(1.04);
 }
 
 hr {
 	margin-bottom: 14px;
-	color: rgb(219, 219, 219)
+	color: rgb(219, 219, 219);
 }
 
 footer {
@@ -255,4 +277,92 @@ footer h1 {
 
 footer img {
 	margin-bottom: 0 !important;
+}
+
+.modal-background-div {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	box-shadow: inset 0px 0px 40px 1px rgb(190, 109, 53);
+	position: fixed;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s;
+}
+
+.modal-background-div .modal-content-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.modal-background-div .modal-content-div .close-modal-span {
+	position: fixed;
+	top: 2%;
+	right: 2.5%;
+	cursor: pointer;
+}
+
+.modal-background-div .modal-content-div ul li {
+	list-style-type: none;
+	margin: 40px;
+}
+
+.modal-background-div .modal-content-div ul li a {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: rgb(190, 109, 53);
+	font-weight: bold;
+	padding: 10px 20px;
+	transition: all ease 0.25s;
+}
+
+.modal-background-div .modal-content-div ul li a:hover {
+	text-shadow: 0px 0px 10px rgb(190, 109, 53);
+	transition: all ease 0.25s;
+}
+
+@media screen and (max-width: 750px) {
+	nav ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav-item-mobile {
+		padding: 0px !important;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 20px;
+	}
+
+	.nav-item-mobile a {
+		height: 20px;
+	}
+
+	.nav-item-desktop {
+		display: none;
+	}
+}
+
+@media screen and (max-height: 470px) {
+	.modal-background-div .modal-content-div ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.modal-background-div .modal-content-div ul li {
+		margin: 20px !important;
+	}
 }

@@ -16,64 +16,64 @@ files, as ISO-9660 is a read-only filesystem.
 <h3>Writing the image to a USB memory stick</h3> <br>
 <p>The size of the uncompressed image is 4.7GiB, so the capacity of your flashdrive should be 5GB at the minimum.</p>
 <h4>FreeBSD</h4>
-<pre class="code">
-# lzma -d nomadbsd-x.y.z.img.lzma
-# dd if=nomadbsd-x.y.z.img of=/dev/daX bs=1m conv=sync
-</pre>
+<p class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma <br>
+# dd if=nomadbsd-x.y.z.img of=/dev/daX bs=1m conv=sync <br>
+</p>
 <p>or</p>
-<pre class="code">
+<p class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/daX bs=1m
-</pre>
+</p>
 <br/>
 <h4>OpenBSD</h4>
-<pre class="code">
-# lzma -d nomadbsd-x.y.z.img.lzma
-# dd if=nomadbsd-x.y.z.img of=/dev/rsdXc bs=1m
-</pre>
+<p class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma <br>
+# dd if=nomadbsd-x.y.z.img of=/dev/rsdXc bs=1m <br>
+</p>
 <p>or</p>
-<pre class="code">
+<p class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rsdXc bs=1m
 </pre>
 <br/>
 <h4>NetBSD</h4>
-<pre class="code">
-# lzma -d nomadbsd-x.y.z.img.lzma
-# dd if=nomadbsd-x.y.z.img of=/dev/rsdXd bs=1m
-</pre>
+<p class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma <br>
+# dd if=nomadbsd-x.y.z.img of=/dev/rsdXd bs=1m <br>
+</p> 
 <p>or</p>
-<pre class="code">
+<p class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rsdXd bs=1m
-</pre>
+</p>
 <br/>
 <h4>DragonFly BSD</h4>
-<pre class="code">
-# lzma -d nomadbsd-x.y.z.img.lzma
-# dd if=nomadbsd-x.y.z.img of=/dev/sdX bs=1m
-</pre>
+<p class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma <br>
+# dd if=nomadbsd-x.y.z.img of=/dev/sdX bs=1m <br>
+</p>
 <p>or</p>
-<pre class="code">
+<p class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/sdX bs=1m
-</pre>
+</p>
 <br/>
 <h4>Mac OS X</h4>
-<pre class="code">
-# lzma -d nomadbsd-x.y.z.img.lzma
-# dd if=nomadbsd-x.y.z.img of=/dev/rdiskX bs=1m
-</pre>
+<p class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma <br>
+# dd if=nomadbsd-x.y.z.img of=/dev/rdiskX bs=1m <br>
+</p>
 <p>or</p>
-<pre class="code">
+<p class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/rdiskX bs=1m
-</pre>
+</p>
 <br/>
 <h4>Linux</h4>
-<pre class="code">
-# lzma -d nomadbsd-x.y.z.img.lzma
-# dd bs=1M if=nomadbsd-x.y.z.img of=/dev/sdX conv=fsync
-</pre>
+<p class="code">
+# lzma -d nomadbsd-x.y.z.img.lzma <br>
+# dd bs=1M if=nomadbsd-x.y.z.img of=/dev/sdX conv=fsync <br>
+</p>
 <p>or</p>
-<pre class="code">
+<p class="code">
 # xzcat nomadbsd-x.y.z.img.lzma | dd of=/dev/sdX bs=1M
-</pre>
+</p>
 <br/>
 <b>Double check to make sure to replace <span class="mono">X</span> with the correct unit number!</b>
 <br/><br/>
