@@ -1,5 +1,6 @@
 TITLE=NomadBSD - Download
 ID=download
+PAGEDESCRIPTION=Download NomadBSD from this page. Also, have some general idea about the setup process.
 PAGEURL=https://nomadbsd.org/download.html
 KEYWORDS=NomadBSD, Download NomadBSD, LZMA NomadBSD, USB Download NomadBSD, VirtualBox NomadBSD
 <link rel="icon" type="image/x-icon" href="favicon.ico">

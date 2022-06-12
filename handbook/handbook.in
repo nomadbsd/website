@@ -1,5 +1,6 @@
 TITLE=NomadBSD - Handbooklet
 ID=handbook
+PAGEDESCRIPTION=The NomadBSD Handbook is a guide for using and downloading the operating system. It gives technical information about the NomadBSD.
 PAGEURL=https://nomadbsd.org/handbook/handbook.html
 KEYWORDS=NomadBSD, NomadBSD Handbook, How To Use NomadBSD, NomadBSD Guide
 FLATTR=no

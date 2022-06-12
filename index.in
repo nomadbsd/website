@@ -1,5 +1,6 @@
 TITLE=NomadBSD
 ID=home
+PAGEDESCRIPTION=NomadBSD is a persistent live system for USB flash drives, based on FreeBSD. Together with automatic hardware detection and setup...
 PAGEURL=https://nomadbsd.org/index.html
 KEYWORDS=NomadBSD, FreeBSD Based Distro, BSD, UNIX, LINUX, GNU/LINUX, OS, Operating System 
 <link rel="icon" type="image/x-icon" href="favicon.ico">

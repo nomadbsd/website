@@ -32,6 +32,8 @@ $date = localtime();
 while (<STDIN>) {
 	if (/^TITLE=(.*)/) {
 		chomp($vars{title} = $1);
+	} elsif(/^PAGEDESCRIPTION=(.*)/) {
+		chomp($vars{pagedescription} = $1);
 	} elsif (/^PAGEURL=(.*)/) {
 		chomp($vars{pageurl} = $1);
 	} elsif (/^KEYWORDS=(.*)/) {
@@ -57,6 +59,7 @@ while (<FH>) {
 	next if (/^#/);
 
 	s/\@URL\@/$url/g;
+	s/\@PAGEDESCRIPTION\@/$vars{pagedescription}/g;
 	s/\@PAGEURL\@/$vars{pageurl}/g;
 	s/\@KEYWORDS\@/$vars{keywords}/g;
 	s/\@ID\@/$vars{id}/g;
@@ -67,6 +70,7 @@ while (<FH>) {
 		foreach (@head) {
 			s/\@ROOTDIR\@/$rootdir/g;
 			s/\@TITLE\@/$vars{title}/g;
+			s/\@PAGEDESCRIPTION\@/$vars{pagedescription}/g;
 			s/\@PAGEURL\@/$vars{pageurl}/g;
 			s/\@KEYWORDS\@/$vars{keywords}/g;
 			s/\@ID\@/$vars{id}/g;
@@ -76,6 +80,7 @@ while (<FH>) {
 		foreach (@content) {
 			s/\@ROOTDIR\@/$rootdir/g;
 			s/\@TITLE\@/$vars{title}/g;
+			s/\@PAGEDESCRIPTION\@/$vars{pagedescription}/g;
 			s/\@PAGEURL\@/$vars{pageurl}/g;
 			s/\@KEYWORDS\@/$vars{keywords}/g;
 			s/\@ID\@/$vars{id}/g;

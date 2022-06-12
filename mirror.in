@@ -1,5 +1,6 @@
 TITLE=How to mirror
 ID=mirror
+PAGEDESCRIPTION=Check the mirrors of NomadBSD and download the related files from the FTP Servers.
 PAGEURL=https://nomadbsd.org/mirror.html
 KEYWORDS=NomadBSD, NomadBSD Mirrors, How To Mirror NomadBSD, NomadBSD Available Mirrors, NomadBSD Mirror Locations
 CONTENT_START
