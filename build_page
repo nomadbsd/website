@@ -32,6 +32,10 @@ $date = localtime();
 while (<STDIN>) {
 	if (/^TITLE=(.*)/) {
 		chomp($vars{title} = $1);
+	} elsif (/^PAGEURL=(.*)/) {
+		chomp($vars{pageurl} = $1);
+	} elsif (/^KEYWORDS=(.*)/) {
+		chomp($vars{keywords} = $1);
 	} elsif (/^ID=(.*)/) {
 		chomp($vars{id} = $1);
 	} elsif (/^BODY_ATTR=(.*)/) {
@@ -53,6 +57,8 @@ while (<FH>) {
 	next if (/^#/);
 
 	s/\@URL\@/$url/g;
+	s/\@PAGEURL\@/$vars{pageurl}/g;
+	s/\@KEYWORDS\@/$vars{keywords}/g;
 	s/\@ID\@/$vars{id}/g;
 	s/\@TITLE\@/$vars{title}/g;
 	s/\@ROOTDIR\@/$rootdir/g;
@@ -61,6 +67,8 @@ while (<FH>) {
 		foreach (@head) {
 			s/\@ROOTDIR\@/$rootdir/g;
 			s/\@TITLE\@/$vars{title}/g;
+			s/\@PAGEURL\@/$vars{pageurl}/g;
+			s/\@KEYWORDS\@/$vars{keywords}/g;
 			s/\@ID\@/$vars{id}/g;
 			print;
 		}
@@ -68,6 +76,8 @@ while (<FH>) {
 		foreach (@content) {
 			s/\@ROOTDIR\@/$rootdir/g;
 			s/\@TITLE\@/$vars{title}/g;
+			s/\@PAGEURL\@/$vars{pageurl}/g;
+			s/\@KEYWORDS\@/$vars{keywords}/g;
 			s/\@ID\@/$vars{id}/g;
 			s/\@DATE\@/$date/g;
 			if (/^\@DOWNLOAD_TABLE\@/) {

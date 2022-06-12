@@ -1,5 +1,7 @@
 TITLE=NomadBSD
 ID=home
+PAGEURL=https://nomadbsd.org/index.html
+KEYWORDS=NomadBSD, FreeBSD Based Distro, BSD, UNIX, LINUX, GNU/LINUX, OS, Operating System 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 CONTENT_START
 <p style="border-style: solid; border-color: rgb(190, 109, 53); padding: .5cm; border-radius: 6px; border-width: 1px;">

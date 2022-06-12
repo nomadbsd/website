@@ -1,5 +1,7 @@
 TITLE=NomadBSD - Contact
 ID=contact
+PAGEURL=https://nomadbsd.org/contact.html
+KEYWORDS=NomadBSD, Contact NomadBSD, Contact NomadBSD Developers, Contact NomadBSD Contributors, Contact NomadBSD Engineers
 CONTENT_START
 <p>
 <h3>Forum</h3> <br>

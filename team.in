@@ -1,5 +1,7 @@
 TITLE=NomadBSD - Team
 ID=team
+PAGEURL=https://nomadbsd.org/team.html
+KEYWORDS=NomadBSD, The NomadBSD Team, NomadBSD Team, NomadBSD Developers, NomadBSD Contributors, NomadBSD Engineers
 CONTENT_START
 <p>
 <h3 class="header-text">The NomadBSD Team</h3>
