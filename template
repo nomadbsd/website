@@ -14,6 +14,7 @@
     <meta property="og:url" content="@PAGEURL@"/>
     <meta property="og:image" content="https://nomadbsd.org/NomadBSD_BrownLogo.png"/>
     <meta property="og:site_name" content="NomadBSD"/>
+    <meta property="og:description" content="@PAGEDESCRIPTION@"/>
 	<link rel="stylesheet" href="@ROOTDIR@style.css"/>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<title>@TITLE@</title>
