@@ -50,11 +50,16 @@ You can check out the latest code and configuration files at
 </a>
 
 <p class="news">
-<a href="#130R-20210508">NomadBSD 130R-20210508 is now available!</a>
+<h3><a href="#20220614">New team member: Mehmet Mert Gunduz</a></h3>
+<p class="date">2022-06-14</p>
+<p>We are happy to announce that Mehmet Mert Gunduz has joined our team. He
+did a great job modernizing the NomadBSD website.
+</p>
+
+<h3><a href="#130R-20210508">NomadBSD 130R-20210508 is now available!</a></h3>
 <p class="date">2021-05-11</p>
 <p>We are pleased to present the release of NomadBSD 130R-20210508.</p>
 <p><strong>Changes since 1.4</strong></p>
-
 <ul>
 <li>
 We've decided to change the versioning scheme to the following form:

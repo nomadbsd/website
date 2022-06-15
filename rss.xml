@@ -5,6 +5,14 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>New team member: Mehmet Mert Gunduz</title>
+			<link>https://nomadbsd.org/index.html#20220614</link>
+			<guid>https://nomadbsd.org/index.html#20220614</guid>
+			<pubDate>Wed, 15 Jun 2022 18:00:00 UTC</pubDate>
+			<description>We are happy to announce that Mehmet Mert Gunduz has joined our team. He
+did a great job modernizing the NomadBSD website.</description>
+		</item>
+		<item>
 			<title>NomadBSD 130R-20210508 released</title>
 			<link>http://nomadbsd.org/index.html#130R-20210508</link>
 			<guid>http://nomadbsd.org/index.html#130R-20210508</guid>
