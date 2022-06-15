@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check the mirrors of NomadBSD and download the related files from the FTP Servers.">
+    <meta name="keywords" content="NomadBSD, NomadBSD Mirrors, How To Mirror NomadBSD, NomadBSD Available Mirrors, NomadBSD Mirror Locations"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:title" content="How to mirror"/>
+    <meta property="og:type" content="Website"/>
+    <meta property="og:url" content="https://nomadbsd.org/mirror.html"/>
+    <meta property="og:image" content="https://nomadbsd.org/NomadBSD_BrownLogo.png"/>
+    <meta property="og:site_name" content="NomadBSD"/>
+    <meta property="og:description" content="Check the mirrors of NomadBSD and download the related files from the FTP Servers."/>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<title>How to mirror</title>
+	<link rel="alternate" type="application/rss+xml" title="NomadBSD news" href="http://nomadbsd.org/rss.xml"/>
+</head>
+<body id="mirror" >
+		<div class="modal-background-div">
+            <div class="modal-content-div">
+                <span class="close-modal-span"><img width="26" src="exitmodelicon.svg" alt="Exit"></span>
+                <ul>
+                	<li><a href="index.html">Home</a></li>
+                    <li><a href="handbook/handbook.html">Handbook</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="screenshots.html">Screenshots</a></li>
+                    <li><a href="team.html">Team</a></li>
+			     	<li><a href="contact.html">Contact</a></li>
+		            <li><a href="mirror.html">Mirror</a></li>
+                </ul>
+            </div>
+        </div>
+	<div id="header"><div id="nomad-text-logo-div"><h1 id="header-nomad-text">nomad</h1><h1 id="header-bsd-text">BSD</h1></div><img width="160" src="NomadBSD_LogoWhite.svg" alt="NomadBSD Logo"></div>
+
+		<nav id="nav">
+        <ul>
+			<li class="nav-item-mobile"><a id="mobilehomehref" href="index.html"><img width="20" src="homenavbaricon.svg" alt="Home"></a></li>
+			<li class="nav-item-mobile"><a id="mobiledash"><img width="20" src="dashesnavbaricon.svg" alt="Menu"></a></li>
+            <li class="nav-item-desktop"><a id="homehref" href="index.html">Home</a></li>
+            <li class="nav-item-desktop"><a id="handbookhref" href="handbook/handbook.html">Handbook</a></li>
+            <li class="nav-item-desktop"><a id="downloadhref" href="download.html">Download</a></li>
+            <li class="nav-item-desktop"><a id="screenshotshref" href="screenshots.html">Screenshots</a></li>
+            <li class="nav-item-desktop"><a id="teamhref" href="team.html">Team</a></li>
+            <li class="nav-item-desktop"><a id="contacthref" href="contact.html">Contact</a></li>
+            <li class="nav-item-desktop"><a id="mirrorhref" href="mirror.html">Mirror</a></li>
+        </ul>
+    </nav>
+	<main id="main">
+<p>
+<h2>How to mirror NomadBSD</h2><br>
+
+<h3>What to mirror</h3>
+<p>
+rsync.nomadbsd.org::nomadbsd/
+</p>
+
+<h3>Expected mirror size</h3>
+<p>
+The mirror won't require more than 50GB.
+</p>
+
+<h3>Mirror update frequency</h3>
+<p>
+Once a day
+</p>
+
+<h3>How to mirror</h3> <br>
+<p class="code">rsync -vaHz --delete rsync.nomadbsd.org::nomadbsd/ /target/directory/</p> <br>
+<h3>Announce a new mirror</h3>
+<p>If you have created a mirror for NomadBSD let us know via mirror [at] nomadbsd [dot] org</p>
+<h3>Available Mirrors</h3>
+<table style="width:100%">
+	<tr>
+		<th>Location</th>
+		<th>Mirror</th>
+	</tr>
+	<tr>
+		<td>Main site</td>
+		<td><a class="mirror-link-hyperlink" href="https://nomadbsd.org/download"><img style="margin-left: 12px" width="34" title="https://nomadbsd.org/download" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>Brazil</td>
+		<td><a class="mirror-link-hyperlink" href="http://mirror.facom.ufms.br/nomadbsd"><img style="margin-left: 12px" width="34" title="http://mirror.facom.ufms.br/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>Canada</td>
+		<td><a class="mirror-link-hyperlink" href="https://bsdadmin.com/nomadbsd"><img style="margin-left: 12px" width="34" title="https://bsdadmin.com/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>England (London)</td>
+		<td><a class="mirror-link-hyperlink" href="http://lon.mirror.splise.net/nomadbsd"><img style="margin-left: 12px" width="34" title="http://lon.mirror.splise.net/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a class="mirror-link-hyperlink" href="https://download.nomadbsd.nosheep.fr"><img style="margin-left: 12px" width="34" title="https://download.nomadbsd.nosheep.fr" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>France</td>
+		<td><a class="mirror-link-hyperlink" href="https://elgrande74.net/nomadbsd"><img style="margin-left: 12px" width="34" title="https://elgrande74.net/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>Germany</td>
+		<td><a class="mirror-link-hyperlink" href="https://ftp.fau.de/nomadbsd"><img style="margin-left: 12px" width="34" title="https://ftp.fau.de/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>Netherlands</td>
+		<td><a class="mirror-link-hyperlink" href="https://nomadbsd.emaus.it"><img style="margin-left: 12px" width="34" title="https://nomadbsd.emaus.it" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>Singapore (SG)</td>
+		<td><a class="mirror-link-hyperlink" href="http://sin.mirror.splise.net/nomadbsd"><img style="margin-left: 12px" width="34" title="http://sin.mirror.splise.net/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>Sweden</td>
+		<td><a class="mirror-link-hyperlink" href="https://ftpmirror2.infania.net/nomadbsd"><img style="margin-left: 12px" width="34" title="https://ftpmirror2.infania.net/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>USA (Kentucky)</td>
+		<td><a class="mirror-link-hyperlink" href="https://mirror2.sandyriver.net/pub/nomadbsd"><img style="margin-left: 12px" width="34" title="https://mirror2.sandyriver.net/pub/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>USA (New York)</td>
+		<td><a class="mirror-link-hyperlink" href="http://nyc.mirror.splise.net/nomadbsd"><img style="margin-left: 12px" width="34" title="http://nyc.mirror.splise.net/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+	<tr>
+		<td>USA (San Francisco) </td>
+		<td><a class="mirror-link-hyperlink" href="http://sfo.mirror.splise.net/nomadbsd"><img style="margin-left: 12px" width="34" title="http://sfo.mirror.splise.net/nomadbsd" src="goicon.svg"></a></td>
+	</tr>
+</table>
+	</main>
+	<footer id="footer">
+		<h1>NOMADBSD</h1>
+		<img width="120" src="NomadBSD_BrownLogo.svg" alt="NomadBSD Logo">
+	</footer>
+	<script src="modal.js"></script>
+</body>
+</html>
