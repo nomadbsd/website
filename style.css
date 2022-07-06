@@ -337,6 +337,22 @@ footer img {
 	transition: all ease 0.25s;
 }
 
+.header-table-row {
+	border-collapse: separate;
+	border-spacing: 0 8px;
+}
+
+.square-table-header {
+	height: 40px
+}
+
+.square-table-header span {
+	background-color: rgb(190, 109, 53);
+	color: white;
+	padding: 4px;
+	border-radius: 6px;
+}
+
 @media screen and (max-width: 750px) {
 	nav ul {
 		display: flex;
