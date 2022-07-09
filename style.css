@@ -235,8 +235,15 @@ table th {
 	margin-bottom: 14px;
 	display: inline-block;
 	word-break: break-all;
+	transition: all ease 0.25s;
 }
 
+.code:hover {
+	box-shadow: inset 0px 0px 100px 0px rgb(190, 109, 53);
+	-moz-box-shadow: inset 0px 0px 100px 0px rgb(190, 109, 53);
+	-webkit-box-shadow: inset 0px 0px 100px 0px rgb(190, 109, 53);
+	transition: all ease 0.25s;
+}
 .nav-item-mobile {
 	display: none;
 	cursor: pointer;
