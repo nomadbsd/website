@@ -398,3 +398,21 @@ footer img {
 		margin: 20px !important;
 	}
 }
+
+@media (prefers-reduced-motion) {
+	h2:hover {
+		transform: none !important;
+	}
+
+	.mirror-link-hyperlink img:hover {
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+
+	.code:hover {
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+}
