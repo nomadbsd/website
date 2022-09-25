@@ -26,15 +26,16 @@ CONTENT_START
 <p>
 DSBAutostart creates desktop files for autostarting programs. The desktop
 files are read and executed by a script which is part of Openbox. This script
-uses the Python module @PORT@(devel/py-xdg). Due to the Python upgrade the
-package name changed from py37-xdg to py38-xdg.</p>
+uses the Python module @PORT@(devel/py-xdg/). Since @PORT@(lang/python/) and 
+@PORT@(lang/python3/) now default to version 3.9 of Python, `py37-xdg` is no 
+longer appropriate.</p>
 
 <h4>Solution</h4>
 <p>
-Install py38-xdg:
+Install py39-xdg:
 </p>
 <p class="code">
-# pkg install py38-xdg
+# pkg install devel/py-xdg
 </p>
 </p>
 
@@ -63,12 +64,12 @@ nvidia-driver &gt; 390</h3>
 <p>
 <h4>Description</h4>
 <p>
-Due to the version upgrade from 440 to 460 of @PORT@(x11/nvidia-driver),
+Due to the version upgrade from 440 to 460 of @PORT@(x11/nvidia-driver/),
 the NomadBSD installer fails to install nvidia-driver-440.
 </p>
 <h4>Solution</h4>
 <p>
-Install @PORT@(x11/nvidia-driver) and make the modules load via
+Install @PORT@(x11/nvidia-driver/) and make the modules load via
 <span class="mono">/etc/rc.conf</span>:
 </p>
 <p class="code">
