@@ -7,7 +7,7 @@
 
 ## Index Page
 
-![NomadBSD_IndexPage](https://user-images.githubusercontent.com/65850970/177276446-541d1ad7-07b9-4d1c-a267-16b3eb58e8b6.PNG) <br> <br>
+![NomadBSD_IndexPage](https://user-images.githubusercontent.com/65850970/177276446-541d1ad7-07b9-4d1c-a267-16b3eb58e8b6.PNG)
 
 ## How To Contribute (Website Improvements)
 
