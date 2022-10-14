@@ -3,7 +3,7 @@
 - Languages: **HTML, CSS, JS, Roff, Shell, Perl**
 - Website Type: **Dynamic**
 
-<i>https://nomadbsd.org/ is the official address for the website. The website contains news about NomadBSD, guides for downloading the files, errata information pages, team members and general information to contact developers.</i> <br> <br>
+*https://nomadbsd.org/ is the official address for the website. The website contains news about NomadBSD, guides for downloading the files, errata information pages, team members and general information to contact developers.*
 
 ## Index Page
 
