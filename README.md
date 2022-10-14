@@ -1,27 +1,27 @@
-> # > **_NomadBSD Website_**
+# NomadBSD Website
 
-☉ Languages: <strong>HTML, CSS, JS, Roff, Shell, Perl</strong> <br>
-☉ Website Type: <strong>Dynamic</strong>
+- Languages: **HTML, CSS, JS, Roff, Shell, Perl**
+- Website Type: **Dynamic**
 
-<i>https://nomadbsd.org/ is the official address for the website. The website contains news about NomadBSD, guides for downloading the files, errata information pages, team members and general information to contact developers.</i> <br> <br>
+*https://nomadbsd.org/ is the official address for the website. The website contains news about NomadBSD, guides for downloading the files, errata information pages, team members and general information to contact developers.*
 
-> # > **_Index Page_**
+## Index Page
 
-![NomadBSD_IndexPage](https://user-images.githubusercontent.com/65850970/177276446-541d1ad7-07b9-4d1c-a267-16b3eb58e8b6.PNG) <br> <br>
+![NomadBSD_IndexPage](https://user-images.githubusercontent.com/65850970/177276446-541d1ad7-07b9-4d1c-a267-16b3eb58e8b6.PNG)
 
-> # > **_How To Contribute (Website Improvements)_**
+## How To Contribute (Website Improvements)
 
-<ol>
-    <li>Fork the project (nomadbsd/website)</li>
-    <li>Clone the fork to your computer (git clone [REPO URL])</li>
-    <li>Build pages from *in files (via Terminal)</li>
-    <li>After making some changes, Commit changes to your fork.</li>
-    <li>Create a pull-request.</li>
-</ol> <br>
+1. Fork the project (nomadbsd/website)
+2. Clone the fork to your computer (`git clone [REPO URL]`)
+3. Build pages from *in files via terminal
+4. After making some changes, Commit changes to your fork.
+5. Create a pull-request.
 
-> # > **_Building Pages (Guide)_**
-    % ./mkmf > Makefile
-    % make
+## Building Pages
+```
+% ./mkmf > Makefile
+% make
+```
     
 ### **_./mkmf > Makefile Command_**
 
