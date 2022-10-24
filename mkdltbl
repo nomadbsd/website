@@ -6,6 +6,80 @@
 
 my $mainsite = "https://nomadbsd.org/download";
 
+sub get_base_version {
+	my ($image_version) = @_;
+
+	$image_version =~ s/([0-9]+).*/\1/;
+	return $image_version;
+}
+
+sub write_table_header {
+	my ($arch, $image_version, $fs) = @_;
+	my $base_version = get_base_version($image_version);
+
+	$fs = uc($fs);
+	print(qq(<a name="${image_version}${arch}"></a>\n));
+	if ($arch eq 'amd64') {
+		$arch_str = '64-bit/x86-64/amd64';
+	} elsif ($arch eq 'i386') {
+		$arch_str = '32-bit/IA-32/i386';
+	} else {
+		$arch_str = 'Mac x86-64';
+	}
+	if ($base_version < 131) {
+		print(qq(<h4>NomadBSD $image_version ($arch_str, UFS)</h4>\n));
+	} else {
+		print(qq(<h4>NomadBSD $image_version ($arch_str, $fs)</h4>\n));
+	}
+	print(qq(<table class="download-table" style="width:100%">\n));
+	print(qq(\t<tr class="header-table-row">\n));
+	print(qq(\t\t<th class="square-table-header"><span>Location</span></th>\n));
+	print(qq(\t\t<th class="square-table-header"><span>Image</span></th>\n));
+	print(qq(\t\t<th class="square-table-header" title="Checksum (lzma)"><span>lzma</span></th>\n));
+	print(qq(\t\t<th class="square-table-header" title="Checksum (image)"><span>image</span></th>\n));
+	print(qq(\t\t<th class="square-table-header"><span>Manifest</span></th>\n));
+	print(qq(\t</tr>\n));
+}
+
+sub pre130_manifest_url {
+	my ($url, $image_version, $arch) = @_;
+	my $manifest_url;
+
+	if ($arch eq 'i386' and $image_version * 10 >= 13) {
+		$manifest_url = "$url/nomadbsd-$image_version.i386.manifest";
+	} else {
+		$manifest_url = "$url/nomadbsd-$image_version.manifest";
+	}
+	return $manifest_url;
+}
+
+sub build_manifest_url {
+	my ($url, $image_version, $arch) = @_;
+	my $image = "nomadbsd-$image_version";
+
+	$base_version = get_base_version($image_version);
+	return pre130_manifest_url($url, $image_version, $arch)
+		if ($base_version < 130);
+	return "$url/nomadbsd-$image_version.$arch.manifest";
+}
+
+sub pre131_image_name {
+	my ($image_version, $arch) = @_;
+	my $image = "nomadbsd-$image_version";
+	my $base_version = get_base_version($image_version);
+	return $image
+		if ($arch eq 'amd64' and $base_version < 130);
+	return "$image.$arch";
+}
+
+sub image_name {
+	my ($image_version, $arch, $fs) = @_;
+
+	return pre131_image_name($image_version, $arch)
+		if ($image_version < 131);
+	return "nomadbsd-$image_version.$arch.$fs.img";
+}
+
 open(my $fh, '<', 'mirrors')
 	or die("Couldn't open mirror list: $!");
 my @mirrors = <$fh>;
@@ -18,62 +92,30 @@ foreach $image_version (<$fh>) {
 	chomp($image_version);
 	next if ($image_version =~ /^$/);
 	foreach my $arch (('amd64', 'i386', 'mac')) {
-		print(qq(<a name="${image_version}${arch}"></a>\n));
-		if ($arch eq 'amd64') {
-			$arch_str = '64-bit/x86-64/amd64';
-		} elsif ($arch eq 'i386') {
-			$arch_str = '32-bit/IA-32/i386';
-		} else {
-			$arch_str = 'Mac x86-64';
-		}
-		print(qq(<h4>NomadBSD $image_version ($arch_str)</h4>\n));
-		print(qq(<table class="download-table" style="width:100%">\n));
-		print(qq(\t<tr class="header-table-row">\n));
-		print(qq(\t\t<th class="square-table-header"><span>Location</span></th>\n));
-		print(qq(\t\t<th class="square-table-header"><span>Image</span></th>\n));
-		print(qq(\t\t<th class="square-table-header" title="Checksum (lzma)"><span>lzma</span></th>\n));
-		print(qq(\t\t<th class="square-table-header" title="Checksum (image)"><span>image</span></th>\n));
-		print(qq(\t\t<th class="square-table-header"><span>Manifest</span></th>\n));
-		print(qq(\t</tr>\n));
-
-		foreach (@mirrors) {
-			chomp;
-			next if (/^#/);
-			next if (!/^([^\t]+)\t+([^\t]+)/);
-			$url	  = $2;
-			$location = $1;
-			my $image;
-
-			$image = "nomadbsd-$image_version";
-			$base_version = $image_version;
-			$base_version =~ s/([0-9]+).*/\1/;
-			if ($base_version < 130) {
-				if ($arch eq 'i386' and $image_version * 10 >= 13) {
-					$manifest_url = "$url/nomadbsd-$image_version.i386.manifest";
-				} else {
-					$manifest_url = "$url/nomadbsd-$image_version.manifest";
-				}
-			} else {
-				$manifest_url = "$url/nomadbsd-$image_version.$arch.manifest";
+		foreach my $fs (('ufs', 'zfs')) {
+			next if ($arch eq 'i386' and $fs eq 'zfs');
+			next if (get_base_version($image_version) < 131 and $fs eq 'zfs');
+			write_table_header($arch, $image_version, $fs);
+			foreach (@mirrors) {
+				chomp;
+				next if (/^#/);
+				next if (!/^([^\t]+)\t+([^\t]+)/);
+				my $url = $2;
+				my $location = $1;
+				my $image = image_name($image_version, $arch, $fs);
+				my $manifest_url = build_manifest_url($url, $image_version, $arch);
+				my $lzma_chksum  = "$mainsite/$image.lzma.sha256";
+				my $image_chksum = "$mainsite/$image.sha256";
+				$image .= ".lzma";
+				print(qq(\t<tr>\n));
+				print(qq(\t\t<td>$location</td>\n));
+				print(qq(\t\t<td><a href="$url/$image"><img title="$url/$image" style="margin-left: 18px; margin-right: auto" width="25" src="downloadicon.svg"></a></td>\n));
+				print(qq(\t\t<td><a href="$lzma_chksum">SHA256</a></td>\n));
+				print(qq(\t\t<td><a href="$image_chksum">SHA256</a></td>\n));
+				print(qq(\t\t<td><a href="$manifest_url">MANIFEST</a></td>\n));
+				print(qq(\t</tr>\n));
 			}
-			if ($arch eq 'amd64' and $base_version < 130) {
-				$lzma_chksum  = "$mainsite/$image.img.lzma.sha256";
-				$image_chksum = "$mainsite/$image.img.sha256";
-				$image .= ".img.lzma";
-			} else {
-				$lzma_chksum  = "$mainsite/$image.$arch.img.lzma.sha256";
-				$image_chksum = "$mainsite/$image.$arch.img.sha256";
-				$image .= ".$arch.img.lzma";
-			}
-			print(qq(\t<tr>\n));
-			print(qq(\t\t<td>$location</td>\n));
-			print(qq(\t\t<td><a href="$url/$image"><img title="$url/$image" style="margin-left: 18px; margin-right: auto" width="25" src="downloadicon.svg"></a></td>\n));
-			print(qq(\t\t<td><a href="$lzma_chksum">SHA256</a></td>\n));
-			print(qq(\t\t<td><a href="$image_chksum">SHA256</a></td>\n));
-			print(qq(\t\t<td><a href="$manifest_url">MANIFEST</a></td>\n));
-			print(qq(\t</tr>\n));
+			print(qq(</table>\n));
 		}
-		print(qq(</table>\n));
 	}
 }
-
