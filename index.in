@@ -43,7 +43,7 @@ You can check out the latest code and configuration files at
 <a href="https://github.com/nomadbsd/NomadBSD">GitHub</a>.
 
 <h2>Contributing to NomadBSD</h2>
-<p>Would you like to translate program interfaces or documentation? Are you a designer or programmer? Check out the open <a href="https://github.com/nomadbsd/NomadBSD/issues">issues</a> on <a href="https://github.com/nomadbsd/NomadBSD">GitHub</a>. Do you have a cool idea for the project? Join the <a href="http://www.freelists.org/list/nomadbsddevs">NomadBSD developermailing list</a> and let us know.</p>
+<p>Would you like to translate program interfaces or documentation? Are you a designer or programmer? Check out the open <a href="https://github.com/nomadbsd/NomadBSD/issues">issues</a> on <a href="https://github.com/nomadbsd/NomadBSD">GitHub</a>. Do you have a cool idea for the project? Join the <a href="http://www.freelists.org/list/nomadbsddevs">NomadBSD developer mailing list</a> and let us know.</p>
 
 <a href="http://nomadbsd.org/rss.xml">
     <h2>News<img alt="RSS" src="feedicon.svg" width="36" height="14"></h2>
@@ -56,7 +56,7 @@ You can check out the latest code and configuration files at
 <p><strong>Changes since 20210508</strong></p>
 <ul>
 <li>The base system has been changed to FreeBSD 13.1-RELEASE-p5.</li>
-<li>Except for i386, We now provide two images for each supported achitecture.
+<li>Except for i386, We now provide two images for each supported architecture.
 One which uses ZFS and one which uses UFS for the root filesystem.</li>
 <li>The file systems used on the UFS version are now created with soft updates
 journaling enabled to reduce file system repair problems after a crash.</li>
