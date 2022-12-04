@@ -5,6 +5,9 @@ PAGEURL=https://nomadbsd.org/screenshots.html
 KEYWORDS=NomadBSD, NomadBSD Screenshots, NomadBSD Pictures, NomadBSD Photos
 <link rel="shortcut icon" href="/favicon.ico">
 CONTENT_START
+<h3>Screenshots 131R-20221130</h3>
+<a href="screenshots/nomadbsd-131R-2022130.png" target="_blank"><img alt="NomadBSD Desktop" width="100%" src="screenshots/nomadbsd-131R-20221130.png"/></a>
+<br/><br/>
 <h3>Screenshots 1.2</h3>
 <a href="screenshots/nomadbsd-1.2-ss1.png" target="_blank"><img alt="NomadBSD Desktop" width="100%" src="screenshots/nomadbsd-1.2-ss1.png"/></a>
 <br/><br/>
