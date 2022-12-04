@@ -5,6 +5,13 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>NomadBSD 131R-20221130 released</title>
+			<link>http://nomadbsd.org/index.html#131R-20221130</link>
+			<guid>http://nomadbsd.org/index.html#131R-20221130</guid>
+			<pubDate>Su, 04 Dec 2022 15:30:00 UTC</pubDate>
+			<description>The release of NomadBSD 131R-20221130 is now available</description>
+		</item>
+		<item>
 			<title>New team member: Mehmet Mert Gunduz</title>
 			<link>https://nomadbsd.org/index.html#20220614</link>
 			<guid>https://nomadbsd.org/index.html#20220614</guid>
