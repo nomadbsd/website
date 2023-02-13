@@ -69,7 +69,7 @@ sub pre131_image_name {
 	my $base_version = get_base_version($image_version);
 	return $image
 		if ($arch eq 'amd64' and $base_version < 130);
-	return "$image.$arch";
+	return "$image.$arch.img";
 }
 
 sub image_name {
