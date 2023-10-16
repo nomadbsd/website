@@ -5,14 +5,6 @@ PAGEURL=https://nomadbsd.org/index.html
 KEYWORDS=NomadBSD, FreeBSD Based Distro, BSD, UNIX, LINUX, GNU/LINUX, OS, Operating System 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 CONTENT_START
-<p style="border-style: solid; border-color: rgb(190, 109, 53); padding: .5cm; border-radius: 6px; border-width: 1px;">
-<b>Help fighting the Coronavirus with your computer!</b><br/><br/>
-By running <a href="https://foldingathome.org">Folding@Home</a> you can provide computing power that helps
-to find therapeutics for COVID-19 and other diseases. Please see <a href="https://foldingathome.org/2020/03/15/coronavirus-what-were-doing-and-how-you-can-help-in-simple-terms/">Coronavirus – What we’re doing and how you can help in simple terms</a> for more information. <a href="https://foldingathome.org/alternative-downloads/">The software is available for Linux, Mac, and Windows</a>. If you want
-to run <a href="https://foldingathome.org">Folding@Home</a> on FreeBSD, install
-the port <a href="https://www.freshports.org/biology/linux-foldingathome">
-biology/linux-foldingathome</a>.</p>
-
 <h2>About</h2>
 <p>
 NomadBSD is a persistent live system for USB flash drives, based on
