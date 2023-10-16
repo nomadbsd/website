@@ -5,6 +5,13 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>NomadBSD 132R-20231013 released</title>
+			<link>https://nomadbsd.org/index.html#20231016</link>
+			<guid>https://nomadbsd.org/index.html#20231016</guid>
+			<pubDate>Mo, 16 Oct 2023 21:10:00 UTC</pubDate>
+			<description>The release of NomadBSD 132R-20231013 is now available</description>
+		</item>
+		<item>
 			<title>NomadBSD 131R-20221130 released</title>
 			<link>http://nomadbsd.org/index.html#131R-20221130</link>
 			<guid>http://nomadbsd.org/index.html#131R-20221130</guid>
