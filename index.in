@@ -22,7 +22,7 @@ can also be used for data recovery, for educational purposes, or to test
 FreeBSD<sup>®</sup>'s hardware compatibility.
 </p>
 For a list of installed software packages see the
-<a href="download/nomadbsd-131R-20221130.amd64.manifest">MANIFEST file</a>.
+<a href="download/nomadbsd-132R-20231013.amd64.manifest">MANIFEST file</a>.
 </p>
 <h2>Requirements</h2>
 <p>
@@ -32,7 +32,7 @@ able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	131R-20221130<br/>
+	132R-20231013<br/>
 </p>
 <h2>Errata</h2>
 <p>n/a</p>
@@ -50,6 +50,16 @@ You can check out the latest code and configuration files at
 </a>
 
 <p class="news">
+<h3><a href="#20231016">NomadBSD 132R-20231013 is now available!</a></h3>
+<p class="date">2023-10-16</p>
+<p>We are pleased to present the release of NomadBSD 132R-20231013.</p>
+<p><strong>Changes since 20221130</strong></p>
+<ul>
+<li>The base system has been changed to FreeBSD 13.2-RELEASE-p4.</li>
+<li>The graphical file search utility Catfish has been added.</li>
+<li>Turkish translations have been added to the NomadBSD setup.</li>
+<li>The uniemoji input method has been added to IBus.</li>
+</ul>
 <h3><a href="#20221204">NomadBSD 131R-20221130 is now available!</a></h3>
 <p class="date">2022-12-04</p>
 <p>We are pleased to present the release of NomadBSD 131R-20221130.</p>
