@@ -5,6 +5,13 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>NomadBSD 140R-20231121 released</title>
+			<link>https://nomadbsd.org/index.html#20231127</link>
+			<guid>https://nomadbsd.org/index.html#20231127</guid>
+			<pubDate>Mo, 27 Nov 2023 16:10:00 UTC</pubDate>
+			<description>A NomadBSD image based on FreeBSD 14.0-RELEASE is now now available</description>
+		</item>
+		<item>
 			<title>NomadBSD 132R-20231013 released</title>
 			<link>https://nomadbsd.org/index.html#20231016</link>
 			<guid>https://nomadbsd.org/index.html#20231016</guid>

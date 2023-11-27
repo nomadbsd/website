@@ -24,7 +24,7 @@ able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	132R-20231013<br/>
+	140R-20231121<br/>
 </p>
 <h2>Errata</h2>
 <p>n/a</p>
@@ -42,6 +42,9 @@ You can check out the latest code and configuration files at
 </a>
 
 <p class="news">
+<h3><a href="#20231127">A NomadBSD image based on FreeBSD 14.0-RELEASE is now available!</a></h3>
+<p class="date">2023-11-27</p>
+<p></p>
 <h3><a href="#20231016">NomadBSD 132R-20231013 is now available!</a></h3>
 <p class="date">2023-10-16</p>
 <p>We are pleased to present the release of NomadBSD 132R-20231013.</p>
