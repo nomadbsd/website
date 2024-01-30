@@ -14,7 +14,7 @@ can also be used for data recovery, for educational purposes, or to test
 FreeBSD<sup>®</sup>'s hardware compatibility.
 </p>
 For a list of installed software packages see the
-<a href="download/nomadbsd-140R-20231121.amd64.manifest">MANIFEST file</a>.
+<a href="download/nomadbsd-140R-20240126.amd64.manifest">MANIFEST file</a>.
 </p>
 <h2>Requirements</h2>
 <p>
@@ -24,7 +24,7 @@ able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	140R-20231121<br/>
+	140R-20240126<br/>
 </p>
 <h2>Errata</h2>
 <p>n/a</p>
@@ -42,6 +42,15 @@ You can check out the latest code and configuration files at
 </a>
 
 <p class="news">
+<h3><a href="#20240130">NomadBSD 140R-20240126 is now available!</a></h3>
+<p class="date">2024-01-30</p>
+<p>
+<p><strong>Changes</strong></p>
+<ul>
+<li>The base system has been changed to FreeBSD 14.0-RELEASE-p4.</li>
+<li>OpenBox has been replaced by XFCE.</li>
+</ul>
+</p>
 <h3><a href="#20231127">A NomadBSD image based on FreeBSD 14.0-RELEASE is now available!</a></h3>
 <p class="date">2023-11-27</p>
 <p></p>

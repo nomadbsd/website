@@ -5,6 +5,13 @@
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
 		<item>
+			<title>NomadBSD 140R-20240126 released</title>
+			<link>https://nomadbsd.org/index.html#20240130</link>
+			<guid>https://nomadbsd.org/index.html#20240130</guid>
+			<pubDate>Tue, 30 Jan 2024 15:00:00 UTC</pubDate>
+			<description>>The release of NomadBSD 140R-20240126 is now available</description>
+		</item>
+		<item>
 			<title>NomadBSD 140R-20231121 released</title>
 			<link>https://nomadbsd.org/index.html#20231127</link>
 			<guid>https://nomadbsd.org/index.html#20231127</guid>
