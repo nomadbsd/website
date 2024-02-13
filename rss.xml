@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<rss version="2.0">
 	<channel>
+		<item>
+			<title>NomadBSD 140R-20240126 Errata released</title>
+			<link>https://nomadbsd.org/index.html#20240211</link>
+			<guid>https://nomadbsd.org/index.html#20240211</guid>
+			<pubDate>Sun, 11 Feb 2024 22:55:00 UTC</pubDate>
+			<description>The 140R-20240126 Errata is now available</description>
+		</item>
 		<title>NomadBSD - FreeBSD based USB live system</title>
 		<link>http://nomadbsd.org/</link>
 		<description>NomadBSD news</description>
@@ -9,7 +16,7 @@
 			<link>https://nomadbsd.org/index.html#20240130</link>
 			<guid>https://nomadbsd.org/index.html#20240130</guid>
 			<pubDate>Tue, 30 Jan 2024 15:00:00 UTC</pubDate>
-			<description>>The release of NomadBSD 140R-20240126 is now available</description>
+			<description>The release of NomadBSD 140R-20240126 is now available</description>
 		</item>
 		<item>
 			<title>NomadBSD 140R-20231121 released</title>

@@ -27,7 +27,7 @@ able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
 	140R-20240126<br/>
 </p>
 <h2>Errata</h2>
-<p>n/a</p>
+<p><a href="errata-140R-20240126.html">140R-20240126 Errata</a></p>
 
 <h2>Development</h2>
 <p>
@@ -42,6 +42,11 @@ You can check out the latest code and configuration files at
 </a>
 
 <p class="news">
+<h3><a href="#20240211">NomadBSD 140R-20240126 Errata released</a></h3>
+<p class="date">2024-02-11</p>
+<p>The <a href="errata-140R-20240126.html">140R-20240126 Errata</a>
+addresses a problem where <span class="code">pkg upgrade</span> fails to create hard links.
+</p>
 <h3><a href="#20240130">NomadBSD 140R-20240126 is now available!</a></h3>
 <p class="date">2024-01-30</p>
 <p>
