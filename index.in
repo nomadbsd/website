@@ -88,7 +88,7 @@ layouts, IBus is now used.</li>
 <li>The display manager SLiM has been replaced by SDDM.</li>
 <li>In order to reduce image sizes, libreOffice and some multimedia packages
 have been removed.</li>
-<li>The kernel has been build with a patch that prevents some laptops from
+<li class="long-p">The kernel has been build with a patch that prevents some laptops from
 hanging when the hwpstate_intel driver is loaded.
 See: https://cgit.freebsd.org/src/commit/?id=67f2a563bfcad75c16536ca500b06ddc9306dfa0</li>
 <li>Turkish localization and support for Opera and Microsoft Edge have been

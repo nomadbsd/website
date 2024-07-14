@@ -349,23 +349,25 @@ Rebooting the system, or restarting
 requires a license from Microsoft<sup>®</sup>, and so it can't be
 pre-installed. You have to build it yourself by using the ports:</p>
 
-<pre><code># pkg install autoconf automake
-# svnlite co https://svn.freebsd.org/ports/head/Mk /usr/ports/Mk
-# svnlite co https://svn.freebsd.org/ports/head/Templates /usr/ports/Templates
-# svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat
-# cd /tmp/fusefs-exfat
-# make DISTDIR=/tmp install
-</code></pre>
+<p class="code">
+# pkg install autoconf automake <br>
+# svnlite co https://svn.freebsd.org/ports/head/Mk /usr/ports/Mk <br>
+# svnlite co https://svn.freebsd.org/ports/head/Templates /usr/ports/Templates <br>
+# svnlite co https://svn.freebsd.org/ports/head/sysutils/fusefs-exfat /tmp/fusefs-exfat <br>
+# cd /tmp/fusefs-exfat <br>
+# make DISTDIR=/tmp install <br>
+</p>
 
 <p>or the <a href="https://github.com/relan/exfat.git">Git repo</a>:</p>
 
-<pre><code># pkg install autoconf automake
-# git clone https://github.com/relan/exfat.git
-# cd exfat
-# autoreconf --install
-# ./configure
-# make &amp;&amp; make install
-</code></pre>
+<p class="code">
+# pkg install autoconf automake <br>
+# git clone https://github.com/relan/exfat.git <br>
+# cd exfat <br>
+# autoreconf --install <br>
+# ./configure <br>
+# make &amp;&amp; make install <br>
+</p>
 
 <p><a name="linuxfs"></a></p>
 
@@ -375,8 +377,9 @@ pre-installed. You have to build it yourself by using the ports:</p>
 <a href="https://www.freshports.org/sysutils/fusefs-lkl">fusefs-lkl</a> for BTRFS
 and XFS support.</p>
 
-<pre><code># pkg install fusefs-lkl
-</code></pre>
+<p class="code">
+# pkg install fusefs-lkl <br>
+</p>
 
 <p><a name="networking"></a></p>
 
@@ -497,16 +500,18 @@ single partition is currently not possible.</p>
 <li><a href="http://nomadbsd.org/download.html">Download and extract</a> an image you intend to run.</li>
 <li><p>Create a virtual harddisk (VDI) from the image:</p>
 
-<pre><code>VBoxManage convertfromraw nomadbsd-x.y.z.img \
-    nomadbsd-x.y.z.vdi --format VDI
-</code></pre></li>
+<p class="code">
+VBoxManage convertfromraw nomadbsd-x.y.z.img \ <br> 
+    nomadbsd-x.y.z.vdi --format VDI <br>
+</p></li>
 <li><p>Change the size of the virtual harddisk, so that you have enough space to
 store files, and install packages. NomadBSD's base system requires approx. 4 GB,
 so resizing the VDI to 8 GB (8000 MB), which is the minimum recommended size,
 will give you about 4 GB for your files.</p>
 
-<pre><code>VBoxManage modifyhd nomadbsd-x.y.z.vdi --resize 8000
-</code></pre>
+<p class="code">
+VBoxManage modifyhd nomadbsd-x.y.z.vdi --resize 8000 <br>
+</p>
 
 <hr />
 
@@ -532,10 +537,11 @@ processors to 2.</li>
 Let's say you want to install <a href="https://freshports.org/editors/linux-sublime">linux-sublime</a>
 you can proceed as follows:</p>
 
-<pre><code># sysrc linux_enable=YES
-# service abi start
-# pkg install linux-sublime
-</code></pre>
+<p class="code">
+# sysrc linux_enable=YES <br>
+# service abi start <br>
+# pkg install linux-sublime <br>
+</p>
 
 <p><a name="troubleshooting"></a></p>
 

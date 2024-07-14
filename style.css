@@ -229,6 +229,10 @@ table th {
 	color: rgb(190, 109, 53);
 }
 
+.long-p {
+	word-break: break-all;
+}
+
 .code {
 	padding: 4px 10px;
 	background-color: rgb(244, 244, 244);
