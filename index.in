@@ -14,7 +14,7 @@ can also be used for data recovery, for educational purposes, or to test
 FreeBSD<sup>®</sup>'s hardware compatibility.
 </p>
 For a list of installed software packages see the
-<a href="download/nomadbsd-140R-20240126.amd64.manifest">MANIFEST file</a>.
+<a href="download/nomadbsd-141R-20240711.amd64.manifest">MANIFEST file</a>.
 </p>
 <h2>Requirements</h2>
 <p>
@@ -24,10 +24,10 @@ able to run NomadBSD decently. Booting is possible via BIOS and UEFI.
 </p>
 <h2>Current Version</h2>
 <p>
-	140R-20240126<br/>
+	141R-20240711<br/>
 </p>
 <h2>Errata</h2>
-<p><a href="errata-140R-20240126.html">140R-20240126 Errata</a></p>
+<p>n/a</p>
 
 <h2>Development</h2>
 <p>
@@ -42,6 +42,19 @@ You can check out the latest code and configuration files at
 </a>
 
 <p class="news">
+<h3><a href="#20240715">NomadBSD 141R-20240711 is now available!</a></h3>
+<p class="date">2024-07-15</p>
+<p>
+<p><strong>Changes since 140R-20240126</strong></p>
+<ul>
+<li>The base system has been changed to FreeBSD 14.1-RELEASE-p2.</li>
+<li>A hard link creation bug concerning unionfs has been fixed.</li>
+<li>A calculation bug which led to an overfull UFS root partition has been fixed.</li>
+<li>The fusefs module has been changed to reduce (and hopefully eliminate) timeout errors on unionfs.</li>
+<li>The NomadBSD tools have been ported from Qt5 to Qt6.</li>
+<li>Several small improvements and bugfixes.</li>
+</ul>
+</p>
 <h3><a href="#20240211">NomadBSD 140R-20240126 Errata released</a></h3>
 <p class="date">2024-02-11</p>
 <p>The <a href="errata-140R-20240126.html">140R-20240126 Errata</a>
